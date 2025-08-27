@@ -26,7 +26,7 @@ const NavbarH = () => {
           </label>
 
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100  rounded-box w-52 gap-6">
-          <li><button onClick={() => scrollToSection('apply')} className='text-l font-bold bg-clip-text text-secondary'>Apply</button></li>
+          <li><button onClick={() => scrollToSection('grant')} className='text-l font-bold bg-clip-text text-secondary'>Amenities</button></li>
           <li><button onClick={() => scrollToSection('schedule')} className='text-l font-bold bg-clip-text text-secondary'>Schedule</button></li>
           <li><button onClick={() => scrollToSection('prize')} className='text-l font-bold bg-clip-text text-secondary'>Prize</button></li>
           <li><button onClick={() => scrollToSection('discover')} className='text-l font-bold bg-clip-text text-secondary'>Discover</button></li>
@@ -44,7 +44,7 @@ const NavbarH = () => {
       <div className="navbar-center hidden lg:flex">
 
         <ul className="menu menu-horizontal px-1">
-          <li><button onClick={() => scrollToSection('apply')} className='text-l font-bold bg-clip-text text-white'>Apply</button></li>
+          <li><button onClick={() => scrollToSection('grant')} className='text-l font-bold bg-clip-text text-white'>Amenities</button></li>
           <li><button onClick={() => scrollToSection('schedule')} className='text-l font-bold bg-clip-text text-white'>Schedule</button></li>
           <li><button onClick={() => scrollToSection('prize')} className='text-l font-bold bg-clip-text text-white'>Prize</button></li>
           <li><button onClick={() => scrollToSection('discover')} className='text-l font-bold bg-clip-text text-white'>Discover</button></li>

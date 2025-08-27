@@ -13,6 +13,8 @@ import FaqView from './components/Hackathon/FaqView';
 import RulesView from './components/Hackathon/RulesView';
 import StarsBackground from './components/StarsBackground';
 import ScheduleView from './components/Agenda/ScheduleView';
+import ThankView from './components/Hackathon/ThankView';
+import GrantView from './components/Hackathon/GrantView';
 
 
 
@@ -25,8 +27,12 @@ export default function Hackathon() {
         
         <Hero />
 
-        <div id="apply" className="w-full">
+        {/* <div id="apply" className="w-full">
           <ApplyView />
+        </div> */}
+
+        <div id="grant" className="w-full">
+          <GrantView />
         </div>
 
         <div id="schedule" className="w-full">
@@ -48,6 +54,10 @@ export default function Hackathon() {
 
         <div id="faq" className="w-full">
           <FaqView />
+        </div>
+
+        <div id="thx" className="w-full">
+          <ThankView />
         </div>
 
         {/* <div id="rules" className="w-full mb-12">
