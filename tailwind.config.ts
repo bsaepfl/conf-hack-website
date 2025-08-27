@@ -22,14 +22,14 @@ export default {
     themes: [
       {
         myCustomTheme: {
-          primary: '#b949d7',   // Vibrant Purple
-          secondary: '#b4a6ed', // Lavender Mist
-          accent: '#bccefb',    // Sky Blue
-          neutral: '#6593b3',   // Steel Blue
-          'base-100': '#f7f7f7',// Light Gray (background)
-          'base-200': '#e5e7eb',// Light Gray (background)
-          'base-300': '#d1d5db',// Light Gray (background)
-          'base-content': '#1f2937',// Light Gray (background)
+          primary: "#4DA2FF",     // Sea (bright, vibrant Sui blue)
+        secondary: "#C0E6FF",   // Aqua (soft highlight / accents)
+        accent: "#011829",      // Ocean (dark blue for contrast accents)
+        neutral: "#030F1C",     // Deep Ocean (very dark blue for strong backgrounds)
+        "base-100": "#FFFFFF",  // Cloud (clean white, page background)
+        "base-200": "#F3F4F6",  // Slightly off-white (UI elements)
+        "base-300": "#E5E7EB",  // Light gray (borders, subtle fills)
+        "base-content": "#011829", // Ocean (default text color for good contrast)
           info: '#e0e8f0',      // Soft Blue
           success: '#86e1b9',   // Mint Green
           warning: '#fbbf24',   // Warm Yellow

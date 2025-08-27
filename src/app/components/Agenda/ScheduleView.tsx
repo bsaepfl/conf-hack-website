@@ -5,6 +5,21 @@ import ScheduleEvent from './ScheduleEvent';
 
 const navigationEvent: DayProps[] = [
     {
+        label: "Thu, 11 Sep",
+        date: "2025-09-11",
+        description: "Workshop 1 - Sui Overview & Installation"
+    },
+    {
+        label: "Thu, 18 Sep",
+        date: "2025-09-18",
+        description: "Workshop 2 - Move Language"
+    },
+    {
+        label: "Thu, 25 Sep",
+        date: "2025-09-25",
+        description: "Workshop 3 - Advanced Features (contract deployment, front-end integration, testing)"
+    },
+    {
         label: "Sat, 27 Sep",
         date: "2025-09-27",
         description: "Day 1"
@@ -18,7 +33,27 @@ const navigationEvent: DayProps[] = [
 ];
 
 const schedule: ScheduleEventType[] = [
-    
+    {
+        date: new Date("2025-09-11T17:00:00"),
+        name: "Workshop 1 - Sui Overview & Installation",
+        icon: "workshop",
+        duration: 3,
+        value: "2025-09-11"
+    },
+    {
+        date: new Date("2025-09-18T17:00:00"),
+        name: "Workshop 2 - Move Language",
+        icon: "workshop",
+        duration: 3,
+        value: "2025-09-18"
+    },
+    {
+        date: new Date("2025-09-25T17:00:00"),
+        name: "Workshop 3 - Advanced Features (contract deployment, front-end integration, testing",
+        icon: "workshop",
+        duration: 3,
+        value: "2025-09-25"
+    },
     
      // Day 1 (Sep 27, 2025)
      {
@@ -29,31 +64,17 @@ const schedule: ScheduleEventType[] = [
         value: "2025-09-27"
     },
     {
-        date: new Date("2025-09-27T10:00:00"),
+        date: new Date("2025-09-27T09:30:00"),
         name: "Opening Ceremony",
         icon: "ceremonyOpen",
         duration: 0.25,
         value: "2025-09-27"
     },
     {
-        date: new Date("2025-09-27T10:30:00"),
-        name: "Workshops",
-        icon: "workshop",
-        duration: 1,
-        value: "2025-09-27"
-    },
-    {
-        date: new Date("2025-09-27T11:30:00"),
-        name: "Team Buidling",
-        icon: "team",
-        duration: 0.5,
-        value: "2025-09-27"
-    },
-    {
-        date: new Date("2025-09-27T12:00:00"),
+        date: new Date("2025-09-27T10:00:00"),
         name: "Hacking Starts",
         icon: "code",
-        duration: 1.5,
+        duration: 0,
         value: "2025-09-27"
     },
     {

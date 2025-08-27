@@ -1,18 +1,22 @@
 import React from "react";
 import EventCard from "./Style/EventCard";
-import { HiArrowLongRight } from "react-icons/hi2";
 import { DiscoverButton } from "./Style/NewsPopUp";
+import suiImage from "./images/icons/Sui_Symbol_Sea.png"; // <-- adjust path if needed
 
 const DiscoverSuiView = () => {
   return (
     <div className="w-full flex flex-col justify-start items-center bg-dark-800 relative">
       <div className="w-full max-w-[1100px] flex flex-col items-center py-20 px-4 sm:px-10 gap-16">
-        <h2 className="w-full font-bold text-3xl sm:text-4xl text-black indent-2">
-          {/* Discover <span className="text-dark-450">Sui Blockchain</span> */}
-          Sui
-        </h2>
+        
+        {/* Image as a left-aligned "title" */}
+        <div className="w-full flex items-center">
+          <img
+            src={suiImage.src}
+            alt="Sui Logo"
+            className="h-10 sm:h-12 object-contain"
+          />
+        </div>
 
-        {/* <div className="w-full flex flex-row justify-between items-start border relative"> */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 justify-between gap-10 sm:gap-20 relative">
           <EventCard
             color="bg-white"
