@@ -3,11 +3,15 @@ import React from "react";
 import nissinLogo from "./images/icons/Nissin.jpg";
 import cbLogo from "./images/icons/CB.gif";
 import suiLogo from "./images/icons/Sui_Symbol_Sea.png"; 
+import snats from "./images/icons/snats.png";
+import brite from "./images/icons/brite.png";
 
 const SponsorThanks = () => {
   const sponsors = [
     { name: "Camille Bloch", logo: cbLogo },
     { name: "Nissin", logo: nissinLogo },
+    { name: "Snatt's", logo: snats },
+    { name: "Brite", logo: brite },
   ];
 
   return (
@@ -46,11 +50,11 @@ const SponsorThanks = () => {
         </div>
 
         {/* Secondary Sponsors */}
-        <div className="flex flex-col items-center justify-center gap-8 pt-10">
+        <div className="flex flex-col items-center justify-center gap-8 pt-10 pb-8">
           <span className="text-gray-600 text-base sm:text-lg font-semibold uppercase tracking-wide">
             Food & Beverage Sponsors
           </span>
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-10 place-items-center">
+          <div className="grid grid-cols-4 sm:grid-cols-4 gap-10 place-items-center">
             {sponsors.map((sponsor, index) => (
               <div
                 key={index}
