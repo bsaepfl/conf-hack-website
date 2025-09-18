@@ -3,14 +3,18 @@ import React from "react";
 import nissinLogo from "./images/icons/Nissin.jpg";
 import cbLogo from "./images/icons/CB.gif";
 import suiLogo from "./images/icons/Sui_Symbol_Sea.png"; 
+
 import snatts from "./images/icons/snatts.png";
 import brite from "./images/icons/Brite.png";
+
 
 const SponsorThanks = () => {
   const sponsors = [
     { name: "Camille Bloch", logo: cbLogo },
     { name: "Nissin", logo: nissinLogo },
+
     { name: "Snatt's", logo: snatts },
+
     { name: "Brite", logo: brite },
   ];
 
@@ -50,7 +54,9 @@ const SponsorThanks = () => {
         </div>
 
         {/* Secondary Sponsors */}
+
         <div className="flex flex-col items-center justify-center gap-8 pt-10 pb-10">
+
           <span className="text-gray-600 text-base sm:text-lg font-semibold uppercase tracking-wide">
             Food & Beverage Sponsors
           </span>
