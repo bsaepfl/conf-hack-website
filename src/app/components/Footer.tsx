@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="https://t.me/+yF2qQVzrG004ZTJk" target="_blank" rel="noopener noreferrer" className="text-lg">
+          <a href="https://t.me/+YcFnxd17Dvk2NmVk" target="_blank" rel="noopener noreferrer" className="text-lg">
             <FaTelegramPlane />
           </a>
           <a href="https://x.com/bsa_epfl" target="_blank" rel="noopener noreferrer" className="text-lg">
