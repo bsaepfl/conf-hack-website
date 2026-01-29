@@ -51,7 +51,7 @@ export const DiscoverButton = ({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-fit relative rounded-md uppercase bg-dark-100 hover:bg-transparent border border-black text-black font-medium hover:text-dark-100 duration-100 px-10 py-2"
+          className="w-fit relative rounded-md uppercase bg-base-100 hover:bg-base-200 border border-black text-black font-medium hover:text-dark-100 duration-100 px-10 py-2"
         >
           {title}
         </a>

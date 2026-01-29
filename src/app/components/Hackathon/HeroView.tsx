@@ -7,7 +7,35 @@ import suiLogo from './images/icons/Sui_Logo_Sea.png';
 import bsaLogo from './images/icons/Logo-dark.png';
 import SpinningCoin from "../SpinningCoin";
 
-const Hero = () => {
+interface HeroProps {
+  title?: React.ReactNode;
+  description?: React.ReactNode;
+  date?: string;
+}
+
+const Hero: React.FC<HeroProps> = ({
+  title = (
+    <>
+      BSA Hackathon
+      <img
+        src={bsaLogo.src}
+        alt="BSA Logo"
+        className="h-8 md:h-14 inline-block object-contain align-middle px-2 pb-2"
+      />
+      <br />
+      Stablecoin & Payments
+    </>
+  ),
+  description = (
+    <p className="text-black max-w-[500px] mb-2 font-normal text-center">
+      Participate in the {" "}
+      <span className="font-semibold"> BSA Stablecoin & Payments Hackathon</span> at EPFL
+      campus and compete for an outstanding{" "}
+      <span className="font-semibold">$20,000</span> prize pool.
+    </p>
+  ),
+  date = "DATES TBD — EPFL CAMPUS",
+}) => {
   const goToPrizes = () => {
     document.getElementById("Prizes")?.scrollIntoView({
       behavior: "smooth",
@@ -36,31 +64,17 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-black text-center md:text-left">
-            BSA Hackathon
-            <img
-              src={bsaLogo.src}
-              alt="BSA Logo"
-              className="h-8 md:h-14 inline-block object-contain align-middle px-2 pb-2"
-            />
-            <br />
-            Stablecoin & Payments
+            {title}
           </h1>
         </div>
 
         <BoxText
-          text={
-            <p className="text-black max-w-[500px] mb-2 font-normal text-center">
-              Participate in the {" "}
-              <span className="font-semibold"> BSA Stablecoin & Payments Hackathon</span> at EPFL
-              campus and compete for an outstanding{" "}
-              <span className="font-semibold">$20,000</span> prize pool.
-            </p>
-          }
+          text={description}
           boxColor="border-dark-450"
         />
 
         <p className="md:text-lg font-light text-black">
-          DATES TBD — EPFL CAMPUS
+          {date}
         </p>
 
         {/* Register Window */}

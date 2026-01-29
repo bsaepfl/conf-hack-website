@@ -29,7 +29,7 @@ const navigationEvent: DayProps[] = [
         date: "2025-09-28",
         description: "Day 2"
     },
-    
+
 ];
 
 const schedule: ScheduleEventType[] = [
@@ -54,9 +54,9 @@ const schedule: ScheduleEventType[] = [
         duration: 3,
         value: "2025-09-25"
     },
-    
-     // Day 1 (Sep 27, 2025)
-     {
+
+    // Day 1 (Sep 27, 2025)
+    {
         date: new Date("2025-09-27T08:30:00"),
         name: "Registration & Breakfast",
         icon: "breakfast",
@@ -170,18 +170,18 @@ const ScheduleView: React.FC = () => {
     );
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4">
+        <div className="w-full max-w-7xl mx-auto px-4 bg-base-200 relative z-[2] py-10 rounded-xl bg-transparent">
             <br />
             <h2 className="w-full font-bold text-3xl sm:text-4xl text-black indent-2 pb-10">
                 Schedule
             </h2>
             <Tab.Group onChange={(index) => setSelectedDay(navigationEvent[index])}>
-                <Tab.List className="flex space-x-2 bg-white bg-opacity-100 rounded-xl p-2">
+                <Tab.List className="flex space-x-2 bg-base-100 rounded-xl p-2 shadow-sm">
                     {navigationEvent.map((day) => (
                         <Tab
                             key={day.date}
                             className={({ selected }) =>
-                                `px-4 py-2 rounded-lg transition-colors ${selected ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100'
+                                `px-4 py-2 rounded-lg transition-colors font-medium ${selected ? 'bg-base-300 text-base-content shadow-md' : 'text-base-content/70 hover:bg-base-200'
                                 }`
                             }
                         >
@@ -193,7 +193,7 @@ const ScheduleView: React.FC = () => {
                     {navigationEvent.map((day) => (
                         <Tab.Panel key={day.date}>
                             {currentDaySchedule.length > 0 ? (
-                                <ul className="bg-white bg-opacity-100 rounded-xl divide-y">
+                                <ul className="bg-white  rounded-xl divide-y">
                                     {currentDaySchedule.map((event, index) => (
                                         <ScheduleEvent
                                             key={`${day.date}-${index}`}
@@ -203,7 +203,7 @@ const ScheduleView: React.FC = () => {
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="text-gray-500 text-center py-8 bg-white bg-opacity-100">
+                                <p className="text-gray-500 text-center py-8 bg-white ">
                                     No events scheduled for this day
                                 </p>
                             )}

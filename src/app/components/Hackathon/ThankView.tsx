@@ -20,7 +20,7 @@ const SponsorThanks = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-20 bg-white relative pb-20">
+    <div className="w-full flex flex-col justify-center items-center gap-20 bg-transparent relative pb-20">
       <div
         id="Sponsors"
         className="h-[52px] sm:h-[70px] w-full absolute -top-[52px] sm:-top-[70px] pointer-events-none"
@@ -56,7 +56,7 @@ const SponsorThanks = () => {
 
         {/* Secondary Sponsors */}
 
-        <div className="flex flex-col items-center justify-center gap-8 pt-10 pb-10">
+        <div className="flex flex-col items-center justify-center gap-8 pt-10 pb-10 bg-base-100 rounded-2xl shadow-md">
 
           <span className="text-gray-600 text-base sm:text-lg font-semibold uppercase tracking-wide">
             Food & Beverage Sponsors

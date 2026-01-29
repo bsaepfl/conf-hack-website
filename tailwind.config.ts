@@ -27,12 +27,12 @@ export default {
       {
         myCustomTheme: {
           primary: "#000000",
-          secondary: "#A1A1AA",
+          secondary: "#71717a",
           accent: "#52525b",
           neutral: "#18181b",
-          "base-100": "#FFFFFF",
-          "base-200": "#F4F4F5",
-          "base-300": "#E4E4E7",
+          "base-100": "#FAFAFA",
+          "base-200": "#E4E4E7",
+          "base-300": "#D4D4D8",
           "base-content": "#000000",
           info: '#e0e8f0',
           success: '#86e1b9',

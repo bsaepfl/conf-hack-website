@@ -15,7 +15,8 @@ import StarsBackground from './components/StarsBackground';
 import ScheduleView from './components/Agenda/ScheduleView';
 import ThankView from './components/Hackathon/ThankView';
 import GrantView from './components/Hackathon/GrantView';
-import SpeakersComponent from './components/SpeakersComponent/SpeakersComponent';
+
+
 
 
 
@@ -33,12 +34,11 @@ export default function Hackathon() {
           <ApplyView />
         </div> */}
 
-        <div id="grant" className="w-full">
-          <GrantView />
-        </div>
 
-        <div id="speakers" className="w-full">
-          <SpeakersComponent />
+
+
+        <div id="prize" className="w-full">
+          <PrizeView />
         </div>
 
         <div id="schedule" className="w-full">
@@ -46,12 +46,15 @@ export default function Hackathon() {
         </div>
 
 
-        <div id="prize" className="w-full">
-          <PrizeView />
-        </div>
+
+
 
         <div id="discover" className="w-full">
           <DiscoverSuiView />
+        </div>
+
+        <div id="grant" className="w-full">
+          <GrantView />
         </div>
 
         <div id="location" className="w-full">
