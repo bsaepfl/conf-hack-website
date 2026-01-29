@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Inria_Serif } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,8 +7,16 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const inriaSerif = Inria_Serif({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  variable: '--font-inria-serif',
   display: 'swap',
 })
 
@@ -28,12 +36,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="nord">
+    <html lang="en" data-theme="myCustomTheme">
       <body
-        className={inter.className}
+        className={`${inter.variable} ${inriaSerif.variable} font-sans antialiased`}
       >
         {children}
       </body>
     </html>
   );
 }
+
