@@ -18,9 +18,9 @@ const PrizeView = () => {
         </h2>
 
         <p className="w-full max-w-[1100px] text-black">
-          From <b className="font-semibold">Septemebr 27-28</b>, we are welcoming
-          builders from around the globe to participate in the Third Edition of the{" "}
-          <b className="font-semibold">Sui x BSA Hackathon</b> at EPFL, a
+          From <b className="font-semibold">DATES TBD</b>, we are welcoming
+          builders from around the globe to participate in the Stablecoin & Payments Hackathon of the{" "}
+          <b className="font-semibold">BSA</b> at EPFL, a
           prestigious institution at the forefront of technology and innovation.
           <br /> <br /> Get to win over{" "}
           <b className="font-semibold">$20,000 USD</b> in prizes and build

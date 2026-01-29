@@ -2,7 +2,8 @@ import React from "react";
 
 import nissinLogo from "./images/icons/Nissin.jpg";
 import cbLogo from "./images/icons/CB.gif";
-import suiLogo from "./images/icons/Sui_Symbol_Sea.png"; 
+import suiLogo from "./images/icons/Sui_Symbol_Sea.png";
+import bsaLogo from "./images/icons/Logo-dark.png";
 
 import snatts from "./images/icons/snatts.png";
 import brite from "./images/icons/Brite.png";
@@ -32,7 +33,7 @@ const SponsorThanks = () => {
             Thank You to Our Sponsors
           </span>
           <span className="text-black text-lg sm:text-xl lg:text-2xl font-medium">
-            Making the Sui x BSA Hackathon possible
+            Making the BSA Stablecoin & Payments Hackathon possible
           </span>
         </h2>
 
@@ -42,13 +43,13 @@ const SponsorThanks = () => {
             Main Sponsor
           </span>
           <img
-            src={suiLogo.src}
-            alt="Sui"
+            src={bsaLogo.src}
+            alt="PlaceHolder Logo"
             className="w-40 sm:w-56 lg:w-72 object-contain"
           />
           <p className="text-center text-black max-w-[700px]">
-            We are deeply grateful to <b className="font-semibold">Sui</b> for
-            sponsoring and supporting this hackathon.  
+            We are deeply grateful to <b className="font-semibold">???</b> for
+            sponsoring and supporting this hackathon.
             Their commitment to innovation and builders worldwide made this event possible.
           </p>
         </div>

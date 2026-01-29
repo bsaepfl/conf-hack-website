@@ -26,8 +26,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sui x BSA III",
-  description: "BSA Blockchain Sui Hackathon ",
+  title: "BSA Stablecoin and Payments",
+  description: "BSA Blockchain Hackathon ",
 };
 
 export default function RootLayout({

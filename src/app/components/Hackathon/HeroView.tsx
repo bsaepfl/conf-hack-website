@@ -31,21 +31,17 @@ const Hero = () => {
       {/* Centered content */}
       <div className="flex flex-col items-center w-full max-w-3xl px-4 gap-8 text-center flex-grow justify-center">
         <h1 className="text-4xl md:text-5xl font-bold text-black">
-          <img
-            src={suiLogo.src}
-            alt="Sui Logo"
-            className="h-8 md:h-14 inline-block object-contain align-middle pr-2 pb-2"
-          />
-          <span className="text-primary">Sui</span> x
 
-          BSA
+
+          BSA Hackathon
           <img
             src={bsaLogo.src}
             alt="Sui Logo"
             className="h-8 md:h-14 inline-block object-contain align-middle pr-2 pb-2"
           />
           <br />
-          Hackathon III
+          Stablecoin & Payments
+
         </h1>
 
         <div className="w-full h-[400px]">
@@ -55,8 +51,8 @@ const Hero = () => {
         <BoxText
           text={
             <p className="text-black max-w-[500px] mb-2 font-normal text-center">
-              Participate in the third edition of the{" "}
-              <span className="font-semibold">Sui x BSA Hackathon</span> at EPFL
+              Participate in the {" "}
+              <span className="font-semibold"> BSA Stablecoin & Payments Hackathon</span> at EPFL
               campus and compete for an outstanding{" "}
               <span className="font-semibold">$20,000</span> prize pool.
             </p>
@@ -65,7 +61,7 @@ const Hero = () => {
         />
 
         <p className="md:text-lg font-light text-black">
-          27 – 28 September — EPFL CAMPUS
+          DATES TBD — EPFL CAMPUS
         </p>
 
         {/* Register Window */}
