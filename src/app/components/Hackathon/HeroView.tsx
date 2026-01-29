@@ -29,23 +29,22 @@ const Hero = () => {
     <div className="bg-dark-800 flex flex-col items-center justify-center py-16 md:py-20 font-semibold min-h-screen w-full relative">
 
       {/* Centered content */}
-      <div className="flex flex-col items-center w-full max-w-3xl px-4 gap-8 text-center flex-grow justify-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-black">
+      <div className="flex flex-col items-center w-full max-w-7xl px-4 gap-8 text-center flex-grow justify-center">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8">
+          <div className="w-full md:w-1/2 h-[300px] md:h-[400px]">
+            <SpinningCoin />
+          </div>
 
-
-          BSA Hackathon
-          <img
-            src={bsaLogo.src}
-            alt="Sui Logo"
-            className="h-8 md:h-14 inline-block object-contain align-middle pr-2 pb-2"
-          />
-          <br />
-          Stablecoin & Payments
-
-        </h1>
-
-        <div className="w-full h-[400px]">
-          <SpinningCoin />
+          <h1 className="text-4xl md:text-5xl font-bold text-black text-center md:text-left">
+            BSA Hackathon
+            <img
+              src={bsaLogo.src}
+              alt="BSA Logo"
+              className="h-8 md:h-14 inline-block object-contain align-middle px-2 pb-2"
+            />
+            <br />
+            Stablecoin & Payments
+          </h1>
         </div>
 
         <BoxText
