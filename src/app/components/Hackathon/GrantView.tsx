@@ -4,9 +4,9 @@ import grantImage from "./images/icons/cat.jpg";
 
 const GrantView = () => {
   return (
-    <div className="w-full flex flex-col justify-start items-center bg-white text-black z-[2]">
+    <div className="w-full flex flex-col justify-start items-center bg-base-200 text-black z-[2]">
       <div className="w-full max-w-[1100px] flex flex-col lg:flex-row py-20 px-4 sm:px-10 gap-8 text-sm sm:text-base z-[2]">
-        
+
         {/* Left: Image */}
         <div className="w-full lg:w-1/2 flex items-center justify-center">
           <img

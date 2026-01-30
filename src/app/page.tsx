@@ -18,39 +18,48 @@ import GrantView from './components/Hackathon/GrantView';
 
 
 
+
+
+
 export default function Hackathon() {
   return (
     <div className="flex flex-col min-h-screen">
       <StarsBackground />
       <NavbarH />
       <main className="flex-grow flex-col flex items-center justify-center bg-base-200">
-        
+
         <Hero />
 
         {/* <div id="apply" className="w-full">
           <ApplyView />
         </div> */}
 
-        <div id="grant" className="w-full">
-          <GrantView />
-        </div>
 
-        <div id="schedule" className="w-full">
-          <ScheduleView />
-        </div> 
 
 
         <div id="prize" className="w-full">
           <PrizeView />
         </div>
 
+        <div id="schedule" className="w-full">
+          <ScheduleView />
+        </div>
+
+
+
+
+
         <div id="discover" className="w-full">
-         <DiscoverSuiView />
+          <DiscoverSuiView />
+        </div>
+
+        <div id="grant" className="w-full">
+          <GrantView />
         </div>
 
         <div id="location" className="w-full">
           <LocationView />
-        </div>  
+        </div>
 
         <div id="faq" className="w-full">
           <FaqView />

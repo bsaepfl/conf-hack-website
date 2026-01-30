@@ -2,7 +2,8 @@ import React from "react";
 
 import nissinLogo from "./images/icons/Nissin.jpg";
 import cbLogo from "./images/icons/CB.gif";
-import suiLogo from "./images/icons/Sui_Symbol_Sea.png"; 
+import suiLogo from "./images/icons/Sui_Symbol_Sea.png";
+import bsaLogo from "./images/icons/Logo-dark.png";
 
 import snatts from "./images/icons/snatts.png";
 import brite from "./images/icons/Brite.png";
@@ -19,7 +20,7 @@ const SponsorThanks = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-20 bg-white relative pb-20">
+    <div className="w-full flex flex-col justify-center items-center gap-20 bg-transparent relative pb-20">
       <div
         id="Sponsors"
         className="h-[52px] sm:h-[70px] w-full absolute -top-[52px] sm:-top-[70px] pointer-events-none"
@@ -32,7 +33,7 @@ const SponsorThanks = () => {
             Thank You to Our Sponsors
           </span>
           <span className="text-black text-lg sm:text-xl lg:text-2xl font-medium">
-            Making the Sui x BSA Hackathon possible
+            Making the BSA Stablecoin & Payments Hackathon possible
           </span>
         </h2>
 
@@ -42,20 +43,20 @@ const SponsorThanks = () => {
             Main Sponsor
           </span>
           <img
-            src={suiLogo.src}
-            alt="Sui"
+            src={bsaLogo.src}
+            alt="PlaceHolder Logo"
             className="w-40 sm:w-56 lg:w-72 object-contain"
           />
           <p className="text-center text-black max-w-[700px]">
-            We are deeply grateful to <b className="font-semibold">Sui</b> for
-            sponsoring and supporting this hackathon.  
+            We are deeply grateful to <b className="font-semibold">???</b> for
+            sponsoring and supporting this hackathon.
             Their commitment to innovation and builders worldwide made this event possible.
           </p>
         </div>
 
         {/* Secondary Sponsors */}
 
-        <div className="flex flex-col items-center justify-center gap-8 pt-10 pb-10">
+        <div className="flex flex-col items-center justify-center gap-8 pt-10 pb-10 bg-base-100 rounded-2xl shadow-md">
 
           <span className="text-gray-600 text-base sm:text-lg font-semibold uppercase tracking-wide">
             Food & Beverage Sponsors
