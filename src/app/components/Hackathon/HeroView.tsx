@@ -58,8 +58,8 @@ const Hero: React.FC<HeroProps> = ({
 
       {/* Centered content */}
       <div className="flex flex-col items-center w-full max-w-7xl px-4 gap-8 text-center flex-grow justify-center">
-        <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8">
-          <div className="w-full md:w-1/2 h-[300px] md:h-[400px]">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full gap-12 md:gap-8">
+          <div className="w-full md:w-1/2 h-[300px] md:h-[400px] flex items-center justify-center">
             <SpinningCoin />
           </div>
 

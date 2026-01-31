@@ -56,12 +56,12 @@ const SponsorThanks = () => {
 
         {/* Secondary Sponsors */}
 
-        <div className="flex flex-col items-center justify-center gap-8 pt-10 pb-10 bg-base-200/40 backdrop-blur-md rounded-2xl shadow-md">
+        <div className="flex flex-col items-center justify-center gap-8 pt-10 pb-10 px-6 bg-base-200/40 backdrop-blur-md rounded-2xl shadow-md">
 
           <span className="text-gray-300 text-base sm:text-lg font-semibold uppercase tracking-wide">
             Food & Beverage Sponsors
           </span>
-          <div className="grid grid-cols-4 sm:grid-cols-4 gap-10 place-items-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
             {sponsors.map((sponsor, index) => (
               <div
                 key={index}

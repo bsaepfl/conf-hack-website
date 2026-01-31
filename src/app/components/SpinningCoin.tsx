@@ -42,7 +42,7 @@ const Coin = () => {
 
 const SpinningCoin = () => {
     return (
-        <div className="w-full h-[400px] flex items-center justify-center">
+        <div className="w-full h-full flex items-center justify-center">
             <Canvas camera={{ position: [0, 0, 8], fov: 50 }}>
                 <ambientLight intensity={3} />
                 <pointLight position={[10, 10, 10]} intensity={4} />
