@@ -34,6 +34,7 @@ import ABH from '../../images/speakers/ABH.jpeg';
 import VA from '../../images/speakers/VA.jpeg';
 import BS from '../../images/speakers/BS.jpeg';
 import IMH from '../../images/speakers/IMH.jpeg';
+import SpeakerCard from './SpeakerCard';
 
 const speakersData = [
   {
@@ -353,30 +354,8 @@ const SpeakersComponent = () => {
       {/* Grid Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 w-full max-w-screen-xl">
         {speakersData.map((speaker, index) => (
-          <div
-            key={index}
-            className="card bg-secondary text-base-content shadow-md p-6 flex flex-col items-start space-y-4 h-auto relative"
-          >
-            {/* Photo Section */}
-            <div className="avatar flex justify-center w-full">
-              <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-4">
-                <Image
-                  src={speaker.image}
-                  alt={speaker.name}
-                  width={200}
-                  height={200}
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            {/* Name and Description Section */}
-            <div className="text-left">
-              <h2 className="card-title text-xl mb-2">{speaker.name}</h2>
-              <p className="text-sm text-black mb-4">
-                {speaker.description}
-              </p>
-            </div>
-
+          <div key={index} className="perspective-1000">
+            <SpeakerCard speaker={speaker} />
           </div>
         ))}
       </div>
