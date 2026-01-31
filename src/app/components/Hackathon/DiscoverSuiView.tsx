@@ -2,7 +2,7 @@ import React from "react";
 import EventCard from "./Style/EventCard";
 import { DiscoverButton } from "./Style/NewsPopUp";
 import suiImage from "./images/icons/Sui_Symbol_Sea.png"; // <-- adjust path if needed
-import bsaLogo from "./images/icons/Logo-dark.png";
+import bsaLogo from "./images/icons/logo_light.png";
 
 const DiscoverSuiView = () => {
   return (
@@ -24,7 +24,7 @@ const DiscoverSuiView = () => {
 
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 justify-between gap-10 sm:gap-20 relative">
           <EventCard
-            color="bg-base-200"
+            color="bg-base-200/40 backdrop-blur-md"
             title="Documentation for ???"
             description="Docs for ???, a next-generation smart contract platform with high throughput, low latency, and an asset-oriented programming model powered by Move"
             footer={
@@ -38,7 +38,7 @@ const DiscoverSuiView = () => {
             }
           />
           <EventCard
-            color="bg-base-200"
+            color="bg-base-200/40 backdrop-blur-md"
             title="Documentation for ???"
             description="Docs for ???, a next-generation smart contract platform with high throughput, low latency, and an asset-oriented programming model powered by Move"
             footer={

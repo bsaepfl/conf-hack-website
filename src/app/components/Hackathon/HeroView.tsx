@@ -4,7 +4,7 @@ import { SlArrowDown } from "react-icons/sl";
 import BoxText from "./Style/BoxText";
 import { motion } from "framer-motion";
 import suiLogo from './images/icons/Sui_Logo_Sea.png';
-import bsaLogo from './images/icons/Logo-dark.png';
+import bsaLogo from './images/icons/logo_light.png';
 import SpinningCoin from "../SpinningCoin";
 
 interface HeroProps {

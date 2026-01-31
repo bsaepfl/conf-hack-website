@@ -44,10 +44,10 @@ const StarsBackground = () => {
         },
         particles: {
           color: {
-            value: "#808080", // Gray
+            value: "#4a4a4aff", // Gray
           },
           links: {
-            color: "#808080",
+            color: "#4a4a4aff",
             distance: 150,
             enable: true,
             opacity: 0.2, // Reduced opacity
