@@ -82,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-md bg-white/70 backdrop-blur-md rounded-xl p-3 shadow-lg"
+          className="w-full max-w-md bg-base-100 backdrop-blur-md rounded-xl p-3 shadow-lg"
         >
           <div className="relative w-full aspect-[4/3] min-h-[260px]">
             <iframe

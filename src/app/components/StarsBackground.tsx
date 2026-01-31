@@ -44,13 +44,13 @@ const StarsBackground = () => {
         },
         particles: {
           color: {
-            value: "#4a4a4aff", // Gray
+            value: "#4a4a4a", // Gray
           },
           links: {
-            color: "#4a4a4aff",
+            color: "#4a4a4a",
             distance: 150,
             enable: true,
-            opacity: 0.2, // Reduced opacity
+            opacity: 0.1, // Reduced opacity
             width: 1,
           },
           collisions: {
@@ -69,12 +69,12 @@ const StarsBackground = () => {
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 400,
             },
-            value: 80,
+            value: 40,
           },
           opacity: {
-            value: 0.5,
+            value: 0.1,
           },
           shape: {
             type: "circle",

@@ -176,7 +176,7 @@ const ScheduleView: React.FC = () => {
                 Schedule
             </h2>
             <Tab.Group onChange={(index) => setSelectedDay(navigationEvent[index])}>
-                <Tab.List className="flex space-x-2 bg-white/10 backdrop-blur-md rounded-xl p-2 shadow-sm">
+                <Tab.List className="flex space-x-2 bg-base-100 backdrop-blur-md rounded-xl p-2 shadow-sm">
                     {navigationEvent.map((day) => (
                         <Tab
                             key={day.date}

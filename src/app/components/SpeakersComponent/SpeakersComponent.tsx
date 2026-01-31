@@ -361,7 +361,7 @@ const SpeakersComponent = () => {
       </div>
 
       {/* Button Section */}
-      <button className="btn btn-primary btn-wide text-white transform transition-transform duration-300 hover:scale-105 active:scale-95 mt-12">
+      <button className="btn btn-primary bg-base-100 btn-wide text-white transform transition-transform duration-300 hover:scale-105 active:scale-95 mt-12">
         Apply as speaker
       </button>
     </main>
