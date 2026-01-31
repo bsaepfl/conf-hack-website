@@ -20,7 +20,7 @@ export default function Conference() {
         <div className="flex flex-col min-h-screen">
             <StarsBackground />
             <NavbarH />
-            <main className="flex-grow flex-col flex items-center justify-center bg-base-200">
+            <main className="flex-grow flex-col flex items-center justify-center">
 
                 <Hero
                     title={
@@ -36,7 +36,7 @@ export default function Conference() {
                         </>
                     }
                     description={
-                        <p className="text-black max-w-[500px] mb-2 font-normal text-center">
+                        <p className="text-base-content max-w-[500px] mb-2 font-normal text-center">
                             Join us for the <span className="font-semibold">BSA Stablecoin & Payments Conference</span> at EPFL.
                             Engage with industry leaders and explore the future of payments.
                         </p>
