@@ -38,19 +38,19 @@ const StarsBackground = () => {
             },
             repulse: {
               distance: 50, // Reduced repulse distance
-              duration: 0.4,
+              speed: 0.1
             },
           },
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: "#808080", // Gray
           },
           links: {
-            color: "#ffffff",
+            color: "#808080",
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.2, // Reduced opacity
             width: 1,
           },
           collisions: {
