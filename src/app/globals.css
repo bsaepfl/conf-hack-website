@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #162238;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #162238;
+    --foreground: #ffffff;
   }
 }
 
@@ -33,30 +33,31 @@ body {
   0% {
     background-position: -200% center;
   }
+
   100% {
     background-position: 200% center;
   }
 }
 
 .title-shine {
-  background-image: linear-gradient(
-    120deg,
-    #64748b 0%,
-    #475569 20%,
-    #334155 40%,
-    #1e293b 50%,
-    #334155 60%,
-    #475569 80%,
-    #64748b 100%
-  );
+  background-image: linear-gradient(120deg,
+      #64748b 0%,
+      #475569 20%,
+      #334155 40%,
+      #1e293b 50%,
+      #334155 60%,
+      #475569 80%,
+      #64748b 100%);
   background-size: 200% auto;
-  animation: titleShine 8s linear infinite; /* Slowed down from 4s to 8s */
+  animation: titleShine 8s linear infinite;
+  /* Slowed down from 4s to 8s */
   transition: all 0.3s ease;
   text-shadow: 0 0 10px rgba(30, 41, 59, 0.4);
 }
 
 .title-shine:hover {
-  animation: titleShine 4s linear infinite; /* Slowed down from 2s to 4s */
+  animation: titleShine 4s linear infinite;
+  /* Slowed down from 2s to 4s */
   text-shadow: 0 0 15px rgba(30, 41, 59, 0.5);
   letter-spacing: 0.5px;
 }
@@ -91,15 +92,13 @@ body {
   left: -1px;
   right: -1px;
   bottom: -1px;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.1)
-  );
+  background: linear-gradient(45deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1));
   border-radius: 16px;
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   mask-composite: exclude;
   pointer-events: none;
@@ -110,16 +109,16 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 .text-shadow {
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-

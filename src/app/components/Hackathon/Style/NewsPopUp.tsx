@@ -51,14 +51,14 @@ export const DiscoverButton = ({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-fit relative rounded-md uppercase bg-base-100 hover:bg-base-200 border border-black text-black font-medium hover:text-dark-100 duration-100 px-10 py-2"
+          className="w-fit relative rounded-md uppercase bg-base-100 hover:bg-base-300 border border-white text-white font-medium hover:text-white duration-100 px-10 py-2"
         >
           {title}
         </a>
       ) : (
         <Link
-          to={link}
-          className="w-fit relative rounded-md uppercase bg-black hover:bg-transparent border border-black text-dark-500 font-medium hover:text-dark-100 duration-100 px-10 py-2"
+          href={link || '#'}
+          className="w-fit relative rounded-md uppercase bg-white hover:bg-transparent border border-white text-black font-medium hover:text-white duration-100 px-10 py-2"
         >
           {ping ? (
             <span className="absolute -right-1 -top-1 flex h-[12px] w-[12px]">

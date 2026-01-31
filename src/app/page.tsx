@@ -26,7 +26,7 @@ export default function Hackathon() {
     <div className="flex flex-col min-h-screen">
       <StarsBackground />
       <NavbarH />
-      <main className="flex-grow flex-col flex items-center justify-center bg-base-200">
+      <main className="flex-grow flex-col flex items-center justify-center bg-base-100">
 
         <Hero />
 

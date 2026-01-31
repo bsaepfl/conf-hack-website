@@ -7,10 +7,10 @@ const FaqView = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center gap-20 bg-dark-800 relative">
       <div className="w-full max-w-[1100px] flex flex-col py-20 px-4 sm:px-10 gap-6 text-sm sm:text-base ">
-        <h2 className="w-full font-bold text-3xl sm:text-4xl text-black indent-2 pb-10">
+        <h2 className="w-full font-bold text-3xl sm:text-4xl text-white indent-2 pb-10">
           FAQ
         </h2>
-        <div className="p-2 bg-white rounded-lg">
+        <div className="p-2 bg-base-200/40 backdrop-blur-md rounded-lg">
           {faqQuestions.map((ques, index) => (
             <Disclosure
               as="div"
@@ -19,15 +19,14 @@ const FaqView = () => {
             >
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between gap-2 rounded-md duration-100 bg-white px-4 py-2 text-left font-medium text-black hover:bg-dark-800 focus:outline-none focus-visible:ring focus-visible:ring-dark-100 focus-visible:ring-opacity-75">
+                  <Disclosure.Button className="flex w-full justify-between gap-2 rounded-md duration-100 bg-base-100 px-4 py-2 text-left font-medium text-white hover:bg-base-300 focus:outline-none focus-visible:ring focus-visible:ring-dark-100 focus-visible:ring-opacity-75">
                     <span>{ques.question}</span>
                     <FiChevronUp
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-black shrink-0 `}
+                      className={`${open ? "rotate-180 transform" : ""
+                        } h-5 w-5 text-white shrink-0 `}
                     />
                   </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
+                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-white">
                     {ques.answer}
                   </Disclosure.Panel>
                 </>

@@ -9,15 +9,15 @@ const PrizeView = () => {
       />
       <div className="w-full max-w-[1100px] flex flex-col py-20 px-4 sm:px-10 gap-8 text-sm sm:text-base ">
         <h2 className="flex flex-col items-center justify-center gap-1 pb-10 sm:py-10">
-          <span className=" font-extrabold text-6xl sm:text-7xl l²g:text-9xl text-gray-700 select-none">
+          <span className=" font-extrabold text-6xl sm:text-7xl l²g:text-9xl text-gray-200 select-none">
             $20,000
           </span>
-          <span className="text-black text-2xl sm:text-3xl lg:text-4xl font-medium">
+          <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-medium">
             Available in prizes
           </span>
         </h2>
 
-        <p className="w-full max-w-[1100px] text-black">
+        <p className="w-full max-w-[1100px] text-white">
           From <b className="font-semibold">DATES TBD</b>, we are welcoming
           builders from around the globe to participate in the Stablecoin & Payments Hackathon of the{" "}
           <b className="font-semibold">BSA</b> at EPFL, a

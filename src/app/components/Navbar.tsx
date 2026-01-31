@@ -35,8 +35,8 @@ const Navbar = () => {
   }, []);
 
   return (
-  <div className="navbar bg-secondary shadow-lg fixed top-0 z-50 font-semibold opacity-100 p-0 lg:p-4">
-    <div className="navbar-start">
+    <div className="navbar bg-secondary shadow-lg fixed top-0 z-50 font-semibold opacity-100 p-0 lg:p-4">
+      <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,7 +44,7 @@ const Navbar = () => {
             </svg>
           </label>
 
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52 gap-6 text-black">
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52 gap-6 text-white">
             <li><button onClick={() => scrollToSection('manifesto')} className='text-l font-bold bg-clip-text'>Manifesto</button></li>
             <li><button onClick={() => scrollToSection('sponsors')} className='text-l font-bold bg-clip-text'>Sponsors</button></li>
             <li><button onClick={() => scrollToSection('panels')} className='text-l font-bold bg-clip-text'>Panels</button></li>
@@ -58,8 +58,8 @@ const Navbar = () => {
           <Image width={50} height={50} src="/images/logo.png" alt="BSA Logo" />
         </Link>
 
-    </div>
-      
+      </div>
+
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-white gap-2 lg:gap-4">
 
@@ -68,23 +68,23 @@ const Navbar = () => {
           <li><button onClick={() => scrollToSection('panels')} className='text-l font-bold bg-clip-text'>Panels</button></li>
           <li><button onClick={() => scrollToSection('speakers')} className='text-l font-bold bg-clip-text'>Speakers</button></li>
           <li><button onClick={() => scrollToSection('agenda')} className='text-l font-bold bg-clip-text'>Schedule</button></li>
-          <li><button onClick={() => scrollToSection('more')} className='text-l font-bold bg-clip-text'>More</button></li> 
+          <li><button onClick={() => scrollToSection('more')} className='text-l font-bold bg-clip-text'>More</button></li>
 
         </ul>
       </div>
-      
+
       <div className="navbar-end gap-2 mr-2 sm:justify-between">
-  <a className='p-1 rounded-lg text-white bg-primary text-sm'>
-    Conference
-  </a>
-  <Link 
-    href="/hackathon" 
-    className={`p-1 hover:bg-blue-200 bg-info rounded-lg text-black text-sm ${annimActive ? 'annim' : ''}`}
-  >
-    Hackathon
-  </Link>
-  <Link href="/register" className="btn btn-sm">Register</Link>
-</div>
+        <a className='p-1 rounded-lg text-white bg-primary text-sm'>
+          Conference
+        </a>
+        <Link
+          href="/hackathon"
+          className={`p-1 hover:bg-blue-200 bg-info rounded-lg text-black text-sm ${annimActive ? 'annim' : ''}`}
+        >
+          Hackathon
+        </Link>
+        <Link href="/register" className="btn btn-sm">Register</Link>
+      </div>
 
 
     </div>

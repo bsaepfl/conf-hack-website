@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({
     </>
   ),
   description = (
-    <p className="text-black max-w-[500px] mb-2 font-normal text-center">
+    <p className="text-white max-w-[500px] mb-2 font-normal text-center">
       Participate in the {" "}
       <span className="font-semibold"> BSA Stablecoin & Payments Hackathon</span> at EPFL
       campus and compete for an outstanding{" "}
@@ -54,7 +54,7 @@ const Hero: React.FC<HeroProps> = ({
   }, []);
 
   return (
-    <div className="bg-dark-800 flex flex-col items-center justify-center py-16 md:py-20 font-semibold min-h-screen w-full relative">
+    <div className="flex flex-col items-center justify-center py-16 md:py-20 font-semibold min-h-screen w-full relative">
 
       {/* Centered content */}
       <div className="flex flex-col items-center w-full max-w-7xl px-4 gap-8 text-center flex-grow justify-center">
@@ -63,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({
             <SpinningCoin />
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-black text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold text-white text-center md:text-left">
             {title}
           </h1>
         </div>
@@ -73,7 +73,7 @@ const Hero: React.FC<HeroProps> = ({
           boxColor="border-dark-450"
         />
 
-        <p className="md:text-lg font-light text-black">
+        <p className="md:text-lg font-light text-white">
           {date}
         </p>
 
@@ -106,10 +106,10 @@ const Hero: React.FC<HeroProps> = ({
           onClick={goToPrizes}
           className="h-20 flex flex-col items-center justify-center px-4 group hover:opacity-80"
         >
-          <p className="text-sm sm:text-base md:text-lg font-light text-black uppercase">
+          <p className="text-sm sm:text-base md:text-lg font-light text-white uppercase">
             Discover
           </p>
-          <SlArrowDown className="group-hover:translate-y-[2px] duration-100 text-black" />
+          <SlArrowDown className="group-hover:translate-y-[2px] duration-100 text-white" />
         </button>
       </div>
     </div>

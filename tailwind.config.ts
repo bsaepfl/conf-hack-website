@@ -26,14 +26,14 @@ export default {
     themes: [
       {
         myCustomTheme: {
-          primary: "#000000",
-          secondary: "#71717a",
-          accent: "#52525b",
-          neutral: "#18181b",
-          "base-100": "#FAFAFA",
-          "base-200": "#E4E4E7",
-          "base-300": "#D4D4D8",
-          "base-content": "#000000",
+          primary: "#C0C0C0", // Silver
+          secondary: "#000000", // Black
+          accent: "#FFFFFF", // White
+          neutral: "#1A202C", // Dark Gray mostly for neutral backgrounds
+          "base-100": "#0f1013ff", // The requested Dark Blue background
+          "base-200": "#36393eff", // Slightly lighter for cards/sections
+          "base-300": "#253a5c", // Even lighter for specialized areas
+          "base-content": "#FFFFFF", // White text for readability
           info: '#e0e8f0',
           success: '#86e1b9',
           warning: '#fbbf24',

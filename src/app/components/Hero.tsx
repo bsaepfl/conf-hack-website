@@ -28,28 +28,28 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[75vh] w-full flex flex-col items-center justify-center bg-base-200">
+    <div className="relative min-h-[75vh] w-full flex flex-col items-center justify-center bg-transparent">
       <StarsBackground />
       <div className="relative z-10 flex flex-col items-center justify-center gap-8 px-4 h-screen">
-        
+
 
         <div className="text-center">
-  <h1 className="text-2xl md:text-6xl font-bold text-black ">BSA Blockchain Conference</h1>
-  <h1 className="text-xl font-bold text-black ">Privacy and Verifiability</h1>
-  <p className="sm:text-xl text-base mt-4 text-black">EPFL, March 7th</p>
-</div>
+          <h1 className="text-2xl md:text-6xl font-bold text-white ">BSA Blockchain Conference</h1>
+          <h1 className="text-xl font-bold text-white ">Privacy and Verifiability</h1>
+          <p className="sm:text-xl text-base mt-4 text-white">EPFL, March 7th</p>
+        </div>
 
 
         <div className="justify-center">
           <a href="/hackathon" className='p-4 hover:bg-blue-200 bg-primary rounded-lg text-white'>Check out the Hackathon</a>
         </div>
         <div>
-            <button className="btn btn-primary mt-6 padding-6 text-white" onClick={handleAddToCalendar}  
-              rel="noopener noreferrer" >Save the date</button>
-            <a className="btn btn-primary mt-6 ml-4 text-white" href="https://cryptpad.fr/form/#/2/form/view/VIi0a+XML51M6gBUfB484Tl+umj7stQfGVMGf-1AIFs/">Join as speaker</a>
-          </div>
-        
-          <RegisterComponentL />
+          <button className="btn btn-primary mt-6 padding-6 text-white" onClick={handleAddToCalendar}
+            rel="noopener noreferrer" >Save the date</button>
+          <a className="btn btn-primary mt-6 ml-4 text-white" href="https://cryptpad.fr/form/#/2/form/view/VIi0a+XML51M6gBUfB484Tl+umj7stQfGVMGf-1AIFs/">Join as speaker</a>
+        </div>
+
+        <RegisterComponentL />
       </div>
 
       <div id="manifesto">
@@ -61,10 +61,10 @@ const Hero = () => {
       </div>
 
       <div id="agenda" className="w-full max-w-7xl z-10">
-  
-          
-          <Schedule />
-        </div>
+
+
+        <Schedule />
+      </div>
 
       <div id="panels">
         <PanelsComponent />
@@ -75,8 +75,8 @@ const Hero = () => {
       </div>
 
       {/* <GrantsComponent /> */}
-      
-      
+
+
 
       <div id="more">
         <WhatComponent />
@@ -86,7 +86,7 @@ const Hero = () => {
       <br />
       <br />
 
-      
+
     </div>
   );
 };
