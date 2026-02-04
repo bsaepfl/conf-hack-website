@@ -14,6 +14,7 @@ import ThankView from '../components/Hackathon/ThankView';
 import GrantView from '../components/Hackathon/GrantView';
 import SpeakersComponent from '../components/SpeakersComponent/SpeakersComponent';
 import bsaLogo from '../components/Hackathon/images/icons/logo_light.png';
+import LumaEmbed from '../components/LumaEmbed';
 
 export default function Conference() {
     return (
@@ -42,6 +43,14 @@ export default function Conference() {
                         </p>
                     }
                 />
+
+                <div id="register" className="w-full">
+                    <LumaEmbed
+                        eventId="evt-CJf7KtWdVOHFx8q"
+                        title="Register for the Conference"
+                        description="Secure your spot at the BSA Stablecoin & Payments Conference. Registration is free and open to all."
+                    />
+                </div>
 
                 {/* <div id="apply" className="w-full">
           <ApplyView />
