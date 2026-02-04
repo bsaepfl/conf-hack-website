@@ -42,6 +42,9 @@ export default function Conference() {
                             Engage with industry leaders and explore the future of payments.
                         </p>
                     }
+                    showCalendar={false}
+                    showDate={false}
+                    showDiscoverButton={false}
                 />
 
                 <div id="register" className="w-full">

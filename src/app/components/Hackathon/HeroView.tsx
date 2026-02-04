@@ -11,6 +11,9 @@ interface HeroProps {
   title?: React.ReactNode;
   description?: React.ReactNode;
   date?: string;
+  showCalendar?: boolean;
+  showDate?: boolean;
+  showDiscoverButton?: boolean;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -35,6 +38,9 @@ const Hero: React.FC<HeroProps> = ({
     </p>
   ),
   date = "DATES TBD — EPFL CAMPUS",
+  showCalendar = true,
+  showDate = true,
+  showDiscoverButton = true,
 }) => {
   const goToPrizes = () => {
     document.getElementById("Prizes")?.scrollIntoView({
@@ -73,45 +79,51 @@ const Hero: React.FC<HeroProps> = ({
           boxColor="border-dark-450"
         />
 
-        <p className="md:text-lg font-light text-white">
-          {date}
-        </p>
+        {showDate && (
+          <p className="md:text-lg font-light text-white">
+            {date}
+          </p>
+        )}
 
         {/* Register Window */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full max-w-md bg-base-100 backdrop-blur-md rounded-xl p-3 shadow-lg"
-        >
-          <div className="relative w-full aspect-[4/3] min-h-[260px]">
-            <iframe
-              src="https://lu.ma/embed/calendar/cal-KuAvNkii7TFKkpK/events"
-              width="100%"
-              height="100%"
-              className="absolute inset-0 w-full h-full rounded-lg"
-              style={{ border: "1px solid rgba(191, 203, 218, 0.4)" }}
-              allowFullScreen
-              aria-hidden="false"
-              tabIndex={0}
-            />
-          </div>
-        </motion.div>
+        {showCalendar && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full max-w-md bg-base-100 backdrop-blur-md rounded-xl p-3 shadow-lg"
+          >
+            <div className="relative w-full aspect-[4/3] min-h-[260px]">
+              <iframe
+                src="https://lu.ma/embed/calendar/cal-KuAvNkii7TFKkpK/events"
+                width="100%"
+                height="100%"
+                className="absolute inset-0 w-full h-full rounded-lg"
+                style={{ border: "1px solid rgba(191, 203, 218, 0.4)" }}
+                allowFullScreen
+                aria-hidden="false"
+                tabIndex={0}
+              />
+            </div>
+          </motion.div>
+        )}
       </div>
 
       {/* Discover button (pinned lower but not forcing push-up) */}
-      <div className="mt-12">
-        <button
-          type="button"
-          onClick={goToPrizes}
-          className="h-20 flex flex-col items-center justify-center px-4 group hover:opacity-80"
-        >
-          <p className="text-sm sm:text-base md:text-lg font-light text-white uppercase">
-            Discover
-          </p>
-          <SlArrowDown className="group-hover:translate-y-[2px] duration-100 text-white" />
-        </button>
-      </div>
+      {showDiscoverButton && (
+        <div className="mt-12">
+          <button
+            type="button"
+            onClick={goToPrizes}
+            className="h-20 flex flex-col items-center justify-center px-4 group hover:opacity-80"
+          >
+            <p className="text-sm sm:text-base md:text-lg font-light text-white uppercase">
+              Discover
+            </p>
+            <SlArrowDown className="group-hover:translate-y-[2px] duration-100 text-white" />
+          </button>
+        </div>
+      )}
     </div>
 
   );
