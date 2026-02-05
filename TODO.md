@@ -9,7 +9,7 @@ This document tracks missing features, placeholder data, and required updates.
   - File: src/app/hackathon/page.tsx
 
 ## Speakers
-- [ ] Update Speaker Data: Update the list of hardcoded speakers with confirmed ones.
+- [ ] Update Speaker Data: Update the list of hardcoded speakers with confirmed ones. (TODO UPDATE AS SOON AS SPEAKERS CONFIRM)
   - File: src/app/components/SpeakersComponent/SpeakersComponent.tsx
 - [ ] "Apply as Speaker" Button: Link this button to an application form.
   - File: src/app/components/SpeakersComponent/SpeakersComponent.tsx
