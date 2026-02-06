@@ -17,7 +17,7 @@ const PrizeView = () => {
           </span>
         </h2>
 
-        <p className="w-full max-w-[1100px] text-white">
+        <p className="w-full max-w-[1100px] text-white text-center sm:text-left">
           From <b className="font-semibold">DATES TBD</b>, we are welcoming
           builders from around the globe to participate in the Stablecoin & Payments Hackathon of the{" "}
           <b className="font-semibold">BSA</b> at EPFL, a

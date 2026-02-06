@@ -338,7 +338,7 @@ const speakersData = [
 
 const SpeakersComponent = () => {
   return (
-    <main className="relative z-10 flex-grow flex flex-col items-center justify-center pt-28 pb-12 px-4 sm:px-6 lg:px-8">
+    <section className="relative z-10 w-full flex flex-col items-center justify-center pt-28 pb-12 px-4 sm:px-6 lg:px-8">
       {/* Title Section */}
       <h1 className="
         text-4xl 
@@ -364,7 +364,7 @@ const SpeakersComponent = () => {
       <button className="btn btn-primary bg-base-100 btn-wide text-white transform transition-transform duration-300 hover:scale-105 active:scale-95 mt-12">
         Apply as speaker
       </button>
-    </main>
+    </section>
   );
 };
 

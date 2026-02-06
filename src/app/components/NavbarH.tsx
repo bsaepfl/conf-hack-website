@@ -16,7 +16,7 @@ const scrollToSection = (id: string) => {
 
 const NavbarH = () => {
   return (
-    <div className="navbar bg-secondary shadow-lg fixed top-0 z-50  font-semibold opacity-100">
+    <div className="navbar bg-secondary shadow-lg fixed top-0 left-0 w-full z-50 font-semibold px-2 md:px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

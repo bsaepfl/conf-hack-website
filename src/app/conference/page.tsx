@@ -19,23 +19,24 @@ import Countdown from '../components/Countdown';
 
 export default function Conference() {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
             <StarsBackground />
             <NavbarH />
-            <main className="flex-grow flex-col flex items-center justify-center">
+            <main className="flex-grow flex flex-col items-center justify-center w-full overflow-x-hidden">
 
                 <Hero
                     title={
-                        <>
-                            BSA Conference
-                            <img
-                                src={bsaLogo.src}
-                                alt="BSA Logo"
-                                className="h-8 md:h-14 inline-block object-contain align-middle px-2 pb-2"
-                            />
-                            <br />
-                            Stablecoin & Payments
-                        </>
+                        <span className="flex flex-col items-center gap-2">
+                            <span className="flex items-center justify-center gap-2 flex-wrap">
+                                BSA Conference
+                                <img
+                                    src={bsaLogo.src}
+                                    alt="BSA Logo"
+                                    className="h-8 md:h-14 object-contain"
+                                />
+                            </span>
+                            <span className="text-center">Stablecoin & Payments</span>
+                        </span>
                     }
                     description={
                         <p className="text-base-content max-w-[500px] mb-2 font-normal text-center">
