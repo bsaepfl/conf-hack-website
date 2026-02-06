@@ -170,18 +170,29 @@ const ScheduleView: React.FC = () => {
     );
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 relative z-[2] py-10 rounded-xl">
-            <br />
-            <h2 className="w-full font-bold text-3xl sm:text-4xl text-white text-center md:text-left md:indent-2 pb-10">
-                Schedule
-            </h2>
+        <div className="w-full max-w-5xl mx-auto px-4 relative z-[2] py-16 rounded-xl">
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+                <div>
+                    <span className="text-sm font-bold tracking-widest uppercase" style={{ color: '#7c6bb4' }}>
+                        Agenda
+                    </span>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-white mt-1">
+                        Event Schedule
+                    </h2>
+                </div>
+            </div>
+
+            {/* Tabs */}
             <Tab.Group onChange={(index) => setSelectedDay(navigationEvent[index])}>
-                <Tab.List className="flex space-x-2 bg-base-100 backdrop-blur-md rounded-xl p-2 shadow-sm">
+                <Tab.List className="flex gap-1 bg-white/[0.03] backdrop-blur-md rounded-xl p-1.5 border border-white/[0.06] mb-6 overflow-x-auto">
                     {navigationEvent.map((day) => (
                         <Tab
                             key={day.date}
                             className={({ selected }) =>
-                                `px-4 py-2 rounded-lg transition-colors font-medium ${selected ? 'bg-white/90 text-black shadow-sm' : 'text-gray-400 hover:bg-white/10'
+                                `whitespace-nowrap px-4 py-2.5 rounded-lg transition-all font-medium text-sm ${selected
+                                    ? 'bg-[#7c6bb4] text-white shadow-lg shadow-purple-500/20'
+                                    : 'text-white/40 hover:text-white/70 hover:bg-white/[0.05]'
                                 }`
                             }
                         >
@@ -189,11 +200,11 @@ const ScheduleView: React.FC = () => {
                         </Tab>
                     ))}
                 </Tab.List>
-                <Tab.Panels className="mt-4">
+                <Tab.Panels>
                     {navigationEvent.map((day) => (
                         <Tab.Panel key={day.date}>
                             {currentDaySchedule.length > 0 ? (
-                                <ul className="bg-white/80 backdrop-blur-md rounded-xl divide-y divide-gray-200/50">
+                                <ul className="flex flex-col gap-3">
                                     {currentDaySchedule.map((event, index) => (
                                         <ScheduleEvent
                                             key={`${day.date}-${index}`}
@@ -203,7 +214,7 @@ const ScheduleView: React.FC = () => {
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="text-gray-400 text-center py-8 bg-white/10 backdrop-blur-md rounded-xl">
+                                <p className="text-white/40 text-center py-12 bg-white/[0.03] border border-white/[0.06] rounded-xl">
                                     No events scheduled for this day
                                 </p>
                             )}
@@ -211,7 +222,6 @@ const ScheduleView: React.FC = () => {
                     ))}
                 </Tab.Panels>
             </Tab.Group>
-            <br />
         </div>
     );
 };

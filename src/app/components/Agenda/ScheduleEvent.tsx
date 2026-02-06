@@ -7,18 +7,33 @@ import {
 import { ScheduleEventType } from '@/types/ScheduleTypes';
 
 const icons: { [key: string]: React.ReactNode } = {
-    meal: <Pizza className="w-7 h-7" />,
-    team: <Users className="w-7 h-7" />,
-    snacks: <Coffee className="w-7 h-7" />,
-    code: <CodeIcon className="w-7 h-7" />,
-    workshop: <Laptop className="w-7 h-7" />,
-    breakfast: <Sunrise className="w-7 h-7" />,
-    ceremonyClose: <Award className="w-7 h-7" />,
-    ceremonyOpen: <PartyPopper className="w-7 h-7" />,
-    judging: <Trophy className="w-7 h-7" />,
-    presentation: <PresentationIcon className="w-7 h-7" />,
-    projectSubmission: <Upload className="w-7 h-7" />,
-    registration: <ClipboardList className="w-7 h-7" />
+    meal: <Pizza className="w-5 h-5" />,
+    team: <Users className="w-5 h-5" />,
+    snacks: <Coffee className="w-5 h-5" />,
+    code: <CodeIcon className="w-5 h-5" />,
+    workshop: <Laptop className="w-5 h-5" />,
+    breakfast: <Sunrise className="w-5 h-5" />,
+    ceremonyClose: <Award className="w-5 h-5" />,
+    ceremonyOpen: <PartyPopper className="w-5 h-5" />,
+    judging: <Trophy className="w-5 h-5" />,
+    presentation: <PresentationIcon className="w-5 h-5" />,
+    projectSubmission: <Upload className="w-5 h-5" />,
+    registration: <ClipboardList className="w-5 h-5" />
+};
+
+const badgeConfig: { [key: string]: { label: string; color: string } } = {
+    meal: { label: 'BREAK', color: 'bg-amber-500/20 text-amber-400 border-amber-500/30' },
+    snacks: { label: 'BREAK', color: 'bg-amber-500/20 text-amber-400 border-amber-500/30' },
+    breakfast: { label: 'BREAK', color: 'bg-amber-500/20 text-amber-400 border-amber-500/30' },
+    workshop: { label: 'WORKSHOP', color: 'bg-green-500/20 text-green-400 border-green-500/30' },
+    code: { label: 'HACKING', color: 'bg-blue-500/20 text-blue-400 border-blue-500/30' },
+    ceremonyOpen: { label: 'CEREMONY', color: 'bg-purple-500/20 text-purple-400 border-purple-500/30' },
+    ceremonyClose: { label: 'CEREMONY', color: 'bg-purple-500/20 text-purple-400 border-purple-500/30' },
+    judging: { label: 'JUDGING', color: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' },
+    presentation: { label: 'TALK', color: 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30' },
+    projectSubmission: { label: 'SUBMISSION', color: 'bg-orange-500/20 text-orange-400 border-orange-500/30' },
+    registration: { label: 'REGISTRATION', color: 'bg-slate-500/20 text-slate-400 border-slate-500/30' },
+    team: { label: 'TEAM', color: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30' },
 };
 
 interface ScheduleEventProps {
@@ -27,28 +42,52 @@ interface ScheduleEventProps {
 }
 
 const ScheduleEvent: React.FC<ScheduleEventProps> = ({ event, isCurrentEvent }) => {
+    const hours = event.date.getHours();
+    const minutes = event.date.getMinutes();
+    const isPM = hours >= 12;
+    const displayHour = hours.toString().padStart(2, '0');
+    const displayMin = minutes.toString().padStart(2, '0');
+    const badge = badgeConfig[event.icon] || { label: 'EVENT', color: 'bg-white/10 text-white/70 border-white/20' };
+    const isCurrent = isCurrentEvent(event);
+
     return (
-        <li className="flex flex-row divide-x text-black py-2 sm:py-3">
-            <div className="flex flex-col lg:flex-row items-start w-[70px] lg:w-32 justify-center lg:justify-between font-semibold px-3 lg:px-4 py-1 sm:py-3 relative flex-shrink-0">
-                <span>
-                    {`${event.date.getHours().toString().padStart(2, "0")}:${event.date
-                        .getMinutes()
-                        .toString()
-                        .padStart(2, "0")}`}
+        <li className={`relative flex items-center gap-4 sm:gap-6 px-4 sm:px-6 py-5 rounded-xl border transition-colors ${isCurrent ? 'bg-white/[0.06] border-purple-500/40' : 'bg-white/[0.03] border-white/[0.06] hover:bg-white/[0.05]'}`}>
+            {/* Current event indicator */}
+            {isCurrent && (
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 rounded-r-full bg-green-400" />
+            )}
+
+            {/* Time */}
+            <div className="flex flex-col items-center flex-shrink-0 w-16 sm:w-20">
+                <span className="text-2xl sm:text-3xl font-bold" style={{ color: '#7c6bb4' }}>
+                    {displayHour}:{displayMin}
                 </span>
-                <span className={event.duration ? "opacity-50 select-none" : "opacity-0 select-none"}>
-                    {`${event.duration}hr`}
+                <span className="text-xs text-white/40 font-medium uppercase">
+                    {isPM ? 'PM' : 'AM'}
                 </span>
-                {isCurrentEvent(event) && (
-                    <>
-                        <div className="bg-green-500 w-3 h-3 rounded-full absolute -left-[18px] top-[18px] animate-ping" />
-                        <div className="bg-green-400 w-3 h-3 rounded-full absolute -left-[18px] top-[18px]" />
-                    </>
-                )}
             </div>
-            <div className="flex flex-row items-start sm:items-center lg:items-start gap-4 w-full px-4 py-1 sm:py-3 flex-1">
-                <span className="hidden sm:flex -mt-1">{icons[event.icon]}</span>
-                <h3 className="font-bold text-sm sm:text-base">{event.name}</h3>
+
+            {/* Divider */}
+            <div className="w-px h-10 bg-white/10 flex-shrink-0 hidden sm:block" />
+
+            {/* Content */}
+            <div className="flex flex-col gap-1.5 flex-1 min-w-0">
+                <div className="flex items-center gap-2 flex-wrap">
+                    <span className={`text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-md border ${badge.color}`}>
+                        {badge.label}
+                    </span>
+                    {event.duration ? (
+                        <span className="text-xs text-white/30">{event.duration}h</span>
+                    ) : null}
+                </div>
+                <h3 className="text-sm sm:text-base font-semibold text-white truncate">
+                    {event.name}
+                </h3>
+            </div>
+
+            {/* Icon */}
+            <div className="flex-shrink-0 text-white/20">
+                {icons[event.icon]}
             </div>
         </li>
     );
