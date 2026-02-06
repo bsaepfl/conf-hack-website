@@ -348,7 +348,7 @@ const SpeakersComponent = () => {
         font-serif
         text-base-content
       ">
-        SPEAKERS
+        Meet the Speakers
       </h1>
 
       {/* Grid Section */}

@@ -12,6 +12,7 @@ import LocationView from './components/Hackathon/LocationView';
 import FaqView from './components/Hackathon/FaqView';
 import RulesView from './components/Hackathon/RulesView';
 import StarsBackground from './components/StarsBackground';
+import Countdown from './components/Countdown';
 import ScheduleView from './components/Agenda/ScheduleView';
 import ThankView from './components/Hackathon/ThankView';
 import GrantView from './components/Hackathon/GrantView';
@@ -29,6 +30,8 @@ export default function Hackathon() {
       <main className="flex-grow flex-col flex items-center justify-center bg-base-100">
 
         <Hero />
+
+        <Countdown />
 
         {/* <div id="apply" className="w-full">
           <ApplyView />

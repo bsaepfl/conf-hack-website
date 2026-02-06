@@ -66,7 +66,7 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ speaker }) => {
                 rotateX,
                 transformStyle: "preserve-3d",
             }}
-            className="card bg-base-200/40 backdrop-blur-md text-base-content shadow-md p-6 flex flex-col items-start space-y-4 h-auto relative overflow-hidden group"
+            className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-md group"
         >
             {/* Reflective Sheen Overlay */}
             <motion.div
@@ -75,37 +75,26 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ speaker }) => {
                         [sheenX, sheenY],
                         ([x, y]) => `radial-gradient(circle at ${x} ${y}, rgba(255,255,255,0.2) 0%, transparent 60%)`
                     ),
-                    zIndex: 10,
+                    zIndex: 30,
                 }}
                 className="absolute inset-0 pointer-events-none mix-blend-overlay"
             />
 
-            <div
-                style={{
-                    transform: "translateZ(50px)",
-                    transformStyle: "preserve-3d",
-                }}
-                className="avatar flex justify-center w-full z-20"
-            >
-                <div className="w-48 h-48 rounded-full overflow-hidden mx-auto mb-4 bg-black/10">
-                    <Image
-                        src={speaker.image}
-                        alt={speaker.name}
-                        width={200}
-                        height={200}
-                        className="object-cover"
-                    />
-                </div>
-            </div>
+            {/* Speaker Photo */}
+            <Image
+                src={speaker.image}
+                alt={speaker.name}
+                fill
+                className="object-cover"
+            />
 
-            <div
-                style={{
-                    transform: "translateZ(30px)",
-                }}
-                className="text-left z-20"
-            >
-                <h2 className="card-title text-xl mb-2">{speaker.name}</h2>
-                <p className="text-sm text-base-content mb-4">
+            {/* Bottom gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
+
+            {/* Speaker info */}
+            <div className="absolute bottom-0 left-0 p-5 z-20">
+                <h2 className="text-xl font-bold text-white">{speaker.name}</h2>
+                <p className="text-sm" style={{ color: '#b4a0d4' }}>
                     {speaker.description}
                 </p>
             </div>

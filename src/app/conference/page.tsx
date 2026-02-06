@@ -15,6 +15,7 @@ import GrantView from '../components/Hackathon/GrantView';
 import SpeakersComponent from '../components/SpeakersComponent/SpeakersComponent';
 import bsaLogo from '../components/Hackathon/images/icons/logo_light.png';
 import LumaEmbed from '../components/LumaEmbed';
+import Countdown from '../components/Countdown';
 
 export default function Conference() {
     return (
@@ -46,6 +47,8 @@ export default function Conference() {
                     showDate={false}
                     showDiscoverButton={false}
                 />
+
+                <Countdown />
 
                 <div id="register" className="w-full">
                     <LumaEmbed
