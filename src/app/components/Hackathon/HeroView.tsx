@@ -18,16 +18,17 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({
   title = (
-    <>
-      BSA Hackathon
-      <img
-        src={bsaLogo.src}
-        alt="BSA Logo"
-        className="h-8 md:h-14 inline-block object-contain align-middle px-2 pb-2"
-      />
-      <br />
-      Stablecoin & Payments
-    </>
+    <span className="flex flex-col items-center gap-2">
+      <span className="flex items-center justify-center gap-2 flex-wrap">
+        BSA Hackathon
+        <img
+          src={bsaLogo.src}
+          alt="BSA Logo"
+          className="h-8 md:h-14 object-contain"
+        />
+      </span>
+      <span className="text-center">Stablecoin & Payments</span>
+    </span>
   ),
   description = (
     <p className="text-white max-w-[500px] mb-2 font-normal text-center">
@@ -69,7 +70,7 @@ const Hero: React.FC<HeroProps> = ({
             <SpinningCoin />
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white text-center md:text-left">
+          <h1 className="text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center md:text-left px-4 break-words">
             {title}
           </h1>
         </div>

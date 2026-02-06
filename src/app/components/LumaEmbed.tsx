@@ -1,15 +1,15 @@
 'use client';
 
 interface LumaEmbedProps {
-    eventId: string;
-    title?: string;
-    description?: string;
+  eventId: string;
+  title?: string;
+  description?: string;
 }
 
 export default function LumaEmbed({ eventId, title, description }: LumaEmbedProps) {
-    return (
-        <div className="w-full py-16 px-4">
-            <style jsx>{`
+  return (
+    <div className="w-full py-16 px-4">
+      <style jsx>{`
         .luma-embed-container {
           position: relative;
           padding: 2px;
@@ -50,34 +50,34 @@ export default function LumaEmbed({ eventId, title, description }: LumaEmbedProp
         }
       `}</style>
 
-            <div className="max-w-4xl mx-auto">
-                {title && (
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-base-content">
-                        {title}
-                    </h2>
-                )}
-                {description && (
-                    <p className="text-center text-base-content/80 mb-8 max-w-2xl mx-auto">
-                        {description}
-                    </p>
-                )}
-                <div className="flex justify-center">
-                    <div className="luma-embed-container w-full max-w-[600px]">
-                        <div className="luma-embed-inner">
-                            <iframe
-                                src={`https://luma.com/embed/event/${eventId}/simple`}
-                                width="600"
-                                height="450"
-                                frameBorder="0"
-                                allow="fullscreen; payment"
-                                aria-hidden="false"
-                                tabIndex={0}
-                                className="luma-iframe w-full"
-                            />
-                        </div>
-                    </div>
-                </div>
+      <div className="w-full max-w-4xl mx-auto">
+        {title && (
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-base-content">
+            {title}
+          </h2>
+        )}
+        {description && (
+          <p className="text-center text-base-content/80 mb-8 max-w-2xl mx-auto">
+            {description}
+          </p>
+        )}
+        <div className="flex justify-center">
+          <div className="luma-embed-container w-full max-w-[600px]">
+            <div className="luma-embed-inner">
+              <iframe
+                src={`https://luma.com/embed/event/${eventId}/simple`}
+                width="600"
+                height="450"
+                frameBorder="0"
+                allow="fullscreen; payment"
+                aria-hidden="false"
+                tabIndex={0}
+                className="luma-iframe w-full"
+              />
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }

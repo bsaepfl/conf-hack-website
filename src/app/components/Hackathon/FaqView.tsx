@@ -7,7 +7,7 @@ const FaqView = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center gap-20 bg-dark-800 relative">
       <div className="w-full max-w-[1100px] flex flex-col py-20 px-4 sm:px-10 gap-6 text-sm sm:text-base ">
-        <h2 className="w-full font-bold text-3xl sm:text-4xl text-white indent-2 pb-10">
+        <h2 className="w-full font-bold text-3xl sm:text-4xl text-white text-center md:text-left md:indent-2 pb-10">
           FAQ
         </h2>
         <div className="p-2 bg-base-200/40 backdrop-blur-md rounded-lg">

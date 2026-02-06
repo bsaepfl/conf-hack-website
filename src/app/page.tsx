@@ -23,10 +23,10 @@ import GrantView from './components/Hackathon/GrantView';
 
 export default function Hackathon() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
       <StarsBackground />
       <NavbarH />
-      <main className="flex-grow flex-col flex items-center justify-center bg-base-100">
+      <main className="flex-grow flex flex-col items-center justify-center bg-base-100 w-full overflow-x-hidden">
 
         <Hero />
 

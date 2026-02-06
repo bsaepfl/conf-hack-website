@@ -5,7 +5,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 const StarsBackground = () => {
-  const particlesInit = async (engine) => {
+  const particlesInit = async (engine: any) => {
     await loadFull(engine);
   };
 
@@ -34,27 +34,27 @@ const StarsBackground = () => {
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 2, // Minimum push quantity
             },
             repulse: {
-              distance: 50, // Reduced repulse distance
+              distance: 50,
               speed: 0.1
             },
           },
         },
         particles: {
           color: {
-            value: "#4a4a4a", // Gray
+            value: "#4a4a4a",
           },
           links: {
             color: "#4a4a4a",
             distance: 150,
             enable: true,
-            opacity: 0.1, // Reduced opacity
+            opacity: 0.1,
             width: 1,
           },
           collisions: {
-            enable: true,
+            enable: false,
           },
           move: {
             direction: "none",
@@ -63,7 +63,7 @@ const StarsBackground = () => {
               default: "bounce",
             },
             random: false,
-            speed: 0.5, // Slower particle speed
+            speed: 0.5,
             straight: false,
           },
           number: {
@@ -72,6 +72,7 @@ const StarsBackground = () => {
               area: 400,
             },
             value: 40,
+            limit: 80, // Total threshold of particles
           },
           opacity: {
             value: 0.1,
