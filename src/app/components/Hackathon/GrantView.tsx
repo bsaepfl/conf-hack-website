@@ -18,10 +18,10 @@ const GrantView = () => {
 
         {/* Right: Content */}
         <div className="w-full lg:w-1/2 flex flex-col gap-6">
-          <h2 className="w-full font-bold text-3xl sm:text-4xl text-white indent-2 pb-2">
+          <h2 className="w-full font-bold text-3xl sm:text-4xl text-white text-center md:text-left md:indent-2 pb-2">
             Amenities
           </h2>
-          <p>
+          <p className="items-center lg:items-start text-center lg:text-left">
             <BsArrowRight className="inline" /> Free registration, absolutely{" "}
             <span className="font-semibold text-blue-400">
               no cost for participants
