@@ -5,135 +5,142 @@ import ScheduleEvent from './ScheduleEvent';
 
 const navigationEvent: DayProps[] = [
     {
-        label: "Thu, 11 Sep",
-        date: "2025-09-11",
+        label: "Thu, 26 Feb",
+        date: "2026-02-26",
         description: "Workshop 1 - TBA"
     },
     {
-        label: "Thu, 18 Sep",
-        date: "2025-09-18",
+        label: "Thu, 5 Mar",
+        date: "2026-03-05",
         description: "Workshop 2 - TBA"
     },
     {
-        label: "Thu, 25 Sep",
-        date: "2025-09-25",
+        label: "Thu, 12 Mar",
+        date: "2026-03-12",
         description: "Workshop 3 - TBA"
     },
     {
-        label: "Sat, 27 Sep",
-        date: "2025-09-27",
-        description: "Day 1"
+        label: "Fri, 20 Mar",
+        date: "2026-03-20",
+        description: "Conference"
     },
     {
-        label: "Sun, 28 Sep",
-        date: "2025-09-28",
-        description: "Day 2"
+        label: "Sat, 21 Mar",
+        date: "2026-03-21",
+        description: "Hackathon Day 1"
+    },
+    {
+        label: "Sun, 22 Mar",
+        date: "2026-03-22",
+        description: "Hackathon Day 2"
     },
 
 ];
 
 const schedule: ScheduleEventType[] = [
     {
-        date: new Date("2025-09-11T17:00:00"),
+        date: new Date("2026-02-26T17:00:00"),
         name: "Workshop 1 - TBA",
         icon: "workshop",
         duration: 3,
-        value: "2025-09-11"
+        value: "2026-02-26"
     },
     {
-        date: new Date("2025-09-18T17:00:00"),
+        date: new Date("2026-03-05T17:00:00"),
         name: "Workshop 2 - TBA",
         icon: "workshop",
         duration: 3,
-        value: "2025-09-18"
+        value: "2026-03-05"
     },
     {
-        date: new Date("2025-09-25T17:00:00"),
+        date: new Date("2026-03-12T17:00:00"),
         name: "Workshop 3 - TBA",
         icon: "workshop",
         duration: 3,
-        value: "2025-09-25"
+        value: "2026-03-12"
     },
 
-    // Day 1 (Sep 27, 2025)
+    // Conference (Mar 20, 2026)
+
+    // Hackathon Day 1 (Mar 21, 2026)
     {
-        date: new Date("2025-09-27T08:30:00"),
+        date: new Date("2026-03-21T08:30:00"),
         name: "Registration & Breakfast",
         icon: "breakfast",
         duration: 1.5,
-        value: "2025-09-27"
+        value: "2026-03-21"
     },
     {
-        date: new Date("2025-09-27T09:30:00"),
+        date: new Date("2026-03-21T09:30:00"),
         name: "Opening Ceremony",
         icon: "ceremonyOpen",
         duration: 0.25,
-        value: "2025-09-27"
+        value: "2026-03-21"
     },
     {
-        date: new Date("2025-09-27T10:00:00"),
+        date: new Date("2026-03-21T10:00:00"),
         name: "Hacking Starts",
         icon: "code",
         duration: 0,
-        value: "2025-09-27"
+        value: "2026-03-21"
     },
     {
-        date: new Date("2025-09-27T12:30:00"),
+        date: new Date("2026-03-21T12:30:00"),
         name: "Brunch",
         icon: "snacks",
         duration: 0.5,
-        value: "2025-09-27"
+        value: "2026-03-21"
     },
     {
-        date: new Date("2025-09-27T18:30:00"),
+        date: new Date("2026-03-21T18:30:00"),
         name: "Dinner",
         icon: "meal",
         duration: 1,
-        value: "2025-09-27"
+        value: "2026-03-21"
     },
 
-    // Day 2 (Sep 28, 2025)
+    // Hackathon Day 2 (Mar 22, 2026)
     {
-        date: new Date("2025-09-28T00:00:00"),
+        date: new Date("2026-03-22T00:00:00"),
         name: "Midnight Snack",
         icon: "snacks",
         duration: 1,
-        value: "2025-09-28"
+        value: "2026-03-22"
     },
     {
-        date: new Date("2025-09-28T07:00:00"),
+        date: new Date("2026-03-22T07:00:00"),
         name: "Breakfast",
         icon: "breakfast",
         duration: 2,
-        value: "2025-09-28"
+        value: "2026-03-22"
     },
     {
-        date: new Date("2025-09-28T13:00:00"),
+        date: new Date("2026-03-22T13:00:00"),
         name: "Hacking Ends",
         icon: "projectSubmission",
         duration: 0,
-        value: "2025-09-28"
+        value: "2026-03-22"
     },
     {
-        date: new Date("2025-09-28T13:00:00"),
+        date: new Date("2026-03-22T13:00:00"),
         name: "Lunch",
         icon: "meal",
         duration: 1,
-        value: "2025-09-28"
+        value: "2026-03-22"
     },
     {
-        date: new Date("2025-09-28T13:00:00"),
+        date: new Date("2026-03-22T13:00:00"),
         name: "Judging",
         icon: "judging",
         duration: 2,
-        value: "2025-09-28"
+        value: "2026-03-22"
     },
     {
-        date: new Date("2025-09-28T15:00:00"),
+        date: new Date("2026-03-22T15:00:00"),
         name: "Closing Ceremony & Awards",
         icon: "ceremonyClose",
         duration: 2,
-        value: "2025-09-28"
+        value: "2026-03-22"
     },
 ];
 

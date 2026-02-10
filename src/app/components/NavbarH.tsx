@@ -15,7 +15,7 @@ const scrollToSection = (id: string) => {
 const navLinks = [
   { label: 'Amenities', id: 'grant' },
   { label: 'Schedule', id: 'schedule' },
-  { label: 'Prize', id: 'prize' },
+  { label: 'Prizes', id: 'prize' },
   { label: 'Discover', id: 'discover' },
   { label: 'Location', id: 'location' },
   { label: 'FAQ', id: 'faq' },
