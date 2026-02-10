@@ -7,17 +7,17 @@ const navigationEvent: DayProps[] = [
     {
         label: "Thu, 11 Sep",
         date: "2025-09-11",
-        description: "Workshop 1 - Sui Overview & Installation"
+        description: "Workshop 1 - TBA"
     },
     {
         label: "Thu, 18 Sep",
         date: "2025-09-18",
-        description: "Workshop 2 - Move Language"
+        description: "Workshop 2 - TBA"
     },
     {
         label: "Thu, 25 Sep",
         date: "2025-09-25",
-        description: "Workshop 3 - Advanced Features (contract deployment, front-end integration, testing)"
+        description: "Workshop 3 - TBA"
     },
     {
         label: "Sat, 27 Sep",
@@ -35,21 +35,21 @@ const navigationEvent: DayProps[] = [
 const schedule: ScheduleEventType[] = [
     {
         date: new Date("2025-09-11T17:00:00"),
-        name: "Workshop 1 - Sui Overview & Installation",
+        name: "Workshop 1 - TBA",
         icon: "workshop",
         duration: 3,
         value: "2025-09-11"
     },
     {
         date: new Date("2025-09-18T17:00:00"),
-        name: "Workshop 2 - Move Language",
+        name: "Workshop 2 - TBA",
         icon: "workshop",
         duration: 3,
         value: "2025-09-18"
     },
     {
         date: new Date("2025-09-25T17:00:00"),
-        name: "Workshop 3 - Advanced Features (contract deployment, front-end integration, testing",
+        name: "Workshop 3 - TBA",
         icon: "workshop",
         duration: 3,
         value: "2025-09-25"

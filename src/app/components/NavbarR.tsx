@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import BSALogo from '../images/hero/BSALogo'
+import Image from 'next/image'
 
 
 
@@ -15,7 +15,7 @@ const Navbar = () => {
       
           
             <Link href="/">
-              <BSALogo  classname="w-full btn btn-ghost normal-case p-2" />
+              <Image src="/images/logo-white.png" alt="BSA Logo" width={50} height={50} className="w-full btn btn-ghost normal-case p-2" />
             </Link>
         </div>
       

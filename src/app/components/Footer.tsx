@@ -1,6 +1,5 @@
 // src/components/Footer.tsx
 import Link from 'next/link';
-import BSALogo from '../images/hero/BSALogo';
 import { FaTelegramPlane, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {

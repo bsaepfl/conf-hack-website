@@ -4,7 +4,7 @@ import { SlArrowDown } from "react-icons/sl";
 import BoxText from "./Style/BoxText";
 import { motion } from "framer-motion";
 import suiLogo from './images/icons/Sui_Logo_Sea.png';
-import bsaLogo from './images/icons/logo_light.png';
+const bsaLogo = { src: "/images/logo-white.png" };
 import SpinningCoin from "../SpinningCoin";
 
 interface HeroProps {
@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({
       <span className="font-semibold">$20,000</span> prize pool.
     </p>
   ),
-  date = "DATES TBD — EPFL CAMPUS",
+  date = "SATURDAY, MARCH 21 — EPFL CAMPUS",
   showCalendar = true,
   showDate = true,
   showDiscoverButton = true,

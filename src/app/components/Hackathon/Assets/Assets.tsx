@@ -268,12 +268,12 @@ export const faqQuestions: FaqType[] = [
   {
     question: "Where will I sleep?",
     answer:
-      "We have booked a youth hostel for foreign participants. If you are a local participant, you can go home to sleep. We will also have a quiet room for naps.",
+      "Mattresses and sleeping bags will be provided on campus for non-local participants. Local participants are welcome to head home, and a quiet room will be available for naps.",
   },
   {
     question: "Will my travel be reimbursed?",
     answer:
-      "There is a travel grant of 150 usdc available for non-local participants. To apply, please fill in the travel grant application form.",
+      "There is a travel grant of 100 usdc available for non-local participants. To apply, please fill in the travel grant application form.",
   },
   {
     question: "What if I don't have a team?",

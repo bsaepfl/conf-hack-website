@@ -13,7 +13,7 @@ import ScheduleView from '../components/Agenda/ScheduleView';
 import ThankView from '../components/Hackathon/ThankView';
 import GrantView from '../components/Hackathon/GrantView';
 import SpeakersComponent from '../components/SpeakersComponent/SpeakersComponent';
-import bsaLogo from '../components/Hackathon/images/icons/logo_light.png';
+const bsaLogo = { src: "/images/logo-white.png" };
 import LumaEmbed from '../components/LumaEmbed';
 import Countdown from '../components/Countdown';
 

@@ -33,7 +33,7 @@ const GrantView = () => {
             <BsArrowRight className="inline" /> For international students,
             accommodation will be provided during the event. <br />
             <BsArrowRight className="inline" /> You can also apply for a{" "}
-            <span className="font-semibold text-blue-400">$150 travel grant</span>{" "}
+            <span className="font-semibold text-blue-400">$100 travel grant</span>{" "}
             to help with transportation costs.
           </p>
         </div>

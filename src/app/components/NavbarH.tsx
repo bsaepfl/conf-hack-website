@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import BSALogo from '../images/hero/BSALogo'
+import Image from 'next/image'
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
@@ -28,7 +28,7 @@ const NavbarH = () => {
 
         {/* Left: Logo */}
         <Link href="/" className="flex-shrink-0">
-          <BSALogo classname="h-10 md:h-12 w-auto" />
+          <Image src="/images/logo-white.png" alt="BSA Logo" width={48} height={48} className="h-10 md:h-12 w-auto" />
         </Link>
 
         {/* Center: Nav links (desktop) */}

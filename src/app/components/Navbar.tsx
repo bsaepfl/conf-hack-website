@@ -55,7 +55,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link href="/" >
-          <Image width={50} height={50} src="/images/logo.png" alt="BSA Logo" />
+          <Image width={50} height={50} src="/images/logo-white.png" alt="BSA Logo" />
         </Link>
 
       </div>

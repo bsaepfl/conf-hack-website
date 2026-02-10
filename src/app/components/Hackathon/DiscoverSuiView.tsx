@@ -2,7 +2,7 @@ import React from "react";
 import EventCard from "./Style/EventCard";
 import { DiscoverButton } from "./Style/NewsPopUp";
 import suiImage from "./images/icons/Sui_Symbol_Sea.png"; // <-- adjust path if needed
-import bsaLogo from "./images/icons/logo_light.png";
+const bsaLogo = { src: "/images/logo-white.png" };
 
 const DiscoverSuiView = () => {
   return (

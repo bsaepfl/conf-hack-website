@@ -3,7 +3,7 @@ import React from "react";
 import nissinLogo from "./images/icons/Nissin.jpg";
 import cbLogo from "./images/icons/CB.gif";
 import suiLogo from "./images/icons/Sui_Symbol_Sea.png";
-import bsaLogo from "./images/icons/logo_light.png";
+const bsaLogo = { src: "/images/logo-white.png" };
 
 import snatts from "./images/icons/snatts.png";
 import brite from "./images/icons/Brite.png";

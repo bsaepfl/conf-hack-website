@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import bsaLogo from './Hackathon/images/icons/Logo-dark.png';
+const bsaLogo = { src: "/images/logo-white.png" };
 
 export default function SplashIntro() {
     // Start true so the black overlay is painted immediately (no flash)
