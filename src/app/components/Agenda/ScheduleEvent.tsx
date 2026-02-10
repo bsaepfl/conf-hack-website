@@ -51,15 +51,15 @@ const ScheduleEvent: React.FC<ScheduleEventProps> = ({ event, isCurrentEvent }) 
     const isCurrent = isCurrentEvent(event);
 
     return (
-        <li className={`relative flex items-center gap-4 sm:gap-6 px-4 sm:px-6 py-5 rounded-xl border transition-colors ${isCurrent ? 'bg-white/[0.06] border-purple-500/40' : 'bg-white/[0.03] border-white/[0.06] hover:bg-white/[0.05]'}`}>
+        <li className={`relative flex items-center gap-3 sm:gap-6 px-3 sm:px-6 py-4 sm:py-5 rounded-xl border transition-colors ${isCurrent ? 'bg-base-300 border-purple-500/40' : 'bg-base-200 border-white/10 hover:bg-base-300'}`}>
             {/* Current event indicator */}
             {isCurrent && (
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 rounded-r-full bg-green-400" />
             )}
 
             {/* Time */}
-            <div className="flex flex-col items-center flex-shrink-0 w-16 sm:w-20">
-                <span className="text-2xl sm:text-3xl font-bold" style={{ color: '#7c6bb4' }}>
+            <div className="flex flex-col items-center flex-shrink-0 w-14 sm:w-20">
+                <span className="text-xl sm:text-3xl font-bold" style={{ color: '#7c6bb4' }}>
                     {displayHour}:{displayMin}
                 </span>
                 <span className="text-xs text-white/40 font-medium uppercase">
@@ -80,7 +80,7 @@ const ScheduleEvent: React.FC<ScheduleEventProps> = ({ event, isCurrentEvent }) 
                         <span className="text-xs text-white/30">{event.duration}h</span>
                     ) : null}
                 </div>
-                <h3 className="text-sm sm:text-base font-semibold text-white truncate">
+                <h3 className="text-sm sm:text-base font-semibold text-white break-words">
                     {event.name}
                 </h3>
             </div>

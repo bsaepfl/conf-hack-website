@@ -185,12 +185,12 @@ const ScheduleView: React.FC = () => {
 
             {/* Tabs */}
             <Tab.Group onChange={(index) => setSelectedDay(navigationEvent[index])}>
-                <Tab.List className="flex gap-1 bg-white/[0.03] backdrop-blur-md rounded-xl p-1.5 border border-white/[0.06] mb-6 overflow-x-auto">
+                <Tab.List className="flex gap-1 bg-base-200 rounded-xl p-1.5 border border-white/10 mb-6 overflow-x-auto">
                     {navigationEvent.map((day) => (
                         <Tab
                             key={day.date}
                             className={({ selected }) =>
-                                `whitespace-nowrap px-4 py-2.5 rounded-lg transition-all font-medium text-sm ${selected
+                                `whitespace-nowrap px-2.5 py-2 sm:px-4 sm:py-2.5 rounded-lg transition-all font-medium text-xs sm:text-sm ${selected
                                     ? 'bg-[#7c6bb4] text-white shadow-lg shadow-purple-500/20'
                                     : 'text-white/40 hover:text-white/70 hover:bg-white/[0.05]'
                                 }`
@@ -214,7 +214,7 @@ const ScheduleView: React.FC = () => {
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="text-white/40 text-center py-12 bg-white/[0.03] border border-white/[0.06] rounded-xl">
+                                <p className="text-white/40 text-center py-12 bg-base-200 border border-white/10 rounded-xl">
                                     No events scheduled for this day
                                 </p>
                             )}

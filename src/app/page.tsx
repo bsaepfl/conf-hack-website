@@ -13,6 +13,7 @@ import FaqView from './components/Hackathon/FaqView';
 import RulesView from './components/Hackathon/RulesView';
 import StarsBackground from './components/StarsBackground';
 import Countdown from './components/Countdown';
+import SplashIntro from './components/SplashIntro';
 import ScheduleView from './components/Agenda/ScheduleView';
 import ThankView from './components/Hackathon/ThankView';
 import GrantView from './components/Hackathon/GrantView';
@@ -25,6 +26,7 @@ import GrantView from './components/Hackathon/GrantView';
 export default function Hackathon() {
   return (
     <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
+      <SplashIntro />
       <StarsBackground />
       <NavbarH />
       <main className="flex-grow flex flex-col items-center justify-center bg-base-100 w-full overflow-x-hidden">

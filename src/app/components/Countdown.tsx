@@ -25,7 +25,7 @@ function pad(n: number) {
 function FlipDigit({ value, label }: { value: string; label: string }) {
     return (
         <div className="flex flex-col items-center gap-2">
-            <div className="relative w-20 h-24 sm:w-28 sm:h-32 md:w-32 md:h-36 rounded-xl bg-base-200/40 backdrop-blur-md border border-white/5 shadow-lg flex items-center justify-center overflow-hidden">
+            <div className="relative w-16 h-20 sm:w-28 sm:h-32 md:w-32 md:h-36 rounded-xl bg-base-200/40 border border-white/5 shadow-lg flex items-center justify-center overflow-hidden">
                 {/* Subtle horizontal divider line */}
                 <div className="absolute inset-x-0 top-1/2 h-px bg-white/5" />
 
@@ -36,7 +36,7 @@ function FlipDigit({ value, label }: { value: string; label: string }) {
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: 20, opacity: 0 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
-                        className="text-4xl sm:text-5xl md:text-6xl font-bold"
+                        className="text-3xl sm:text-5xl md:text-6xl font-bold"
                         style={{ color: '#7c6bb4' }}
                     >
                         {value}
@@ -61,8 +61,8 @@ export default function Countdown() {
 
     if (!time) {
         return (
-            <div className="relative z-10 w-full flex justify-center py-8">
-                <div className="flex gap-3 sm:gap-5 md:gap-6">
+            <div className="relative z-10 w-full flex justify-center py-8 px-4">
+                <div className="flex gap-2 sm:gap-5 md:gap-6">
                     {['Days', 'Hours', 'Mins', 'Secs'].map((label) => (
                         <FlipDigit key={label} value="--" label={label} />
                     ))}
