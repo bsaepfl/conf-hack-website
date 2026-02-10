@@ -16,10 +16,10 @@ const Footer = () => {
 
         {/* Center: Social Icons (Bordered) */}
         <div className="justify-self-center flex items-center gap-4 border-l border-r border-white/30 px-4">
-          <a href="https://t.me/+YcFnxd17Dvk2NmVk" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-white/80 transition-colors">
+          <a href="https://t.me/+RCJQgriooYMxYWFk" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-white/80 transition-colors">
             <FaTelegramPlane />
           </a>
-          <a href="https://x.com/bsa_epfl" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-white/80 transition-colors">
+          <a href="https://x.com/bsaepfl" target="_blank" rel="noopener noreferrer" className="text-lg hover:text-white/80 transition-colors">
             <FaTwitter />
           </a>
           <a href="mailto:bsa@epfl.ch" className="text-lg hover:text-white/80 transition-colors">
