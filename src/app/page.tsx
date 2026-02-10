@@ -46,6 +46,10 @@ export default function Hackathon() {
           <PrizeView />
         </div>
 
+        <div id="sponsors" className="w-full">
+          <ThankView />
+        </div>
+
         <div id="schedule" className="w-full">
           <ScheduleView />
         </div>
@@ -70,9 +74,6 @@ export default function Hackathon() {
           <FaqView />
         </div>
 
-        <div id="thx" className="w-full">
-          <ThankView />
-        </div>
 
         {/* <div id="rules" className="w-full mb-12">
           <RulesView />

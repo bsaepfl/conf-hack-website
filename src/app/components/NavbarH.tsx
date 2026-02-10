@@ -16,6 +16,7 @@ const navLinks = [
   { label: 'Amenities', id: 'grant' },
   { label: 'Schedule', id: 'schedule' },
   { label: 'Prizes', id: 'prize' },
+  { label: 'Sponsors', id: 'sponsors' },
   { label: 'Discover', id: 'discover' },
   { label: 'Location', id: 'location' },
   { label: 'FAQ', id: 'faq' },
