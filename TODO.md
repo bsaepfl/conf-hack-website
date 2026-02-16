@@ -30,3 +30,7 @@ This document tracks missing features, placeholder data, and required updates.
 
 ## Ticketing / Registration
 - [ ] Verify Registration Links: Ensure all "Register" or "Apply" buttons point to the correct active forms.
+
+## Sections in each page
+- [ ] Only keep relevant sections to each page (e.g hackathon related sections only in the hackathon page)
+- [ ] Update with correct hackathon application in /hackathon

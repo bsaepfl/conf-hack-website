@@ -22,7 +22,7 @@ const defaultLinks = [
   { label: 'FAQ', id: 'faq' },
 ];
 
-const NavbarH = ({ links }: { links?: { label: string; id: string }[] }) => {
+const NavbarH = ({ links }: { links?: { label: string; id: string; href?: string }[] }) => {
   const navLinks = links || defaultLinks;
   return (
     <nav className="fixed top-3 left-3 right-3 z-50 mx-auto max-w-7xl rounded-2xl border border-white/10 bg-black/70 backdrop-blur-xl shadow-lg shadow-black/20">
@@ -37,13 +37,23 @@ const NavbarH = ({ links }: { links?: { label: string; id: string }[] }) => {
         <ul className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <li key={link.id}>
-              <button
-                onClick={() => scrollToSection(link.id)}
-                className="relative px-3 py-2 text-[13px] font-medium tracking-[0.05em] text-white/60 uppercase transition-colors duration-200 hover:text-white group"
-              >
-                {link.label}
-                <span className="absolute bottom-1 left-3 right-3 h-px bg-white/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </button>
+              {link.href ? (
+                <Link
+                  href={link.href}
+                  className="relative px-3 py-2 text-[13px] font-medium tracking-[0.05em] text-white/60 uppercase transition-colors duration-200 hover:text-white group"
+                >
+                  {link.label}
+                  <span className="absolute bottom-1 left-3 right-3 h-px bg-white/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                </Link>
+              ) : (
+                <button
+                  onClick={() => scrollToSection(link.id)}
+                  className="relative px-3 py-2 text-[13px] font-medium tracking-[0.05em] text-white/60 uppercase transition-colors duration-200 hover:text-white group"
+                >
+                  {link.label}
+                  <span className="absolute bottom-1 left-3 right-3 h-px bg-white/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                </button>
+              )}
             </li>
           ))}
         </ul>
@@ -67,12 +77,21 @@ const NavbarH = ({ links }: { links?: { label: string; id: string }[] }) => {
             <ul tabIndex={0} className="dropdown-content mt-3 z-[1] p-4 shadow-xl bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl w-56 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <li key={link.id}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
-                    className="w-full text-left px-3 py-2.5 text-sm font-medium tracking-[0.05em] text-white/70 uppercase rounded-lg transition-colors hover:text-white hover:bg-white/5"
-                  >
-                    {link.label}
-                  </button>
+                  {link.href ? (
+                    <Link
+                      href={link.href}
+                      className="block w-full text-left px-3 py-2.5 text-sm font-medium tracking-[0.05em] text-white/70 uppercase rounded-lg transition-colors hover:text-white hover:bg-white/5"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => scrollToSection(link.id)}
+                      className="w-full text-left px-3 py-2.5 text-sm font-medium tracking-[0.05em] text-white/70 uppercase rounded-lg transition-colors hover:text-white hover:bg-white/5"
+                    >
+                      {link.label}
+                    </button>
+                  )}
                 </li>
               ))}
               <li className="mt-2 sm:hidden">

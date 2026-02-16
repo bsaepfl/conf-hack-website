@@ -1,5 +1,5 @@
 // src/app/tickets/page.tsx
-import NavbarR from '../components/NavbarR';
+import NavbarH from '../components/NavbarH';
 import Footer from '../components/Footer';
 import StarsBackground from '../components/StarsBackground';
 import LumaEmbed from '../components/LumaEmbed';
@@ -8,7 +8,10 @@ import LumaEmbed from '../components/LumaEmbed';
 const TicketsPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <NavbarR />
+      <NavbarH links={[
+        { label: 'Conference', id: 'conference', href: '/conference' },
+        { label: 'Hackathon', id: 'hackathon', href: '/hackathon' },
+      ]} />
       <main className="flex-grow flex flex-col items-center justify-center pt-24 pb-12">
         <StarsBackground />
         <LumaEmbed
