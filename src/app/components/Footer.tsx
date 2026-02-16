@@ -9,7 +9,7 @@ const Footer = () => {
 
         {/* Left: Hackathon (Aligned Right to hug center) */}
         <div className="justify-self-end pr-4">
-          <Link href="/" className="btn btn-xs btn-ghost text-white hover:bg-white/20">
+          <Link href="/hackathon" className="btn btn-xs btn-ghost text-white hover:bg-white/20">
             Hackathon
           </Link>
         </div>

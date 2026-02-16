@@ -12,7 +12,7 @@ const scrollToSection = (id: string) => {
   }
 };
 
-const navLinks = [
+const defaultLinks = [
   { label: 'Amenities', id: 'grant' },
   { label: 'Schedule', id: 'schedule' },
   { label: 'Prizes', id: 'prize' },
@@ -22,7 +22,8 @@ const navLinks = [
   { label: 'FAQ', id: 'faq' },
 ];
 
-const NavbarH = () => {
+const NavbarH = ({ links }: { links?: { label: string; id: string }[] }) => {
+  const navLinks = links || defaultLinks;
   return (
     <nav className="fixed top-3 left-3 right-3 z-50 mx-auto max-w-7xl rounded-2xl border border-white/10 bg-black/70 backdrop-blur-xl shadow-lg shadow-black/20">
       <div className="flex items-center justify-between px-4 md:px-6 py-2">
