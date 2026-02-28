@@ -24,8 +24,22 @@ const textStyle = (gradient: string): React.CSSProperties => ({
 });
 
 export default function Conference() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        setIsMobile(window.innerWidth < 768);
+    }, []);
+
     const [locked, setLocked] = useState(true);
     const progress = useMotionValue(0);
+
+    // Skip animation on mobile
+    useEffect(() => {
+        if (isMobile) {
+            progress.set(1);
+            setLocked(false);
+        }
+    }, [isMobile, progress]);
 
     // Lock body scroll while animation is active
     useEffect(() => {
