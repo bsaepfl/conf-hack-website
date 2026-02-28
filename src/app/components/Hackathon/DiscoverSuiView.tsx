@@ -25,28 +25,28 @@ const DiscoverSuiView = () => {
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 justify-between gap-10 sm:gap-20 relative">
           <EventCard
             color="bg-base-200/40 backdrop-blur-md"
-            title="Documentation for ???"
-            description="Docs for ???, a next-generation smart contract platform with high throughput, low latency, and an asset-oriented programming model powered by Move"
+            title="Documentation for TON"
+            description="TON is the blockchain powering Telegram’s Web3 ecosystem, designed for fast, scalable payments and apps. Explore the official docs to build on TON."
             footer={
               <div className="flex justify-center">
                 <DiscoverButton
                   ping={false}
                   title="View"
-                  href="https://docs.sui.io/"
+                  href="https://docs.ton.org/"
                 />
               </div>
             }
           />
           <EventCard
             color="bg-base-200/40 backdrop-blur-md"
-            title="Documentation for ???"
-            description="Docs for ???, a next-generation smart contract platform with high throughput, low latency, and an asset-oriented programming model powered by Move"
+            title="Documentation for XRPL"
+            description="XRPL (XRP Ledger) is a decentralized blockchain for payments and asset issuance with low fees and fast settlement. Use the docs to start building."
             footer={
               <div className="flex justify-center">
                 <DiscoverButton
                   ping={false}
-                  title="Learn More"
-                  href="https://docs.sui.io/learn/why-move"
+                  title="View"
+                  href="https://xrpl.org/docs/"
                 />
               </div>
             }

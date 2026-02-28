@@ -48,11 +48,10 @@ const tiers: SponsorTier[] = [
     borderColor: "border-gray-400/30",
     bgColor: "bg-gray-400/5",
     logoSize: "w-24 sm:w-32 lg:w-36",
-    gridCols: "grid-cols-2 sm:grid-cols-3",
+    gridCols: "grid-cols-1 sm:grid-cols-2",
     sponsors: [
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
+      { name: "ENS", logo: bsaLogo.src, url: "https://ens.domains" },
+      { name: "Hyli", logo: bsaLogo.src, url: "https://hyli.org" },
     ],
   },
   {
