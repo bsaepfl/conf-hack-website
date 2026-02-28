@@ -53,7 +53,7 @@ const tiers: SponsorTier[] = [
     color: "text-gray-300",
     borderColor: "border-gray-400/30",
     bgColor: "bg-gray-400/5",
-    Size: "w-36 sm:w-44 lg:w-52",
+    logoSize: "w-32 sm:w-40 lg:w-44",
     gridCols: "grid-cols-1",
     sponsors: [
       { name: "ENS", logo: ens.src, url: "https://ens.domains" },
