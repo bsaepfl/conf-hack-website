@@ -5,6 +5,7 @@ const bsaLogo = { src: "/images/logo-white.png" };
 type Sponsor = {
   name: string;
   logo: string;
+  url?: string;
 };
 
 type SponsorTier = {
@@ -26,7 +27,7 @@ const tiers: SponsorTier[] = [
     logoSize: "w-44 sm:w-56 lg:w-64",
     gridCols: "grid-cols-1",
     sponsors: [
-      { name: "Sponsor TBA", logo: bsaLogo.src },
+      { name: "AlphaTON Capital", logo: bsaLogo.src, url: "https://alphatoncapital.com" },
     ],
   },
   {
@@ -37,8 +38,8 @@ const tiers: SponsorTier[] = [
     logoSize: "w-32 sm:w-40 lg:w-48",
     gridCols: "grid-cols-1 sm:grid-cols-2",
     sponsors: [
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
+      { name: "Ledger", logo: bsaLogo.src, url: "https://www.ledger.com" },
+      { name: "XRPL Commons", logo: bsaLogo.src, url: "https://xrplcommons.org" },
     ],
   },
   {
@@ -60,12 +61,11 @@ const tiers: SponsorTier[] = [
     borderColor: "border-orange-400/30",
     bgColor: "bg-orange-400/5",
     logoSize: "w-20 sm:w-24 lg:w-28",
-    gridCols: "grid-cols-2 sm:grid-cols-4",
+    gridCols: "grid-cols-2 sm:grid-cols-3",
     sponsors: [
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
+      { name: "Swissquote", logo: bsaLogo.src, url: "https://www.swissquote.com" },
+      { name: "Raiffeisen", logo: bsaLogo.src, url: "https://www.raiffeisen.ch" },
+      { name: "Taurus", logo: bsaLogo.src, url: "https://www.taurushq.com" },
     ],
   },
 ];
@@ -104,14 +104,34 @@ const SponsorThanks = () => {
                   key={index}
                   className="flex flex-col items-center justify-center gap-4"
                 >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className={`${tier.logoSize} object-contain opacity-60`}
-                  />
-                  <span className="text-white/50 font-medium text-sm sm:text-base text-center">
-                    {sponsor.name}
-                  </span>
+                  {sponsor.url ? (
+                    <a
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-col items-center justify-center gap-4 hover:opacity-90"
+                    >
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className={`${tier.logoSize} object-contain opacity-60`}
+                      />
+                      <span className="text-white/50 font-medium text-sm sm:text-base text-center">
+                        {sponsor.name}
+                      </span>
+                    </a>
+                  ) : (
+                    <>
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className={`${tier.logoSize} object-contain opacity-60`}
+                      />
+                      <span className="text-white/50 font-medium text-sm sm:text-base text-center">
+                        {sponsor.name}
+                      </span>
+                    </>
+                  )}
                 </div>
               ))}
             </div>

@@ -156,7 +156,7 @@ export default function HackathonPage() {
 
                     <p className="text-white/70 max-w-[500px] mt-8 font-normal text-center text-base md:text-lg px-4">
                         Participate in the <span className="font-semibold text-white">BSA Stablecoin & Payments Hackathon</span> at EPFL
-                        campus and compete for an outstanding <span className="font-semibold text-white">$20,000</span> prize pool.
+                        campus and compete for an outstanding <span className="font-semibold text-white">$16,000</span> prize pool.
                     </p>
 
                     <p className="md:text-lg font-light text-white mt-4">

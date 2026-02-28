@@ -172,7 +172,7 @@ export default function Hackathon() {
                         >
                             <div className="relative z-10 text-center">
                                 <span className="block text-lg font-semibold text-white tracking-wide">Hackathon</span>
-                                <span className="block text-xs text-white/50 mt-1">March 21–22 — $20,000 Prize Pool</span>
+                                <span className="block text-xs text-white/50 mt-1">March 21–22 — $16,000 Prize Pool</span>
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-r from-[#7c3aed]/0 to-[#7c3aed]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </Link>

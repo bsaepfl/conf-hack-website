@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react';
+
 export interface ScheduleEventType {
     date: Date;
-    name: string;
+    name: ReactNode;
     icon: string;
     duration?: number;
     value: string;
