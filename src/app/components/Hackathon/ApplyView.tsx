@@ -1,6 +1,7 @@
 import React from "react";
 import { DiscoverButton } from "../../NewsPopUp";
 
+
 const ApplyView = () => {
   return (
     <div className="w-full flex flex-col justify-start items-center bg-white text-black z-[2]">
