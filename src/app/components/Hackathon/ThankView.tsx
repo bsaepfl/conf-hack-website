@@ -1,10 +1,17 @@
 import React from "react";
 
-const bsaLogo = { src: "/images/logo-white.png" };
+import alphaton from "../../images/sponsors/alphaton.png";
+import ledger from "../../images/sponsors/ledger.png";
+import xrpl from "../../images/sponsors/xrpl.png";
+import ens from "../../images/sponsors/ens.png";
+import raiffeisen from "../../images/sponsors/raiffeisen.png";
+import swissquote from "../../images/sponsors/swissquote.png";
+import taurus from "../../images/sponsors/taurus2.png";
 
 type Sponsor = {
   name: string;
   logo: string;
+  url?: string;
 };
 
 type SponsorTier = {
@@ -23,10 +30,10 @@ const tiers: SponsorTier[] = [
     color: "text-cyan-300",
     borderColor: "border-cyan-400/30",
     bgColor: "bg-cyan-400/5",
-    logoSize: "w-44 sm:w-56 lg:w-64",
+    logoSize: "w-56 sm:w-72 lg:w-80",
     gridCols: "grid-cols-1",
     sponsors: [
-      { name: "Sponsor TBA", logo: bsaLogo.src },
+      { name: "AlphaTON Capital", logo: alphaton.src, url: "https://alphatoncapital.com" },
     ],
   },
   {
@@ -34,11 +41,11 @@ const tiers: SponsorTier[] = [
     color: "text-yellow-400",
     borderColor: "border-yellow-400/30",
     bgColor: "bg-yellow-400/5",
-    logoSize: "w-32 sm:w-40 lg:w-48",
+    logoSize: "w-44 sm:w-56 lg:w-64",
     gridCols: "grid-cols-1 sm:grid-cols-2",
     sponsors: [
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
+      { name: "Ledger", logo: ledger.src, url: "https://www.ledger.com" },
+      { name: "XRPL Commons", logo: xrpl.src, url: "https://xrplcommons.org" },
     ],
   },
   {
@@ -46,12 +53,10 @@ const tiers: SponsorTier[] = [
     color: "text-gray-300",
     borderColor: "border-gray-400/30",
     bgColor: "bg-gray-400/5",
-    logoSize: "w-24 sm:w-32 lg:w-36",
-    gridCols: "grid-cols-2 sm:grid-cols-3",
+    logoSize: "w-32 sm:w-40 lg:w-44",
+    gridCols: "grid-cols-1",
     sponsors: [
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
+      { name: "ENS", logo: ens.src, url: "https://ens.domains" },
     ],
   },
   {
@@ -59,13 +64,12 @@ const tiers: SponsorTier[] = [
     color: "text-orange-400",
     borderColor: "border-orange-400/30",
     bgColor: "bg-orange-400/5",
-    logoSize: "w-20 sm:w-24 lg:w-28",
-    gridCols: "grid-cols-2 sm:grid-cols-4",
+    logoSize: "w-28 sm:w-36 lg:w-44",
+    gridCols: "grid-cols-2 sm:grid-cols-3",
     sponsors: [
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
-      { name: "Sponsor TBA", logo: bsaLogo.src },
+      { name: "Raiffeisen", logo: raiffeisen.src, url: "https://www.raiffeisen.ch" },
+      { name: "Swissquote", logo: swissquote.src, url: "https://www.swissquote.com" },
+      { name: "Taurus", logo: taurus.src, url: "https://www.taurushq.com" },
     ],
   },
 ];
@@ -104,14 +108,34 @@ const SponsorThanks = () => {
                   key={index}
                   className="flex flex-col items-center justify-center gap-4"
                 >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className={`${tier.logoSize} object-contain opacity-60`}
-                  />
-                  <span className="text-white/50 font-medium text-sm sm:text-base text-center">
-                    {sponsor.name}
-                  </span>
+                  {sponsor.url ? (
+                    <a
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-col items-center justify-center gap-4 hover:opacity-90"
+                    >
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className={`${tier.logoSize} object-contain opacity-60`}
+                      />
+                      <span className="text-white/50 font-medium text-sm sm:text-base text-center">
+                        {sponsor.name}
+                      </span>
+                    </a>
+                  ) : (
+                    <>
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className={`${tier.logoSize} object-contain opacity-60`}
+                      />
+                      <span className="text-white/50 font-medium text-sm sm:text-base text-center">
+                        {sponsor.name}
+                      </span>
+                    </>
+                  )}
                 </div>
               ))}
             </div>

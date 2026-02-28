@@ -159,8 +159,8 @@ export const schedule: ScheduleEvent[] = [
     name: "Snacks",
     icon: "snacks",
     description: "",
-    time: "17:00",
-    date: generateDate("2024-10-12", 17, 0),
+    time: "18:00",
+    date: generateDate("2024-10-12", 18, 0),
     duration: 1,
     value: "2024-10-12",
   },
@@ -253,7 +253,7 @@ export const faqQuestions: FaqType[] = [
   {
     question: "What is the size of the teams?",
     answer:
-      "Teams can range from 3 to 5 participants. We recommend having 2 participants that know how to code and one from a Business background.",
+      "Teams can range from 2 to 4 participants. We recommend having 2 participants that know how to code and one from a Business background.",
   },
   {
     question: "Where is it?",

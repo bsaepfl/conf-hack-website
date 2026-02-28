@@ -7,12 +7,12 @@ const navigationEvent: DayProps[] = [
     {
         label: "Thu, 26 Feb",
         date: "2026-02-26",
-        description: "Workshop 1 - TBA"
+        description: "Workshop 1 - Intro to Blockchain"
     },
     {
         label: "Thu, 5 Mar",
         date: "2026-03-05",
-        description: "Workshop 2 - TBA"
+        description: "Workshop 2 - Intro to TON"
     },
     {
         label: "Thu, 12 Mar",
@@ -39,24 +39,36 @@ const navigationEvent: DayProps[] = [
 
 const schedule: ScheduleEventType[] = [
     {
-        date: new Date("2026-02-26T17:00:00"),
-        name: "Workshop 1 - TBA",
+        date: new Date("2026-02-26T18:00:00"),
+        name: (
+            <>
+                Workshop 1 -{' '}
+                <a
+                    href="https://luma.com/jw508v9s"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline underline-offset-2 hover:text-white/80"
+                >
+                    Intro to Blockchain
+                </a>
+            </>
+        ),
         icon: "workshop",
-        duration: 3,
+        duration: 1.5,
         value: "2026-02-26"
     },
     {
-        date: new Date("2026-03-05T17:00:00"),
-        name: "Workshop 2 - TBA",
+        date: new Date("2026-03-05T18:00:00"),
+        name: "Workshop 2 - Intro to TON",
         icon: "workshop",
-        duration: 3,
+        duration: 1.5,
         value: "2026-03-05"
     },
     {
-        date: new Date("2026-03-12T17:00:00"),
+        date: new Date("2026-03-12T18:00:00"),
         name: "Workshop 3 - TBA",
         icon: "workshop",
-        duration: 3,
+        duration: 1.5,
         value: "2026-03-12"
     },
 

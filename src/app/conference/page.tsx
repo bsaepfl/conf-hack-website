@@ -91,9 +91,9 @@ export default function Conference() {
             <StarsBackground />
             <NavbarH links={[
                 { label: 'Speakers', id: 'speakers' },
-                { label: 'Amenities', id: 'grant' },
-                { label: 'Schedule', id: 'schedule' },
                 { label: 'Sponsors', id: 'sponsors' },
+                { label: 'Schedule', id: 'schedule' },
+                { label: 'Amenities', id: 'grant' },
                 { label: 'Location', id: 'location' },
                 { label: 'FAQ', id: 'faq' },
             ]} />
