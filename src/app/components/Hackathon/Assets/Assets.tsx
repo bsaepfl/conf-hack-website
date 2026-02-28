@@ -248,7 +248,7 @@ export const faqQuestions: FaqType[] = [
     question:
       "Will there be any preparation if we do not know the programming language?",
     answer:
-      "Of course! For the next three weeks, we will have workshops and Office hours where you can come to learn. If you sign up, you'll be able to enter the Telegram group for the hackathon in which Move developers await for your questions.\nFinally, not all of the hack is about code! You also need to have ideas and knowledge in Finance and marketing can be very helpful for your team!",
+      "Of course! For the next three weeks, we will have workshops and Office hours where you can come to learn. If you sign up, you'll be able to enter the Telegram group for the hackathon in which developers await for your questions.\nFinally, not all of the hack is about code! You also need to have ideas and knowledge in finance and marketing which can be very helpful for your team!",
   },
   {
     question: "What is the size of the teams?",
@@ -258,7 +258,7 @@ export const faqQuestions: FaqType[] = [
   {
     question: "Where is it?",
     answer:
-      "The Sui x BSA III Hackathon will take place in EPFL’s Lausanne campus, BC Building. You can find directions in the section above.",
+      "The BSA Stablecoins & Payments Hackathon will take place in EPFL’s Lausanne campus, BC Building. You can find directions in the section above.",
   },
   {
     question: "What should I bring?",
