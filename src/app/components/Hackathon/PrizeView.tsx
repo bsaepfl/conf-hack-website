@@ -17,15 +17,18 @@ const PrizeView = () => {
           </span>
         </h2>
 
-        <p className="w-full max-w-[1100px] text-white text-center">
-          From <b className="font-semibold">Saturday, March 21 at 8:30 AM</b>, we are welcoming
-          builders from around the globe to participate in the Stablecoin & Payments Hackathon of the{" "}
-          <b className="font-semibold">BSA</b> at EPFL, a
-          prestigious institution at the forefront of technology and innovation.
-          <br /> <br /> Get to win over{" "}
-          <b className="font-semibold">$16,000 USD</b> in prizes and build
-          something amazing in just 36 hours!
-        </p>
+        <div className="w-full max-w-[700px] mx-auto flex flex-col gap-4">
+          <p className="text-white/80 text-center leading-relaxed">
+            From <span className="font-semibold text-white">Saturday, March 21 at 8:30 AM</span>, we
+            are welcoming builders from around the globe to participate in the
+            Stablecoin & Payments Hackathon of the{" "}
+            <span className="font-semibold text-white">BSA</span> at EPFL, a
+            prestigious institution at the forefront of technology and innovation.
+          </p>
+          <p className="text-center text-lg font-semibold text-white rounded-lg border border-white/15 bg-white/5 px-5 py-4">
+            Get to win over $16,000 USD in prizes and build something amazing in just 36 hours!
+          </p>
+        </div>
       </div>
     </div>
   );
