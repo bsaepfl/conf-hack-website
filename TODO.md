@@ -3,7 +3,7 @@
 This document tracks missing features, placeholder data, and required updates.
 
 ## Schedule & Agenda
-- [ ] Update Schedule Data: The ScheduleView component contains hardcoded data for September 2025.
+- [x] Update Schedule Data: The ScheduleView component contains hardcoded data for September 2025.
   - File: src/app/components/Agenda/ScheduleView.tsx
 - [ ] Timeline Feature: Missing timeline in the Hackathon page.
   - File: src/app/hackathon/page.tsx

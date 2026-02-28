@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({
       Participate in the {" "}
       <span className="font-semibold"> BSA Stablecoin & Payments Hackathon</span> at EPFL
       campus and compete for an outstanding{" "}
-      <span className="font-semibold">$20,000</span> prize pool.
+      <span className="font-semibold">$16,000</span> prize pool.
     </p>
   ),
   date = "SATURDAY, MARCH 21 — EPFL CAMPUS",
