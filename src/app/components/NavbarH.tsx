@@ -13,11 +13,11 @@ const scrollToSection = (id: string) => {
 };
 
 const defaultLinks = [
-  { label: 'Amenities', id: 'grant' },
-  { label: 'Schedule', id: 'schedule' },
   { label: 'Prizes', id: 'prize' },
   { label: 'Sponsors', id: 'sponsors' },
+  { label: 'Schedule', id: 'schedule' },
   { label: 'Discover', id: 'discover' },
+  { label: 'Amenities', id: 'grant' },
   { label: 'Location', id: 'location' },
   { label: 'FAQ', id: 'faq' },
 ];
