@@ -7,6 +7,8 @@ import ens from "../../images/sponsors/ens.png";
 import raiffeisen from "../../images/sponsors/raiffeisen.png";
 import swissquote from "../../images/sponsors/swissquote.png";
 import taurus from "../../images/sponsors/taurus2.png";
+import hyli from "../../images/sponsors/hyli.png";
+import mica from "../../images/sponsors/mica.png";
 
 type Sponsor = {
   name: string;
@@ -56,6 +58,7 @@ const tiers: SponsorTier[] = [
     logoSize: "w-32 sm:w-40 lg:w-44",
     gridCols: "grid-cols-1",
     sponsors: [
+      { name: "Hyli", logo: hyli.src, url: "https://www.hyli.org/" },
       { name: "ENS", logo: ens.src, url: "https://ens.domains" },
     ],
   },
@@ -70,6 +73,7 @@ const tiers: SponsorTier[] = [
       { name: "Raiffeisen", logo: raiffeisen.src, url: "https://www.raiffeisen.ch" },
       { name: "Swissquote", logo: swissquote.src, url: "https://www.swissquote.com" },
       { name: "Taurus", logo: taurus.src, url: "https://www.taurushq.com" },
+      { name: "MICA", logo: mica.src, url: "https://www.micacryptoalliance.com/" },
     ],
   },
 ];
