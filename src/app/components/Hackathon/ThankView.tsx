@@ -104,6 +104,12 @@ const tiers: SponsorTier[] = [
         logoClass: "w-36 sm:w-44 lg:w-52",
         url: "https://cryptovalley.swiss/",
       },
+      {
+        name: "DecentralHouse",
+        logo: "https://i.ibb.co/21JGJjkb/DECENTRAL.png",
+        logoClass: "w-44 sm:w-56 lg:w-64",
+        url: "https://decentral.house/",
+      },
     ],
   },
 ];
