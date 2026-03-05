@@ -21,21 +21,29 @@ const GrantView = () => {
           <h2 className="w-full font-bold text-3xl sm:text-4xl text-white text-center md:text-left md:indent-2 pb-2">
             Amenities
           </h2>
-          <p className="items-center lg:items-start text-center lg:text-left">
-            <BsArrowRight className="inline" /> Free registration, absolutely{" "}
-            <span className="font-semibold text-blue-400">
-              no cost for participants
-            </span>{" "}
-            <br />
-            <BsArrowRight className="inline" /> Food, snacks, beverages, coffee,
-            energy drinks and much more supplied during the whole Hackathon{" "}
-            <br />
-            <BsArrowRight className="inline" /> For international students,
-            accommodation will be provided during the event. <br />
-            <BsArrowRight className="inline" /> You can also apply for a{" "}
-            <span className="font-semibold text-blue-400">$100 travel grant</span>{" "}
-            to help with transportation costs. Link to apply will be released soon.
-          </p>
+          <ul className="flex flex-col gap-4">
+            <li className="flex items-start gap-3 text-center lg:text-left">
+              <BsArrowRight className="mt-1 shrink-0 text-blue-400" />
+              <span>Free registration, absolutely{" "}
+                <span className="font-semibold text-blue-400">no cost for participants</span>
+              </span>
+            </li>
+            <li className="flex items-start gap-3 text-center lg:text-left">
+              <BsArrowRight className="mt-1 shrink-0 text-blue-400" />
+              <span>Food, snacks, beverages, coffee, energy drinks and much more supplied during the whole event</span>
+            </li>
+            <li className="flex items-start gap-3 text-center lg:text-left">
+              <BsArrowRight className="mt-1 shrink-0 text-blue-400" />
+              <span>For international students, accommodation will be provided during the event.</span>
+            </li>
+            <li className="flex items-start gap-3 text-center lg:text-left">
+              <BsArrowRight className="mt-1 shrink-0 text-blue-400" />
+              <span>You can also apply for a{" "}
+                <span className="font-semibold text-blue-400">$100 travel grant</span>{" "}
+                to help with transportation costs. Link to apply will be released soon.
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
