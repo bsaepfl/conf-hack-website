@@ -34,9 +34,131 @@ import ABH from '../../images/speakers/ABH.jpeg';
 import VA from '../../images/speakers/VA.jpeg';
 import BS from '../../images/speakers/BS.jpeg';
 import IMH from '../../images/speakers/IMH.jpeg';
+import WD from '../../images/speakers/WD.png';
+import SK from '../../images/speakers/SK.png';
+import OR from '../../images/speakers/OR.png';
+import RT from '../../images/speakers/RT.png';
+import BH from '../../images/speakers/BH.png';
+import JI from '../../images/speakers/JI.png';
+import CM from '../../images/speakers/CM.png';
+import MRR from '../../images/speakers/MR.png';
+import VT from '../../images/speakers/VT.png';
+import JMS from '../../images/speakers/JMS.png';
+import GV from '../../images/speakers/GV.png';
+import MB from '../../images/speakers/MB.png';
+import FX from '../../images/speakers/FX.jpg';
 import SpeakerCard from './SpeakerCard';
+import { BiHeading } from 'react-icons/bi';
 
 const speakersData = [
+  {
+    name: 'Marc Bickel',
+    image: MB,
+    description: 'Co-Founder & CTO of Fume',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Gauthier Vila',
+    image: GV,
+    description: 'Founder of Zyfai',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Jean-Marc Seigneur',
+    image: JMS,
+    description: 'Researcher and Lecturer in Decentralized Trust at the University of Geneva',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Vytautas Vito Tumas',
+    image: VT,
+    description: 'Blockchain Researcher & Senior Software Engineer at Ripple',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Mark Richardson',
+    image: MRR,
+    description: 'Director Global Distribution at Amgen',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Carlos Martin Doncel',
+    image: CM,
+    description: 'Leading Digital Assets and New Initiatives at Swissquote Bank',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Juan Ignacio Ibañez',
+    image: JI,
+    description: 'General Secretary of the MiCA Crypto Alliance',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Biba Homsy',
+    image: BH,
+    description: 'Founder & Partner at Homsy Legal, Regulatory & Crypto Lawyer',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Romain Thépaut',
+    image: RT,
+    description: 'President of DeVinci Blockchain',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Oleschak Robert',
+    image: OR,
+    description: 'Adviser at the Swiss National Bank',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Sebastiaan Krist',
+    image: SK,
+    description: 'Head of Corporate Banking Projects at Raiffeisen Switzerland',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'William De Ath',
+    image: WD,
+    description: 'Chief Partnership Officer at AlphaTON Capital',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
   {
     name: 'Peterson Yuhala',
     image: PY,
@@ -164,7 +286,7 @@ const speakersData = [
     },
   },
   {
-    name: ' Alan Szepieniec',
+    name: 'Alan Szepieniec',
     image: AS,
     description: 'co-founder of Neptune Cash',
     socials: {
@@ -173,7 +295,7 @@ const speakersData = [
     },
   },
   {
-    name: ' Luis Bezzenberger',
+    name: 'Luis Bezzenberger',
     image: LB,
     description: 'Product Lead at Brainbot for Shutter Network',
     socials: {
