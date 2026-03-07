@@ -59,7 +59,19 @@ const schedule: ScheduleEventType[] = [
     },
     {
         date: new Date("2026-03-05T18:00:00"),
-        name: "Workshop 2 - Intro to TON",
+        name: (
+            <>
+                Workshop 2 -{' '}
+                <a
+                    href="https://luma.com/ifh8m7kh"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline underline-offset-2 hover:text-white/80"
+                >
+                    Intro to TON
+                </a>
+            </>
+        ),
         icon: "workshop",
         duration: 1.5,
         value: "2026-03-05"

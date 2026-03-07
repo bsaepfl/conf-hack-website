@@ -14,6 +14,7 @@ type Sponsor = {
   name: string;
   logo: string;
   url?: string;
+  logoClass?: string;
 };
 
 type SponsorTier = {
@@ -33,7 +34,7 @@ const tiers: SponsorTier[] = [
     borderColor: "border-cyan-400/30",
     bgColor: "bg-cyan-400/5",
     logoSize: "w-56 sm:w-72 lg:w-80",
-    gridCols: "grid-cols-1",
+    gridCols: "grid-cols-1 sm:grid-cols-2",
     sponsors: [
       { name: "AlphaTON Capital", logo: alphaton.src, url: "https://alphatoncapital.com" },
     ],
@@ -60,6 +61,7 @@ const tiers: SponsorTier[] = [
     sponsors: [
       { name: "Hyli", logo: hyli.src, url: "https://www.hyli.org/" },
       { name: "ENS", logo: ens.src, url: "https://ens.domains" },
+      { name: "Hyli", logo: "/images/hyli.png", url: "https://www.hyli.org/" },
     ],
   },
   {
@@ -68,11 +70,49 @@ const tiers: SponsorTier[] = [
     borderColor: "border-orange-400/30",
     bgColor: "bg-orange-400/5",
     logoSize: "w-28 sm:w-36 lg:w-44",
-    gridCols: "grid-cols-2 sm:grid-cols-3",
+    gridCols: "grid-cols-2 sm:grid-cols-4",
     sponsors: [
       { name: "Raiffeisen", logo: raiffeisen.src, url: "https://www.raiffeisen.ch" },
       { name: "Swissquote", logo: swissquote.src, url: "https://www.swissquote.com" },
       { name: "Taurus", logo: taurus.src, url: "https://www.taurushq.com" },
+      {
+        name: "Syz Bank",
+        logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/zhwc5walgccxtdcufweh?ik-sanitizeSvg=true",
+        logoClass: "w-12 sm:w-14 lg:w-16 max-w-[64px] h-auto",
+        url: "https://www.syzgroup.com/",
+      },
+      {
+        name: "Supernova",
+        logo: "https://thesupernovaexperience.com/_nuxt/img/supernova_logo.f821ca6.svg",
+        url: "https://thesupernovaexperience.com/",
+      },
+    ],
+  },
+  {
+    label: "Community Partners",
+    color: "text-white",
+    borderColor: "border-white/30",
+    bgColor: "bg-white/5",
+    logoSize: "w-28 sm:w-36 lg:w-44",
+    gridCols: "grid-cols-1 sm:grid-cols-2",
+    sponsors: [
+      {
+        name: "MiCA Crypto Alliance",
+        logo: "https://cdn.prod.website-files.com/660a94378d5efa3a1040a72d/678ef42b2512530c092f9425_MiCA_Logo_White%20(1).png",
+        url: "https://www.micacryptoalliance.com/",
+      },
+      {
+        name: "Crypto Valley Association",
+        logo: "https://wp.logos-download.com/wp-content/uploads/2021/02/Crypto_Valley_Association_Logo.png?dl",
+        logoClass: "w-36 sm:w-44 lg:w-52",
+        url: "https://cryptovalley.swiss/",
+      },
+      {
+        name: "DecentralHouse",
+        logo: "https://i.ibb.co/21JGJjkb/DECENTRAL.png",
+        logoClass: "w-44 sm:w-56 lg:w-64",
+        url: "https://decentral.house/",
+      },
       { name: "MICA", logo: mica.src, url: "https://www.micacryptoalliance.com/" },
     ],
   },
@@ -122,7 +162,7 @@ const SponsorThanks = () => {
                       <img
                         src={sponsor.logo}
                         alt={sponsor.name}
-                        className={`${tier.logoSize} object-contain opacity-60`}
+                        className={`${sponsor.logoClass ?? tier.logoSize} object-contain opacity-60`}
                       />
                       <span className="text-white/50 font-medium text-sm sm:text-base text-center">
                         {sponsor.name}
@@ -133,7 +173,7 @@ const SponsorThanks = () => {
                       <img
                         src={sponsor.logo}
                         alt={sponsor.name}
-                        className={`${tier.logoSize} object-contain opacity-60`}
+                        className={`${sponsor.logoClass ?? tier.logoSize} object-contain opacity-60`}
                       />
                       <span className="text-white/50 font-medium text-sm sm:text-base text-center">
                         {sponsor.name}
