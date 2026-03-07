@@ -17,7 +17,7 @@ const navigationEvent: DayProps[] = [
     {
         label: "Thu, 12 Mar",
         date: "2026-03-12",
-        description: "Workshop 3 - TBA"
+        description: "Workshop 3 - TON Deep Dive"
     },
     {
         label: "Fri, 20 Mar",
@@ -78,7 +78,19 @@ const schedule: ScheduleEventType[] = [
     },
     {
         date: new Date("2026-03-12T18:00:00"),
-        name: "Workshop 3 - TBA",
+        name: (
+            <>
+                Workshop 3 -{' '}
+                <a
+                    href="https://luma.com/kfzyydfv?tk=EhUV31"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline underline-offset-2 hover:text-white/80"
+                >
+                    TON Deep Dive
+                </a>
+            </>
+        ),
         icon: "workshop",
         duration: 1.5,
         value: "2026-03-12"

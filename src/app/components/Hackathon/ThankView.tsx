@@ -8,7 +8,6 @@ import raiffeisen from "../../images/sponsors/raiffeisen.png";
 import swissquote from "../../images/sponsors/swissquote.png";
 import taurus from "../../images/sponsors/taurus2.png";
 import hyli from "../../images/sponsors/hyli.png";
-import mica from "../../images/sponsors/mica.png";
 
 type Sponsor = {
   name: string;
@@ -24,6 +23,7 @@ type SponsorTier = {
   bgColor: string;
   logoSize: string;
   gridCols: string;
+  useFlexLayout?: boolean;
   sponsors: Sponsor[];
 };
 
@@ -34,7 +34,7 @@ const tiers: SponsorTier[] = [
     borderColor: "border-cyan-400/30",
     bgColor: "bg-cyan-400/5",
     logoSize: "w-56 sm:w-72 lg:w-80",
-    gridCols: "grid-cols-1 sm:grid-cols-2",
+    gridCols: "grid-cols-1",
     sponsors: [
       { name: "AlphaTON Capital", logo: alphaton.src, url: "https://alphatoncapital.com" },
     ],
@@ -57,11 +57,10 @@ const tiers: SponsorTier[] = [
     borderColor: "border-gray-400/30",
     bgColor: "bg-gray-400/5",
     logoSize: "w-32 sm:w-40 lg:w-44",
-    gridCols: "grid-cols-1",
+    gridCols: "grid-cols-1 sm:grid-cols-2",
     sponsors: [
       { name: "Hyli", logo: hyli.src, url: "https://www.hyli.org/" },
       { name: "ENS", logo: ens.src, url: "https://ens.domains" },
-      { name: "Hyli", logo: "/images/hyli.png", url: "https://www.hyli.org/" },
     ],
   },
   {
@@ -71,6 +70,7 @@ const tiers: SponsorTier[] = [
     bgColor: "bg-orange-400/5",
     logoSize: "w-28 sm:w-36 lg:w-44",
     gridCols: "grid-cols-2 sm:grid-cols-4",
+    useFlexLayout: true,
     sponsors: [
       { name: "Raiffeisen", logo: raiffeisen.src, url: "https://www.raiffeisen.ch" },
       { name: "Swissquote", logo: swissquote.src, url: "https://www.swissquote.com" },
@@ -94,7 +94,7 @@ const tiers: SponsorTier[] = [
     borderColor: "border-white/30",
     bgColor: "bg-white/5",
     logoSize: "w-28 sm:w-36 lg:w-44",
-    gridCols: "grid-cols-1 sm:grid-cols-2",
+    gridCols: "grid-cols-1 sm:grid-cols-3",
     sponsors: [
       {
         name: "MiCA Crypto Alliance",
@@ -113,7 +113,6 @@ const tiers: SponsorTier[] = [
         logoClass: "w-44 sm:w-56 lg:w-64",
         url: "https://decentral.house/",
       },
-      { name: "MICA", logo: mica.src, url: "https://www.micacryptoalliance.com/" },
     ],
   },
 ];
@@ -146,7 +145,7 @@ const SponsorThanks = () => {
             <span className={`${tier.color} text-lg sm:text-xl font-semibold uppercase tracking-widest`}>
               {tier.label}
             </span>
-            <div className={`grid ${tier.gridCols} gap-10 place-items-center w-full`}>
+            <div className={tier.useFlexLayout ? "flex flex-wrap justify-center gap-10 w-full" : `grid ${tier.gridCols} gap-10 place-items-center w-full`}>
               {tier.sponsors.map((sponsor, index) => (
                 <div
                   key={index}
