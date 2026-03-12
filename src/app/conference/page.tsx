@@ -12,6 +12,7 @@ import ScheduleView from '../components/Agenda/ScheduleView';
 import ThankView from '../components/Hackathon/ThankView';
 import GrantView from '../components/Hackathon/GrantView';
 import SpeakersComponent from '../components/SpeakersComponent/SpeakersComponent';
+import PreviousSpeakersComponent from '../components/SpeakersComponent/PreviousSpeakersComponent';
 import LumaEmbed from '../components/LumaEmbed';
 import Countdown from '../components/Countdown';
 
@@ -172,6 +173,10 @@ export default function Conference() {
 
                 <div id="speakers" className="w-full">
                     <SpeakersComponent />
+                </div>
+                
+                <div id="previous-speakers" className="w-full">
+                    <PreviousSpeakersComponent />
                 </div>
 
                 <div id="sponsors" className="w-full">

@@ -47,23 +47,110 @@ import JMS from '../../images/speakers/JMS.png';
 import GV from '../../images/speakers/GV.png';
 import MB from '../../images/speakers/MB.png';
 import FX from '../../images/speakers/FX.jpg';
+import AlexMourot from '../../images/speakers/AlexMourot.jpeg';
+import BryanFord from '../../images/speakers/bryanford.jpg';
+import CarmenHett from '../../images/speakers/carmenhett.jpeg';
+import CedricMaire from '../../images/speakers/cedricmair.jpeg';
+import CharlesHenryMonchau from '../../images/speakers/chmonchau.jpeg';
+import FlorianDucommun from '../../images/speakers/floriantduco.jpeg';
+import JeanFrancoisRochet from '../../images/speakers/JFrochet.jpeg';
+import LancelotDeFerriere from '../../images/speakers/lancelotdef.jpg';
+import NicolaMassella from '../../images/speakers/nicomass.jpeg';
+import SherazAhmed from '../../images/speakers/sheraza.jpg';
+import ShiriBand from '../../images/speakers/shiriband.jpeg';
+import TrangFernandezLeenknecht from '../../images/speakers/trangfer.jpeg';
 import SpeakerCard from './SpeakerCard';
 import { BiHeading } from 'react-icons/bi';
 
 const speakersData = [
   {
-    name: 'Marc Bickel',
-    image: MB,
-    description: 'Co-Founder & CTO of Fume',
+    name: 'Alexandre Mourot',
+    image: AlexMourot,
+    description: 'President, BSA Blockchain Club | Sui Developer Ambassador',
     socials: {
       twitter: '',
       linkedin: '',
     },
   },
   {
-    name: 'Gauthier Vila',
-    image: GV,
-    description: 'Founder of Zyfai',
+    name: 'Bryan Ford',
+    image: BryanFord,
+    description: 'Leads the Decentralized/Distributed Systems (DEDIS) lab at the Swiss Federal Institute of Technology in Lausanne (EPFL)',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Carmen Hett',
+    image: CarmenHett,
+    description: 'Corporate Treasurer at UNHCR',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Cedric Maire',
+    image: CedricMaire,
+    description: 'Co-Chair Cyber Security Working Group Crypto Valley Association',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Charles Henry Monchau',
+    image: CharlesHenryMonchau,
+    description: 'Chief Investment Officer & Member of the Executive Committee at Syz Group',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Florian Ducommun',
+    image: FlorianDucommun,
+    description: 'Partner Bonnard Lawson International Law Firm / Group CEO Colossus Digital SA',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Jean-François Rochet',
+    image: JeanFrancoisRochet,
+    description: 'Ledger Exec',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Lancelot de Ferriere',
+    image: LancelotDeFerriere,
+    description: 'Hyli CTO',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Nicola Massella',
+    image: NicolaMassella,
+    description: 'Partner at STORM Partners, leading the Legal & Compliance practice.',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Sheraz Ahmed',
+    image: SherazAhmed,
+    description: 'Founder of Decentral House',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Shiri Band',
+    image: ShiriBand,
+    description: 'Technical Product Lead - CBDC, Tokenization, Digital Assets SICPA',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Trang Fernandez-Leenknecht',
+    image: TrangFernandezLeenknecht,
+    description: 'Founding partner at holistik',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Alexandre Mourot',
+    image: AlexMourot,
+    description: 'President, BSA Blockchain Club | Sui Developer Ambassador',
+    socials: {
+      twitter: '',
+      linkedin: '',
+    },
+  },
+  {
+    name: 'Marc Bickel',
+    image: MB,
+    description: 'Co-Founder & CTO of Fume',
     socials: {
       twitter: '',
       linkedin: '',
@@ -124,15 +211,6 @@ const speakersData = [
     },
   },
   {
-    name: 'Romain Thépaut',
-    image: RT,
-    description: 'President of DeVinci Blockchain',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
     name: 'Oleschak Robert',
     image: OR,
     description: 'Adviser at the Swiss National Bank',
@@ -151,69 +229,6 @@ const speakersData = [
     },
   },
   {
-    name: 'William De Ath',
-    image: WD,
-    description: 'Chief Partnership Officer at AlphaTON Capital',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Peterson Yuhala',
-    image: PY,
-    description: 'Postdoctoral Researcher on confidential computing at UniNE',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Guillaume Michel',
-    image: GM,
-    description: 'Research Engineer at Interplanetary Shipyard',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Mate Soos',
-    image: MS,
-    description: 'Ethereum Foundation',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Micha Roon',
-    image: MR,
-    description: 'Head of Engineering at the Hashgraph Association',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Feltroid Prime',
-    image: FP,
-    description: 'Applied Cryptography Engineer, member of Herodotus and Garaga',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Ziyi Guan',
-    image: ZG,
-    description: 'Ph.D. student at the EPFL Theory Group',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
     name: 'JP Aumasson',
     image: JPA,
     description: 'CSO & Co-founder of Taurus Group',
@@ -223,234 +238,9 @@ const speakersData = [
     },
   },
   {
-    name: 'Maxim Orlovsky',
-    image: MO,
-    description: 'Director at the Institue for Distributed and Congnitive Systems',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Bettina Sosa',
-    image: BS,
-    description: 'Head of DevRel at Partisia',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Jeff Burdges',
-    image: JBW,
-    description: 'Applied Cryptography Researcher at Web3 Foundation',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Ariel Ben Hattar',
-    image: ABH,
-    description: 'CMTA',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Laura Kiviharju',
-    image: LK,
-    description: 'Data Protection Cybersecurity & AI Governance Specialist',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
     name: 'François Xavier Wicht',
     image: fxw,
     description: 'PhD student in the Cryptology and Data Security Group at UniBern',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Yunus Gürlek',
-    image: YG,
-    description: 'Mina Community Core Developer - zkVot',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Alan Szepieniec',
-    image: AS,
-    description: 'co-founder of Neptune Cash',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Luis Bezzenberger',
-    image: LB,
-    description: 'Product Lead at Brainbot for Shutter Network',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Pim Keer',
-    image: PK,
-    description: 'Pre-doctoral researcher on Security and Privacy at TU Wien',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Maciej Kalka',
-    image: MK,
-    description: 'Researcher at VLayer Labs',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Claude Bardeciej',
-    image: q,
-    description: 'Developer Relations Engineer at Midnight',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Simon Malatrait',
-    image: SM,
-    description: 'Smart Contract Hacker & Developer',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Handan Alper',
-    image: HA,
-    description: 'Researcher at =Nil',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Gurgen Arakelov',
-    image: GA,
-    description: 'Co-founder & CEO of Fairmath',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Sylve Chevet',
-    image: SC,
-    description: 'Co-founder & CEO of Hylé',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Kassandra.eth',
-    image: K,
-    description: 'Cryptographer',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Akaki Mamageishvili',
-    image: AM,
-    description: 'Senior Research Scientist at Offchain Labs',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Alexander Linton',
-    image: AL,
-    description: 'President of the Session Technology Foundation',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Christian Knabenhans',
-    image: CK,
-    description: 'Ph.D. student at the EPFL COMPSEC lab',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Isla Munro',
-    image: IMH,
-    description: 'Zuitzerland',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Nicolas Sierro',
-    image: NS,
-    description: 'Product & Project Manager at Privately',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Vlad Avelson',
-    image: VA,
-    description: 'Zuitzerland and Cosimo Capital',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Phillip Jovanovic',
-    image: PJ,
-    description: 'Full Professor in Information Security at UCL',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Sisyphus',
-    image: S,
-    description: 'Exploration Team Lead at Starkware',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
-    name: 'Jordi Baylina',
-    image: JB,
-    description: 'Technical Lead at Polygon Hermez zkEVM',
     socials: {
       twitter: '',
       linkedin: '',
