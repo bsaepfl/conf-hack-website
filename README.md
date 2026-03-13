@@ -8,7 +8,7 @@ First, install all dependecies (pnpm recommanded)
 pnpm install
 ```
 
-First, run the development server:  
+First, run the development server:
 
 ```bash
 npm run dev
