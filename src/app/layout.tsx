@@ -28,6 +28,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BSA Stablecoin and Payments",
   description: "BSA Blockchain Hackathon ",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
