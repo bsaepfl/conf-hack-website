@@ -19,3 +19,14 @@ export interface CurrentEvent {
     hour: number;
     minutes: number;
 }
+
+export type StageName = 'panel' | 'keynote' | 'technical';
+
+export interface ConferenceEventType {
+    date: Date;
+    name: ReactNode;
+    icon: string;
+    duration: number;
+    speaker?: string;
+    stage: StageName;
+}

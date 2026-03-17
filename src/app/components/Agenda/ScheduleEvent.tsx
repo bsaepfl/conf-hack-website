@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Coffee, Users, Pizza, Code as CodeIcon, Laptop,
     Sunrise, Award, Trophy, PartyPopper, Presentation as PresentationIcon,
-    Upload, ClipboardList
+    Upload, ClipboardList, MessagesSquare, Mic, GraduationCap
 } from 'lucide-react';
 import { ScheduleEventType } from '@/types/ScheduleTypes';
 
@@ -18,7 +18,10 @@ const icons: { [key: string]: React.ReactNode } = {
     judging: <Trophy className="w-5 h-5" />,
     presentation: <PresentationIcon className="w-5 h-5" />,
     projectSubmission: <Upload className="w-5 h-5" />,
-    registration: <ClipboardList className="w-5 h-5" />
+    registration: <ClipboardList className="w-5 h-5" />,
+    panel: <MessagesSquare className="w-5 h-5" />,
+    keynote: <Mic className="w-5 h-5" />,
+    technical: <GraduationCap className="w-5 h-5" />
 };
 
 const badgeConfig: { [key: string]: { label: string; color: string } } = {
@@ -34,6 +37,9 @@ const badgeConfig: { [key: string]: { label: string; color: string } } = {
     projectSubmission: { label: 'SUBMISSION', color: 'bg-orange-500/20 text-orange-400 border-orange-500/30' },
     registration: { label: 'REGISTRATION', color: 'bg-slate-500/20 text-slate-400 border-slate-500/30' },
     team: { label: 'TEAM', color: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30' },
+    panel: { label: 'PANEL', color: 'bg-violet-500/20 text-violet-400 border-violet-500/30' },
+    keynote: { label: 'KEYNOTE', color: 'bg-rose-500/20 text-rose-400 border-rose-500/30' },
+    technical: { label: 'RESEARCH', color: 'bg-teal-500/20 text-teal-400 border-teal-500/30' },
 };
 
 interface ScheduleEventProps {
