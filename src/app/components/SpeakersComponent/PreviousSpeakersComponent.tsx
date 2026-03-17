@@ -68,12 +68,6 @@ const previousSpeakersData = [
     socials: { twitter: '', linkedin: '' },
   },
   {
-    name: 'William De Ath',
-    image: WD,
-    description: 'Chief Partnership Officer at AlphaTON Capital',
-    socials: { twitter: '', linkedin: '' },
-  },
-  {
     name: 'Peterson Yuhala',
     image: PY,
     description: 'Postdoctoral Researcher on confidential computing at UniNE',
@@ -89,12 +83,6 @@ const previousSpeakersData = [
     name: 'Mate Soos',
     image: MS,
     description: 'Ethereum Foundation',
-    socials: { twitter: '', linkedin: '' },
-  },
-  {
-    name: 'Micha Roon',
-    image: MR,
-    description: 'Head of Engineering at the Hashgraph Association',
     socials: { twitter: '', linkedin: '' },
   },
   {

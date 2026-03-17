@@ -59,6 +59,14 @@ import NicolaMassella from '../../images/speakers/nicomass.jpeg';
 import SherazAhmed from '../../images/speakers/sheraza.jpg';
 import ShiriBand from '../../images/speakers/shiriband.jpeg';
 import TrangFernandezLeenknecht from '../../images/speakers/trangfer.jpeg';
+import FK from '../../images/speakers/FK.jpeg';
+import SS from '../../images/speakers/SS.jpeg';
+import RM from '../../images/speakers/RM.jpeg';
+import NB from '../../images/speakers/NB.jpeg';
+import SDM from '../../images/speakers/SDM.jpeg';
+import NR from '../../images/speakers/NR.jpeg';
+import TV from '../../images/speakers/TV.jpeg';
+import ADM from '../../images/speakers/ADM.jpg';
 import SpeakerCard from './SpeakerCard';
 import { BiHeading } from 'react-icons/bi';
 
@@ -236,6 +244,66 @@ const speakersData = [
       twitter: '',
       linkedin: '',
     },
+  },
+  {
+    name: 'William De Ath',
+    image: WD,
+    description: 'Chief Partnership Officer at AlphaTON Capital',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Micha Roon',
+    image: MR,
+    description: 'Head of Engineering at the Hashgraph Association',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Filip Koprivec',
+    image: FK,
+    description: 'CPO at Flare Network',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Stan Stelcher',
+    image: SS,
+    description: 'BSA',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Rafael Mastroberardino',
+    image: RM,
+    description: 'Franklin Templeton',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Nandy Ba',
+    image: NB,
+    description: 'AAVE ACI Team',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Stanislas de Maistre',
+    image: SDM,
+    description: 'Belem Capital',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Nicolas Rémond',
+    image: NR,
+    description: 'SwissBorg',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Timothy Voirol',
+    image: TV,
+    description: 'Storm Partners',
+    socials: { twitter: '', linkedin: '' },
+  },
+  {
+    name: 'Dr. Anandadeep Mandal',
+    image: ADM,
+    description: 'Researcher',
+    socials: { twitter: '', linkedin: '' },
   },
 ];
 
