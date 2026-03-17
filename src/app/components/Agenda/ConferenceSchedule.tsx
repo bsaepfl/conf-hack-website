@@ -41,6 +41,9 @@ const StageColumn: React.FC<{
             <div className="flex items-center gap-2.5">
                 <div className="w-1 h-6 rounded-full" style={{ backgroundColor: stage.color }} />
                 <h3 className="text-lg font-bold text-white">{stage.label}</h3>
+                <span className="text-sm font-semibold px-2.5 py-0.5 rounded-full border border-white/15 bg-white/10 text-white/70">
+                    {stage.room}
+                </span>
             </div>
             <div className="flex items-center gap-1.5 mt-1.5 ml-3.5">
                 <MapPin className="w-3 h-3 text-white/40" />
