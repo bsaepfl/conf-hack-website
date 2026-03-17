@@ -214,7 +214,7 @@ const ScheduleView: React.FC = () => {
     );
 
     return (
-        <div className="w-full max-w-5xl mx-auto px-4 relative z-[2] py-16 rounded-xl">
+        <div className="w-full max-w-6xl mx-auto px-4 relative z-[2] py-16 rounded-xl">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
                 <div>
