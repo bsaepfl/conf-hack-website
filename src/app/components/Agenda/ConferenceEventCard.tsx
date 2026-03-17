@@ -54,9 +54,8 @@ const ConferenceEventCard: React.FC<ConferenceEventCardProps> = ({ event, curren
 
     return (
         <div
-            className={`relative flex items-start gap-3 px-3 py-3 rounded-lg border-l-2 transition-colors ${
-                isCurrent ? 'bg-base-300 border-r border-t border-b border-r-purple-500/40 border-t-purple-500/40 border-b-purple-500/40' : 'bg-base-200 border-r border-t border-b border-r-white/10 border-t-white/10 border-b-white/10 hover:bg-base-300'
-            }`}
+            className={`relative flex items-start gap-3 px-3 py-3 rounded-lg border-l-2 transition-colors ${isCurrent ? 'bg-base-300 border-r border-t border-b border-r-purple-500/40 border-t-purple-500/40 border-b-purple-500/40' : 'bg-base-200 border-r border-t border-b border-r-white/10 border-t-white/10 border-b-white/10 hover:bg-base-300'
+                }`}
             style={{ borderLeftColor: borderColor }}
         >
             {isCurrent && (
