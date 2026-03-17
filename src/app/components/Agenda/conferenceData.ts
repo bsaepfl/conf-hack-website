@@ -64,10 +64,10 @@ export const conferenceSchedule: ConferenceEventType[] = [
     },
     {
         date: new Date("2026-03-20T11:00:00"),
-        name: "On-Chain Treasury - United Nations Transformation: Adoption of Blockchain Technology, Tokenisation, and use of Stablecoins",
+        name: "On-Chain Treasury - United Nations Transformation: Adoption of Blockchain Technology, Tokenisation, and Use of Stablecoins",
         icon: "keynote",
         duration: 0.75,
-        speaker: "Carmen Hett X William De Ath",
+        speaker: "Carmen Hett x William De Ath",
         stage: "keynote",
     },
     {

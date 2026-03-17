@@ -5,6 +5,7 @@ import { Tab } from '@headlessui/react';
 import { ConferenceEventType, CurrentEvent, StageName } from '@/types/ScheduleTypes';
 import { conferenceSchedule } from './conferenceData';
 import ConferenceEventCard from './ConferenceEventCard';
+import { MapPin } from 'lucide-react';
 
 interface StageConfig {
     key: StageName;
@@ -23,24 +24,43 @@ interface ConferenceScheduleProps {
     currentTime: CurrentEvent;
 }
 
+function hasTimeGap(a: ConferenceEventType, b: ConferenceEventType): boolean {
+    const aEnd = a.date.getHours() * 60 + a.date.getMinutes() + a.duration * 60;
+    const bStart = b.date.getHours() * 60 + b.date.getMinutes();
+    return (bStart - aEnd) >= 30;
+}
+
 const StageColumn: React.FC<{
     stage: StageConfig;
     events: ConferenceEventType[];
     currentTime: CurrentEvent;
 }> = ({ stage, events, currentTime }) => (
     <div className="flex flex-col">
-        <div className="pb-3 mb-3 border-b border-white/10">
-            <div className="flex items-center gap-2">
+        {/* Stage header */}
+        <div className="pb-4 mb-4 border-b border-white/10">
+            <div className="flex items-center gap-2.5">
                 <div className="w-1 h-6 rounded-full" style={{ backgroundColor: stage.color }} />
                 <h3 className="text-lg font-bold text-white">{stage.label}</h3>
-                <span className="text-sm font-semibold px-2.5 py-0.5 rounded-full border border-white/15 bg-white/10 text-white/70">
-                    {stage.room}
-                </span>
+            </div>
+            <div className="flex items-center gap-1.5 mt-1.5 ml-3.5">
+                <MapPin className="w-3 h-3 text-white/40" />
+                <span className="text-sm font-medium text-white/50">{stage.room}</span>
             </div>
         </div>
-        <div className="flex flex-col gap-2">
+
+        {/* Events with gap detection */}
+        <div className="flex flex-col gap-2.5">
             {events.map((event, i) => (
-                <ConferenceEventCard key={i} event={event} currentTime={currentTime} />
+                <React.Fragment key={i}>
+                    {i > 0 && hasTimeGap(events[i - 1], event) && (
+                        <div className="flex items-center gap-3 py-1.5">
+                            <div className="flex-1 h-px bg-white/[0.06]" />
+                            <span className="text-[10px] font-medium text-white/25 uppercase tracking-wider">afternoon</span>
+                            <div className="flex-1 h-px bg-white/[0.06]" />
+                        </div>
+                    )}
+                    <ConferenceEventCard event={event} currentTime={currentTime} />
+                </React.Fragment>
             ))}
         </div>
     </div>
@@ -54,7 +74,7 @@ const ConferenceSchedule: React.FC<ConferenceScheduleProps> = ({ currentTime }) 
         <div>
             {/* Desktop: 3-column grid */}
             <div className="hidden md:block">
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-6">
                     {stages.map((stage) => (
                         <StageColumn key={stage.key} stage={stage} events={eventsByStage(stage.key)} currentTime={currentTime} />
                     ))}
@@ -64,39 +84,51 @@ const ConferenceSchedule: React.FC<ConferenceScheduleProps> = ({ currentTime }) 
             {/* Mobile: sub-tabs per stage */}
             <div className="md:hidden">
                 <Tab.Group>
-                    <Tab.List className="flex gap-1 bg-base-300/50 rounded-lg p-1 mb-4">
-                        {stages.map((stage, idx) => (
+                    <Tab.List className="flex gap-1 bg-base-300/50 rounded-lg p-1 mb-5">
+                        {stages.map((stage) => (
                             <Tab
                                 key={stage.key}
                                 className={({ selected }: { selected: boolean }) =>
-                                    `flex-1 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${selected
+                                    `flex-1 rounded-md text-xs font-medium transition-all ${selected
                                         ? 'text-white shadow-sm'
                                         : 'text-white/40 hover:text-white/60'
                                     }`
                                 }
                             >
                                 {({ selected }: { selected: boolean }) => (
-                                    <span
-                                        className={`block w-full rounded-md px-3 py-1.5 text-xs font-medium transition-all ${selected ? 'text-white' : 'text-white/40'
-                                            }`}
+                                    <div
+                                        className={`rounded-md px-3 py-2 text-center ${selected ? 'text-white' : 'text-white/40'}`}
                                         style={selected ? { backgroundColor: stage.color } : {}}
                                     >
-                                        {stage.label.replace(' Stage', '')}
-                                    </span>
+                                        <span className="block text-xs font-medium">{stage.label.replace(' Stage', '')}</span>
+                                        <span className="block text-[10px] opacity-70 mt-0.5">{stage.room}</span>
+                                    </div>
                                 )}
                             </Tab>
                         ))}
                     </Tab.List>
                     <Tab.Panels>
-                        {stages.map((stage) => (
-                            <Tab.Panel key={stage.key}>
-                                <div className="flex flex-col gap-2">
-                                    {eventsByStage(stage.key).map((event, i) => (
-                                        <ConferenceEventCard key={i} event={event} currentTime={currentTime} />
-                                    ))}
-                                </div>
-                            </Tab.Panel>
-                        ))}
+                        {stages.map((stage) => {
+                            const events = eventsByStage(stage.key);
+                            return (
+                                <Tab.Panel key={stage.key}>
+                                    <div className="flex flex-col gap-2.5">
+                                        {events.map((event, i) => (
+                                            <React.Fragment key={i}>
+                                                {i > 0 && hasTimeGap(events[i - 1], event) && (
+                                                    <div className="flex items-center gap-3 py-1.5">
+                                                        <div className="flex-1 h-px bg-white/[0.06]" />
+                                                        <span className="text-[10px] font-medium text-white/25 uppercase tracking-wider">afternoon</span>
+                                                        <div className="flex-1 h-px bg-white/[0.06]" />
+                                                    </div>
+                                                )}
+                                                <ConferenceEventCard event={event} currentTime={currentTime} />
+                                            </React.Fragment>
+                                        ))}
+                                    </div>
+                                </Tab.Panel>
+                            );
+                        })}
                     </Tab.Panels>
                 </Tab.Group>
             </div>
