@@ -39,6 +39,10 @@ const ConferenceEventCard: React.FC<ConferenceEventCardProps> = ({ event, curren
     const displayHour = hours.toString().padStart(2, '0');
     const displayMin = minutes.toString().padStart(2, '0');
 
+    const endTotalMin = (hours * 60 + minutes) + event.duration * 60;
+    const endH = Math.floor(endTotalMin / 60).toString().padStart(2, '0');
+    const endM = (endTotalMin % 60).toString().padStart(2, '0');
+
     const eventDateStr = event.date.toISOString().split('T')[0];
     const eventStart = hours * 60 + minutes;
     const eventEnd = eventStart + event.duration * 60;
@@ -50,18 +54,20 @@ const ConferenceEventCard: React.FC<ConferenceEventCardProps> = ({ event, curren
 
     return (
         <div
-            className={`relative flex items-start gap-3 px-3 py-3 rounded-lg border-l-2 transition-colors ${
-                isCurrent ? 'bg-base-300 border-r border-t border-b border-r-purple-500/40 border-t-purple-500/40 border-b-purple-500/40' : 'bg-base-200 border-r border-t border-b border-r-white/10 border-t-white/10 border-b-white/10 hover:bg-base-300'
-            }`}
+            className={`relative flex items-start gap-3 px-3 py-3 rounded-lg border-l-2 transition-colors ${isCurrent ? 'bg-base-300 border-r border-t border-b border-r-purple-500/40 border-t-purple-500/40 border-b-purple-500/40' : 'bg-base-200 border-r border-t border-b border-r-white/10 border-t-white/10 border-b-white/10 hover:bg-base-300'
+                }`}
             style={{ borderLeftColor: borderColor }}
         >
             {isCurrent && (
                 <div className="absolute right-2 top-2 w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             )}
 
-            <div className="flex flex-col items-center flex-shrink-0 w-12">
+            <div className="flex flex-col items-center flex-shrink-0 w-14">
                 <span className="text-lg font-bold" style={{ color: '#7c6bb4' }}>
                     {displayHour}:{displayMin}
+                </span>
+                <span className="text-sm text-white/30">
+                    {endH}:{endM}
                 </span>
             </div>
 

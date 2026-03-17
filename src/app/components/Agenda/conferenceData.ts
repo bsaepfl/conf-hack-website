@@ -50,7 +50,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         date: new Date("2026-03-20T09:30:00"),
         name: "AlphaTON - Data Sovereignty, Take Back Control: Blockchain in the Age of AI",
         icon: "keynote",
-        duration: 0.33,
+        duration: 0.5,
         speaker: "William De Ath",
         stage: "keynote",
     },
