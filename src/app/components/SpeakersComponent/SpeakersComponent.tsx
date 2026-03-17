@@ -139,15 +139,6 @@ const speakersData = [
     socials: { twitter: '', linkedin: '' },
   },
   {
-    name: 'Alexandre Mourot',
-    image: AlexMourot,
-    description: 'President, BSA Blockchain Club | Sui Developer Ambassador',
-    socials: {
-      twitter: '',
-      linkedin: '',
-    },
-  },
-  {
     name: 'Marc Bickel',
     image: MB,
     description: 'Co-Founder & CTO of Fume',

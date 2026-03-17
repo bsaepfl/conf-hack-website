@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Tab } from '@headlessui/react';
 import { CurrentEvent, DayProps, ScheduleEventType } from '@/types/ScheduleTypes';
 import ScheduleEvent from './ScheduleEvent';
+import ConferenceSchedule from './ConferenceSchedule';
 
 const navigationEvent: DayProps[] = [
     {
@@ -246,7 +247,9 @@ const ScheduleView: React.FC = () => {
                 <Tab.Panels>
                     {navigationEvent.map((day) => (
                         <Tab.Panel key={day.date}>
-                            {currentDaySchedule.length > 0 ? (
+                            {day.date === "2026-03-20" ? (
+                                <ConferenceSchedule currentTime={currentTime} />
+                            ) : currentDaySchedule.length > 0 ? (
                                 <ul className="flex flex-col gap-3">
                                     {currentDaySchedule.map((event, index) => (
                                         <ScheduleEvent
