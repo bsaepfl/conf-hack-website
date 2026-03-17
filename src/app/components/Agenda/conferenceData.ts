@@ -8,6 +8,12 @@ export const conferenceSchedule: ConferenceEventType[] = [
         icon: "panel",
         duration: 0.75,
         stage: "panel",
+        panelists: [
+            { name: "JP Aumasson", linkedin: "https://www.linkedin.com/in/aumasson/", company: "Taurus" },
+            { name: "Lancelot de Ferriere", linkedin: "https://www.linkedin.com/in/lancelotdeferriere/", company: "Hyli" },
+            { name: "Cedric Maire", linkedin: "https://www.linkedin.com/in/cedric-maire/", company: "CVA" },
+            { name: "Alexandre Mourot", linkedin: "https://www.linkedin.com/in/alexandre-mourot-01b965239/", company: "BSA" },
+        ],
     },
     {
         date: new Date("2026-03-20T10:30:00"),
@@ -15,6 +21,11 @@ export const conferenceSchedule: ConferenceEventType[] = [
         icon: "panel",
         duration: 0.75,
         stage: "panel",
+        panelists: [
+            { name: "Sebastiaan Krist", linkedin: "https://www.linkedin.com/in/sebastiaankrist/", company: "Raiffeisen" },
+            { name: "Oleschak Robert", linkedin: "https://www.linkedin.com/in/robert-oleschak-702059a0/", company: "SNB" },
+            { name: "Shiri Band", linkedin: "https://www.linkedin.com/in/shiri-band/", company: "SICPA" },
+        ],
     },
     {
         date: new Date("2026-03-20T11:30:00"),
@@ -22,6 +33,13 @@ export const conferenceSchedule: ConferenceEventType[] = [
         icon: "panel",
         duration: 0.75,
         stage: "panel",
+        panelists: [
+            { name: "Adi Seredinschi", linkedin: "https://www.linkedin.com/in/seredinschi/", company: "Circle" },
+            { name: "Vito Tumas", linkedin: "https://www.linkedin.com/in/vtumas/", company: "Ripple" },
+            { name: "Micha Roon", linkedin: "https://www.linkedin.com/in/micha/", company: "Hashgraph Association" },
+            { name: "Filip Koprivec", linkedin: "https://www.linkedin.com/in/filip-koprivec-a6635b107/", company: "Flare Network" },
+            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "Decentral House" },
+        ],
     },
     {
         date: new Date("2026-03-20T14:00:00"),
@@ -29,6 +47,12 @@ export const conferenceSchedule: ConferenceEventType[] = [
         icon: "panel",
         duration: 0.75,
         stage: "panel",
+        panelists: [
+            { name: "Biba Homsy", linkedin: "https://www.linkedin.com/in/bibahomsy/", company: "Homsy Legal" },
+            { name: "Juan Ignacio Ibanez", linkedin: "https://www.linkedin.com/in/juanignacioibanez/", company: "MiCA Crypto Alliance" },
+            { name: "Trang Fernandez-Leenknecht", linkedin: "https://www.linkedin.com/in/trangfernandezleenknecht/", company: "holistik" },
+            { name: "Nicola Massella", linkedin: "https://www.linkedin.com/in/nicolamassella/", company: "Storm Partners" },
+        ],
     },
     {
         date: new Date("2026-03-20T15:00:00"),
@@ -36,6 +60,12 @@ export const conferenceSchedule: ConferenceEventType[] = [
         icon: "panel",
         duration: 0.75,
         stage: "panel",
+        panelists: [
+            { name: "William De'Ath", linkedin: "https://www.linkedin.com/in/williamde-ath/", company: "AlphaTON" },
+            { name: "Jean-François Rochet", linkedin: "https://www.linkedin.com/in/jfrochet/", company: "Ledger" },
+            { name: "Carmen Hett", linkedin: "https://www.linkedin.com/in/carmen-hett-/", company: "UNHCR" },
+            { name: "Stan Stelcher", linkedin: "https://www.linkedin.com/in/stan-stelcher/", company: "BSA" },
+        ],
     },
     {
         date: new Date("2026-03-20T16:00:00"),
@@ -43,6 +73,13 @@ export const conferenceSchedule: ConferenceEventType[] = [
         icon: "panel",
         duration: 0.75,
         stage: "panel",
+        panelists: [
+            { name: "Carlos Martin Doncel", linkedin: "https://www.linkedin.com/in/carlos-martin-doncel-7ab37319/", company: "Swissquote" },
+            { name: "Charles Henry Monchau", linkedin: "https://www.linkedin.com/in/charles-henry-monchau-cfa-cmt-caia-4003096/", company: "SYZ" },
+            { name: "Rafael Mastroberardino", linkedin: "https://www.linkedin.com/in/rafael-mastroberardino/", company: "Franklin Templeton" },
+            { name: "Mark Richardson", linkedin: "https://www.linkedin.com/in/mrichardson87/" },
+            { name: "Sebastiaan Krist", linkedin: "https://www.linkedin.com/in/sebastiaankrist/", company: "Raiffeisen" },
+        ],
     },
 
     // === KEYNOTE STAGE ===
@@ -51,64 +88,83 @@ export const conferenceSchedule: ConferenceEventType[] = [
         name: "AlphaTON - Data Sovereignty, Take Back Control: Blockchain in the Age of AI",
         icon: "keynote",
         duration: 0.5,
-        speaker: "William De Ath",
         stage: "keynote",
+        panelists: [
+            { name: "William De Ath", linkedin: "https://www.linkedin.com/in/williamde-ath/", company: "AlphaTON" },
+        ],
     },
     {
         date: new Date("2026-03-20T10:15:00"),
         name: "AAVE ACI Team",
         icon: "keynote",
         duration: 0.75,
-        speaker: "Nandy",
         stage: "keynote",
+        panelists: [
+            { name: "Nandy", linkedin: "https://www.linkedin.com/in/nandyba/", company: "AAVE" },
+        ],
     },
     {
         date: new Date("2026-03-20T11:00:00"),
         name: "On-Chain Treasury - United Nations Transformation: Adoption of Blockchain Technology, Tokenisation, and Use of Stablecoins",
         icon: "keynote",
         duration: 0.75,
-        speaker: "Carmen Hett x William De Ath",
         stage: "keynote",
+        panelists: [
+            { name: "Carmen Hett", linkedin: "https://www.linkedin.com/in/carmen-hett-/", company: "UNHCR" },
+            { name: "William De Ath", linkedin: "https://www.linkedin.com/in/williamde-ath/", company: "AlphaTON" },
+        ],
     },
     {
         date: new Date("2026-03-20T11:45:00"),
         name: "Belem - From Experiment to Infrastructure: How Institutional Capital Is Reshaping DeFi",
         icon: "keynote",
         duration: 0.75,
-        speaker: "Stanislas de Maistre",
         stage: "keynote",
+        panelists: [
+            { name: "Stanislas de Maistre", linkedin: "https://www.linkedin.com/in/standemaistre/", company: "Belem" },
+        ],
     },
     {
         date: new Date("2026-03-20T13:00:00"),
         name: "CMTAT",
         icon: "keynote",
         duration: 0.25,
-        speaker: "Rosie x Ryan",
         stage: "keynote",
+        panelists: [
+            { name: "Rosie Ovan", linkedin: "https://www.linkedin.com/in/rosieovan/" },
+            { name: "Ryan Sauge", linkedin: "https://www.linkedin.com/in/ryan-sge/" },
+        ],
     },
     {
         date: new Date("2026-03-20T13:15:00"),
         name: "SwissBorg",
         icon: "keynote",
         duration: 0.75,
-        speaker: "Nicolas Rémond",
         stage: "keynote",
+        panelists: [
+            { name: "Nicolas Rémond", linkedin: "https://www.linkedin.com/in/nremond/", company: "SwissBorg" },
+        ],
     },
     {
         date: new Date("2026-03-20T14:00:00"),
         name: "Hyli",
         icon: "keynote",
         duration: 0.75,
-        speaker: "Lancelot de Ferrière",
         stage: "keynote",
+        panelists: [
+            { name: "Lancelot de Ferrière", linkedin: "https://www.linkedin.com/in/lancelotdeferriere/", company: "Hyli" },
+        ],
     },
     {
         date: new Date("2026-03-20T14:45:00"),
         name: "Areta x Storm - M&A and the Future of Payments",
         icon: "keynote",
         duration: 0.75,
-        speaker: "Sheraz Ahmed x Timothy Voirol",
         stage: "keynote",
+        panelists: [
+            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "Decentral House" },
+            { name: "Timothy Voirol", linkedin: "https://www.linkedin.com/in/timothy-voirol/", company: "Storm Partners" },
+        ],
     },
 
     // === TECHNICAL STAGE ===
@@ -117,47 +173,59 @@ export const conferenceSchedule: ConferenceEventType[] = [
         name: "Ephemeral Coin Tracing",
         icon: "technical",
         duration: 0.75,
-        speaker: "François-Xavier Wicht",
         stage: "technical",
+        panelists: [
+            { name: "François-Xavier Wicht", linkedin: "François-Xavier Wicht", company: "UniBern" },
+        ],
     },
     {
         date: new Date("2026-03-20T11:15:00"),
         name: "Programmable Money: How Stablecoins Replace the Backend of Asset Management",
         icon: "technical",
         duration: 0.75,
-        speaker: "Marc Bickel",
         stage: "technical",
+        panelists: [
+            { name: "Marc Bickel", linkedin: "https://www.linkedin.com/in/marc-bickel/", company: "Fume" },
+        ],
     },
     {
         date: new Date("2026-03-20T13:15:00"),
         name: "PopCoin, a Democratic Time-Based Cryptocurrency",
         icon: "technical",
         duration: 0.75,
-        speaker: "Prof. Bryan Ford",
         stage: "technical",
+        panelists: [
+            { name: "Prof. Bryan Ford", linkedin: "https://www.linkedin.com/in/baford/", company: "EPFL" },
+        ],
     },
     {
         date: new Date("2026-03-20T14:00:00"),
         name: "Offline Use of Stablecoins at Time of War or Natural Disaster",
         icon: "technical",
         duration: 0.75,
-        speaker: "Dr. habil. Jean-Marc Seigneur",
         stage: "technical",
+        panelists: [
+            { name: "Dr. habil. Jean-Marc Seigneur", linkedin: "https://www.linkedin.com/in/jmseigneur/", company: "University of Geneva" },
+        ],
     },
     {
         date: new Date("2026-03-20T14:45:00"),
         name: "An Arbitrary Mean-Rate Exchange Protocol",
         icon: "technical",
         duration: 0.75,
-        speaker: "Mark Richardson",
         stage: "technical",
+        panelists: [
+            { name: "Mark Richardson", linkedin: "https://www.linkedin.com/in/mrichardson87/" },
+        ],
     },
     {
         date: new Date("2026-03-20T15:30:00"),
         name: "The Invisible Infrastructure: How Stablecoins Are Quietly Rebuilding Global Payments",
         icon: "technical",
         duration: 0.75,
-        speaker: "Dr. Anandadeep Mandal",
         stage: "technical",
+        panelists: [
+            { name: "Dr. Anandadeep Mandal", linkedin: "https://www.linkedin.com/in/anandadeep-mandal-177978293/" },
+        ],
     },
 ];
