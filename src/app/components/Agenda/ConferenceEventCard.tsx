@@ -63,6 +63,19 @@ const ConferenceEventCard: React.FC<ConferenceEventCardProps> = ({ event, curren
                 {event.speaker && (
                     <p className="text-xs text-white/45 leading-relaxed">{event.speaker}</p>
                 )}
+                {event.panelists && event.panelists.length > 0 && (
+                    <div className="flex flex-wrap gap-x-1.5 gap-y-0.5 mt-0.5">
+                        {event.panelists.map((p, i) => (
+                            <span key={i}>
+                                <a href={p.linkedin} target="_blank" rel="noreferrer"
+                                   className="text-xs text-white/45 hover:text-white/70 underline underline-offset-2 transition-colors">
+                                    {p.name}{p.company && ` (${p.company})`}
+                                </a>
+                                {i < event.panelists!.length - 1 && <span className="text-white/20">,</span>}
+                            </span>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
