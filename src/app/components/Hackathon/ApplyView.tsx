@@ -4,9 +4,9 @@ import { DiscoverButton } from "../../NewsPopUp";
 
 const ApplyView = () => {
   return (
-    <div className="w-full flex flex-col justify-start items-center bg-white text-black z-[2]">
+    <div className="w-full flex flex-col justify-start items-center bg-base-100 text-white z-[2]">
       <div className="w-full max-w-[1100px] flex flex-col py-20 px-4 sm:px-10 gap-8 text-sm sm:text-base z-[2]">
-        <h2 className="w-full font-bold text-3xl sm:text-4xl text-dark-100 text-center pb-4">
+        <h2 className="w-full font-bold text-3xl sm:text-4xl text-white text-center pb-4">
           How To Apply - Join a Team
         </h2>
         <div className="flex flex-col gap-4 w-full max-w-[700px] mx-auto">
@@ -33,16 +33,16 @@ const ApplyView = () => {
               <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-black text-white text-sm font-semibold mt-0.5">
                 {i + 1}
               </span>
-              <p className="text-black/80 leading-relaxed">{step}</p>
+              <p className="text-white/80 leading-relaxed">{step}</p>
             </div>
           ))}
         </div>
-        <div className="w-full flex items-center justify-center lg:justify-start">
+        <div className="w-full flex items-center justify-center">
           <a
             href="https://dorahacks.io/hackathon/bsa-stablecoins-payments/detail"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center h-[44px] w-[312px] rounded-[4px] bg-dark-100 text-white font-semibold hover:opacity-90"
+            className="inline-flex items-center justify-center h-[44px] w-[312px] rounded-[4px] bg-white text-black font-semibold hover:opacity-90"
           >
             Apply on DoraHacks
           </a>
