@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   title: "BSA Stablecoin and Payments",
   description: "BSA Blockchain Hackathon ",
   icons: {
-    icon: "/icon.svg",
+    icon: "/icon.png",
   },
 };
 
