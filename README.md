@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, install all dependecies (pnpm recommanded) 
+First, install all dependecies (pnpm recommanded)
 
 ```bash
 pnpm install
