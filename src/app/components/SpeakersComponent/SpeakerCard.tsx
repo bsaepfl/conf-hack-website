@@ -2,6 +2,7 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { FaLinkedin } from 'react-icons/fa';
 
 interface Speaker {
     name: string;
@@ -92,11 +93,24 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({ speaker }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
 
             {/* Speaker info */}
-            <div className="absolute bottom-0 left-0 p-5 z-20">
-                <h2 className="text-xl font-bold text-white">{speaker.name}</h2>
-                <p className="text-sm" style={{ color: '#b4a0d4' }}>
-                    {speaker.description}
-                </p>
+            <div className="absolute bottom-0 left-0 right-0 p-5 z-20 flex items-end justify-between">
+                <div>
+                    <h2 className="text-xl font-bold text-white">{speaker.name}</h2>
+                    <p className="text-sm" style={{ color: '#b4a0d4' }}>
+                        {speaker.description}
+                    </p>
+                </div>
+                {speaker.socials.linkedin && (
+                    <a
+                        href={speaker.socials.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-white/60 hover:text-white transition-colors flex-shrink-0 ml-2"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <FaLinkedin size={20} />
+                    </a>
+                )}
             </div>
         </motion.div>
     );

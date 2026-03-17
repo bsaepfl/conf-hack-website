@@ -22,11 +22,18 @@ export interface CurrentEvent {
 
 export type StageName = 'panel' | 'keynote' | 'technical';
 
+export interface Panelist {
+    name: string;
+    linkedin: string;
+    company?: string;
+}
+
 export interface ConferenceEventType {
     date: Date;
     name: ReactNode;
     icon: string;
     duration: number;
     speaker?: string;
+    panelists?: Panelist[];
     stage: StageName;
 }

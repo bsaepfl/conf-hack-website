@@ -67,6 +67,7 @@ import SDM from '../../images/speakers/SDM.jpeg';
 import NR from '../../images/speakers/NR.jpeg';
 import TV from '../../images/speakers/TV.jpeg';
 import ADM from '../../images/speakers/ADM.jpg';
+import ADI from '../../images/speakers/ADI.jpeg';
 import SpeakerCard from './SpeakerCard';
 import { BiHeading } from 'react-icons/bi';
 
@@ -77,74 +78,74 @@ const speakersData = [
     description: 'President, BSA Blockchain Club | Sui Developer Ambassador',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/alexandre-mourot-01b965239/',
     },
   },
   {
     name: 'Bryan Ford',
     image: BryanFord,
     description: 'Leads the Decentralized/Distributed Systems (DEDIS) lab at the Swiss Federal Institute of Technology in Lausanne (EPFL)',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/baford/' },
   },
   {
     name: 'Carmen Hett',
     image: CarmenHett,
     description: 'Corporate Treasurer at UNHCR',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/carmen-hett-/' },
   },
   {
     name: 'Cedric Maire',
     image: CedricMaire,
     description: 'Co-Chair Cyber Security Working Group Crypto Valley Association',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/cedric-maire/' },
   },
   {
     name: 'Charles Henry Monchau',
     image: CharlesHenryMonchau,
     description: 'Chief Investment Officer & Member of the Executive Committee at Syz Group',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/charles-henry-monchau-cfa-cmt-caia-4003096/' },
   },
   {
     name: 'Florian Ducommun',
     image: FlorianDucommun,
     description: 'Partner Bonnard Lawson International Law Firm / Group CEO Colossus Digital SA',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/florianducommun/' },
   },
   {
     name: 'Jean-François Rochet',
     image: JeanFrancoisRochet,
     description: 'Ledger Exec',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/jfrochet/' },
   },
   {
     name: 'Lancelot de Ferriere',
     image: LancelotDeFerriere,
     description: 'Hyli CTO',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/lancelotdeferriere/' },
   },
   {
     name: 'Nicola Massella',
     image: NicolaMassella,
     description: 'Partner at STORM Partners, leading the Legal & Compliance practice.',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/nicolamassella/' },
   },
   {
     name: 'Sheraz Ahmed',
     image: SherazAhmed,
     description: 'Founder of Decentral House',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/sherazahmed1/' },
   },
   {
     name: 'Shiri Band',
     image: ShiriBand,
     description: 'Technical Product Lead - CBDC, Tokenization, Digital Assets SICPA',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/shiri-band/' },
   },
   {
     name: 'Trang Fernandez-Leenknecht',
     image: TrangFernandezLeenknecht,
     description: 'Founding partner at holistik',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/trangfernandezleenknecht/' },
   },
   {
     name: 'Marc Bickel',
@@ -152,7 +153,7 @@ const speakersData = [
     description: 'Co-Founder & CTO of Fume',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/marc-bickel/',
     },
   },
   {
@@ -161,7 +162,7 @@ const speakersData = [
     description: 'Researcher and Lecturer in Decentralized Trust at the University of Geneva',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/jmseigneur/',
     },
   },
   {
@@ -170,7 +171,7 @@ const speakersData = [
     description: 'Blockchain Researcher & Senior Software Engineer at Ripple',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/vtumas/',
     },
   },
   {
@@ -179,7 +180,7 @@ const speakersData = [
     description: 'Director Global Distribution at Amgen',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/mrichardson87/',
     },
   },
   {
@@ -188,7 +189,7 @@ const speakersData = [
     description: 'Leading Digital Assets and New Initiatives at Swissquote Bank',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/carlos-martin-doncel-7ab37319/',
     },
   },
   {
@@ -197,7 +198,7 @@ const speakersData = [
     description: 'General Secretary of the MiCA Crypto Alliance',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/juanignacioibanez/',
     },
   },
   {
@@ -206,7 +207,7 @@ const speakersData = [
     description: 'Founder & Partner at Homsy Legal, Regulatory & Crypto Lawyer',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/bibahomsy/',
     },
   },
   {
@@ -215,7 +216,7 @@ const speakersData = [
     description: 'Adviser at the Swiss National Bank',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/robert-oleschak-702059a0/',
     },
   },
   {
@@ -224,7 +225,7 @@ const speakersData = [
     description: 'Head of Corporate Banking Projects at Raiffeisen Switzerland',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/sebastiaankrist/',
     },
   },
   {
@@ -233,7 +234,7 @@ const speakersData = [
     description: 'CSO & Co-founder of Taurus Group',
     socials: {
       twitter: '',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/aumasson/',
     },
   },
   {
@@ -249,61 +250,67 @@ const speakersData = [
     name: 'William De Ath',
     image: WD,
     description: 'Chief Partnership Officer at AlphaTON Capital',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/williamde-ath/' },
   },
   {
     name: 'Micha Roon',
     image: MR,
     description: 'Head of Engineering at the Hashgraph Association',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/micha/' },
   },
   {
     name: 'Filip Koprivec',
     image: FK,
     description: 'CPO at Flare Network',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/filip-koprivec-a6635b107/' },
   },
   {
     name: 'Stan Stelcher',
     image: SS,
     description: 'BSA',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/stan-stelcher/' },
   },
   {
     name: 'Rafael Mastroberardino',
     image: RM,
     description: 'Franklin Templeton',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/rafael-mastroberardino/' },
   },
   {
     name: 'Nandy Ba',
     image: NB,
     description: 'AAVE ACI Team',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/nandyba/' },
   },
   {
     name: 'Stanislas de Maistre',
     image: SDM,
     description: 'Belem Capital',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/standemaistre/' },
   },
   {
     name: 'Nicolas Rémond',
     image: NR,
     description: 'SwissBorg',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/nremond/' },
   },
   {
     name: 'Timothy Voirol',
     image: TV,
     description: 'Storm Partners',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/timothy-voirol/' },
   },
   {
     name: 'Dr. Anandadeep Mandal',
     image: ADM,
     description: 'Researcher',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/anandadeep-mandal-177978293/' },
+  },
+  {
+    name: 'Adi Seredinschi',
+    image: ADI,
+    description: 'Circle',
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/seredinschi/' },
   },
 ];
 
