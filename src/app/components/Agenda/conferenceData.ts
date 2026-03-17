@@ -38,7 +38,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
             { name: "Vito Tumas", linkedin: "https://www.linkedin.com/in/vtumas/", company: "Ripple" },
             { name: "Micha Roon", linkedin: "https://www.linkedin.com/in/micha/", company: "Hashgraph Association" },
             { name: "Filip Koprivec", linkedin: "https://www.linkedin.com/in/filip-koprivec-a6635b107/", company: "Flare Network" },
-            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "Decentral House" },
+            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "STORM" },
         ],
     },
     {
@@ -162,7 +162,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         duration: 0.75,
         stage: "keynote",
         panelists: [
-            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "Decentral House" },
+            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "STORM" },
             { name: "Timothy Voirol", linkedin: "https://www.linkedin.com/in/timothy-voirol/", company: "Storm Partners" },
         ],
     },

@@ -132,7 +132,7 @@ const speakersData = [
   {
     name: 'Sheraz Ahmed',
     image: SherazAhmed,
-    description: 'Founder of Decentral House',
+    description: 'STORM',
     socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/sherazahmed1/' },
   },
   {
