@@ -9,14 +9,14 @@ import ConferenceEventCard from './ConferenceEventCard';
 interface StageConfig {
     key: StageName;
     label: string;
-    description: string;
+    room: string;
     color: string;
 }
 
 const stages: StageConfig[] = [
-    { key: 'panel', label: 'Main Stage', description: '6 panels on payments & blockchain', color: '#8b5cf6' },
-    { key: 'keynote', label: 'Secondary Stage', description: '8 keynote presentations', color: '#f43f5e' },
-    { key: 'technical', label: 'Technical Stage', description: '6 research talks', color: '#14b8a6' },
+    { key: 'panel', label: 'Main Stage', room: 'BC 05/06', color: '#8b5cf6' },
+    { key: 'keynote', label: 'Secondary Stage', room: 'BC420', color: '#f43f5e' },
+    { key: 'technical', label: 'Technical Stage', room: 'BC410', color: '#14b8a6' },
 ];
 
 interface ConferenceScheduleProps {
@@ -33,8 +33,10 @@ const StageColumn: React.FC<{
             <div className="flex items-center gap-2">
                 <div className="w-1 h-6 rounded-full" style={{ backgroundColor: stage.color }} />
                 <h3 className="text-lg font-bold text-white">{stage.label}</h3>
+                <span className="text-sm font-semibold px-2.5 py-0.5 rounded-full border border-white/15 bg-white/10 text-white/70">
+                    {stage.room}
+                </span>
             </div>
-            <p className="text-xs text-white/40 mt-1 ml-3">{stage.description}</p>
         </div>
         <div className="flex flex-col gap-2">
             {events.map((event, i) => (
