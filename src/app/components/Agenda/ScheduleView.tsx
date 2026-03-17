@@ -6,21 +6,6 @@ import ConferenceSchedule from './ConferenceSchedule';
 
 const navigationEvent: DayProps[] = [
     {
-        label: "Thu, 26 Feb",
-        date: "2026-02-26",
-        description: "Workshop 1 - Intro to Blockchain"
-    },
-    {
-        label: "Thu, 5 Mar",
-        date: "2026-03-05",
-        description: "Workshop 2 - Intro to TON"
-    },
-    {
-        label: "Thu, 12 Mar",
-        date: "2026-03-12",
-        description: "Workshop 3 - TON Deep Dive"
-    },
-    {
         label: "Fri, 20 Mar",
         date: "2026-03-20",
         description: "Conference"
@@ -35,68 +20,9 @@ const navigationEvent: DayProps[] = [
         date: "2026-03-22",
         description: "Hackathon Day 2"
     },
-
 ];
 
 const schedule: ScheduleEventType[] = [
-    {
-        date: new Date("2026-02-26T18:00:00"),
-        name: (
-            <>
-                Workshop 1 -{' '}
-                <a
-                    href="https://luma.com/jw508v9s"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline underline-offset-2 hover:text-white/80"
-                >
-                    Intro to Blockchain
-                </a>
-            </>
-        ),
-        icon: "workshop",
-        duration: 1.5,
-        value: "2026-02-26"
-    },
-    {
-        date: new Date("2026-03-05T18:00:00"),
-        name: (
-            <>
-                Workshop 2 -{' '}
-                <a
-                    href="https://luma.com/ifh8m7kh"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline underline-offset-2 hover:text-white/80"
-                >
-                    Intro to TON
-                </a>
-            </>
-        ),
-        icon: "workshop",
-        duration: 1.5,
-        value: "2026-03-05"
-    },
-    {
-        date: new Date("2026-03-12T18:00:00"),
-        name: (
-            <>
-                Workshop 3 -{' '}
-                <a
-                    href="https://luma.com/kfzyydfv?tk=EhUV31"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline underline-offset-2 hover:text-white/80"
-                >
-                    TON Deep Dive
-                </a>
-            </>
-        ),
-        icon: "workshop",
-        duration: 1.5,
-        value: "2026-03-12"
-    },
-
     // Conference (Mar 20, 2026)
 
     // Hackathon Day 1 (Mar 21, 2026)

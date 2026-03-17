@@ -11,8 +11,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         panelists: [
             { name: "JP Aumasson", linkedin: "https://www.linkedin.com/in/aumasson/", company: "Taurus" },
             { name: "Lancelot de Ferriere", linkedin: "https://www.linkedin.com/in/lancelotdeferriere/", company: "Hyli" },
-            { name: "Cedric Maire", linkedin: "https://www.linkedin.com/in/cedric-maire/", company: "CVA" },
-            { name: "Alexandre Mourot", linkedin: "https://www.linkedin.com/in/alexandre-mourot-01b965239/", company: "BSA" },
+            { name: "Cedric Maire", linkedin: "https://www.linkedin.com/in/cedric-maire/", company: "CVA - Bitcoin Suisse AG" },
         ],
     },
     {
@@ -25,6 +24,8 @@ export const conferenceSchedule: ConferenceEventType[] = [
             { name: "Sebastiaan Krist", linkedin: "https://www.linkedin.com/in/sebastiaankrist/", company: "Raiffeisen" },
             { name: "Oleschak Robert", linkedin: "https://www.linkedin.com/in/robert-oleschak-702059a0/", company: "SNB" },
             { name: "Shiri Band", linkedin: "https://www.linkedin.com/in/shiri-band/", company: "SICPA" },
+            { name: "Alexandre Mourot", linkedin: "https://www.linkedin.com/in/alexandre-mourot-01b965239/", company: "BSA" },
+
         ],
     },
     {
@@ -38,7 +39,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
             { name: "Vito Tumas", linkedin: "https://www.linkedin.com/in/vtumas/", company: "Ripple" },
             { name: "Micha Roon", linkedin: "https://www.linkedin.com/in/micha/", company: "Hashgraph Association" },
             { name: "Filip Koprivec", linkedin: "https://www.linkedin.com/in/filip-koprivec-a6635b107/", company: "Flare Network" },
-            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "STORM" },
+            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "STORM Partners" },
         ],
     },
     {
@@ -50,8 +51,8 @@ export const conferenceSchedule: ConferenceEventType[] = [
         panelists: [
             { name: "Biba Homsy", linkedin: "https://www.linkedin.com/in/bibahomsy/", company: "Homsy Legal" },
             { name: "Juan Ignacio Ibanez", linkedin: "https://www.linkedin.com/in/juanignacioibanez/", company: "MiCA Crypto Alliance" },
-            { name: "Trang Fernandez-Leenknecht", linkedin: "https://www.linkedin.com/in/trangfernandezleenknecht/", company: "holistik" },
-            { name: "Nicola Massella", linkedin: "https://www.linkedin.com/in/nicolamassella/", company: "Storm Partners" },
+            { name: "Trang Fernandez-Leenknecht", linkedin: "https://www.linkedin.com/in/trangfernandezleenknecht/", company: "Holistik" },
+            { name: "Nicola Massella", linkedin: "https://www.linkedin.com/in/nicolamassella/", company: "STORM Partners" },
         ],
     },
     {
@@ -77,7 +78,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
             { name: "Carlos Martin Doncel", linkedin: "https://www.linkedin.com/in/carlos-martin-doncel-7ab37319/", company: "Swissquote" },
             { name: "Charles Henry Monchau", linkedin: "https://www.linkedin.com/in/charles-henry-monchau-cfa-cmt-caia-4003096/", company: "SYZ" },
             { name: "Rafael Mastroberardino", linkedin: "https://www.linkedin.com/in/rafael-mastroberardino/", company: "Franklin Templeton" },
-            { name: "Mark Richardson", linkedin: "https://www.linkedin.com/in/mrichardson87/" },
+            { name: "Mark Richardson", linkedin: "https://www.linkedin.com/in/mrichardson87/", company: "Bancor Protocol" },
             { name: "Sebastiaan Krist", linkedin: "https://www.linkedin.com/in/sebastiaankrist/", company: "Raiffeisen" },
         ],
     },
@@ -116,12 +117,12 @@ export const conferenceSchedule: ConferenceEventType[] = [
     },
     {
         date: new Date("2026-03-20T11:45:00"),
-        name: "Belem - From Experiment to Infrastructure: How Institutional Capital Is Reshaping DeFi",
+        name: "Belem Capital - From Experiment to Infrastructure: How Institutional Capital Is Reshaping DeFi",
         icon: "keynote",
         duration: 0.75,
         stage: "keynote",
         panelists: [
-            { name: "Stanislas de Maistre", linkedin: "https://www.linkedin.com/in/standemaistre/", company: "Belem" },
+            { name: "Stanislas de Maistre", linkedin: "https://www.linkedin.com/in/standemaistre/", company: "Belem Capital" },
         ],
     },
     {
@@ -131,13 +132,13 @@ export const conferenceSchedule: ConferenceEventType[] = [
         duration: 0.25,
         stage: "keynote",
         panelists: [
-            { name: "Rosie Ovan", linkedin: "https://www.linkedin.com/in/rosieovan/" },
-            { name: "Ryan Sauge", linkedin: "https://www.linkedin.com/in/ryan-sge/" },
+            { name: "Rosie Ovan", linkedin: "https://www.linkedin.com/in/rosieovan/", company: "CMTA" },
+            { name: "Ryan Sauge", linkedin: "https://www.linkedin.com/in/ryan-sge/", company: "Taurus" },
         ],
     },
     {
         date: new Date("2026-03-20T13:15:00"),
-        name: "SwissBorg",
+        name: "Stablecoins will bring all the trading onchain",
         icon: "keynote",
         duration: 0.75,
         stage: "keynote",
@@ -157,13 +158,13 @@ export const conferenceSchedule: ConferenceEventType[] = [
     },
     {
         date: new Date("2026-03-20T14:45:00"),
-        name: "Areta x Storm - M&A and the Future of Payments",
+        name: "Areta x Storm - Understanding M&A in Digital Assets: From Industry Origins to Future Opportunities",
         icon: "keynote",
         duration: 0.75,
         stage: "keynote",
         panelists: [
-            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "STORM" },
-            { name: "Timothy Voirol", linkedin: "https://www.linkedin.com/in/timothy-voirol/", company: "Storm Partners" },
+            { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "STORM Partners" },
+            { name: "Timothy Voirol", linkedin: "https://www.linkedin.com/in/timothy-voirol/", company: "Areta" },
         ],
     },
 
@@ -215,7 +216,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         duration: 0.75,
         stage: "technical",
         panelists: [
-            { name: "Mark Richardson", linkedin: "https://www.linkedin.com/in/mrichardson87/" },
+            { name: "Mark Richardson", linkedin: "https://www.linkedin.com/in/mrichardson87/", company: "Bancor Protocol" },
         ],
     },
     {

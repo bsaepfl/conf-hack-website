@@ -30,7 +30,9 @@ const GrantView = () => {
             </li>
             <li className="flex items-start gap-3 text-center lg:text-left">
               <BsArrowRight className="mt-1 shrink-0 text-blue-400" />
-              <span>Food, snacks, beverages, coffee, energy drinks and much more supplied during the whole event</span>
+              <span>Food, snacks, beverages, coffee provided by{" "}
+                <a href="https://www.lasemeuse.ch" target="_blank" rel="noreferrer" className="font-semibold text-blue-400 hover:underline">Cafés La Semeuse</a>
+                , energy drinks and much more supplied during the whole event</span>
             </li>
             <li className="flex items-start gap-3 text-center lg:text-left">
               <BsArrowRight className="mt-1 shrink-0 text-blue-400" />
