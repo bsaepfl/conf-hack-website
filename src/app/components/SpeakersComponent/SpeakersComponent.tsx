@@ -1,6 +1,7 @@
 // components/SpeakersComponent.tsx
 import Image from 'next/image';
 import placeholder from '../../images/tickets/placeholder.webp';
+import TH from '../../images/speakers/TH.png';
 import PY from '../../images/speakers/PY.png';
 import GM from '../../images/speakers/GM.jpeg';
 import FP from '../../images/speakers/FP.jpeg';
@@ -48,7 +49,6 @@ import GV from '../../images/speakers/GV.png';
 import MB from '../../images/speakers/MB.png';
 import FX from '../../images/speakers/FX.jpg';
 import AlexMourot from '../../images/speakers/AlexMourot.jpeg';
-import BryanFord from '../../images/speakers/bryanford.jpg';
 import CarmenHett from '../../images/speakers/carmenhett.jpeg';
 import CedricMaire from '../../images/speakers/cedricmair.jpeg';
 import CharlesHenryMonchau from '../../images/speakers/chmonchau.jpeg';
@@ -80,12 +80,6 @@ const speakersData = [
       twitter: '',
       linkedin: 'https://www.linkedin.com/in/alexandre-mourot-01b965239/',
     },
-  },
-  {
-    name: 'Bryan Ford',
-    image: BryanFord,
-    description: 'Decentralized and Distributed Systems (DEDIS), EPFL',
-    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/baford/' },
   },
   {
     name: 'Carmen Hett',
@@ -166,15 +160,6 @@ const speakersData = [
     },
   },
   {
-    name: 'Vytautas Vito Tumas',
-    image: VT,
-    description: 'Blockchain Researcher & Software Engineer, Ripple',
-    socials: {
-      twitter: '',
-      linkedin: 'https://www.linkedin.com/in/vtumas/',
-    },
-  },
-  {
     name: 'Mark Richardson',
     image: MRR,
     description: 'Project Lead, Bancor Protocol',
@@ -238,6 +223,18 @@ const speakersData = [
     },
   },
   {
+    name: 'Adi Seredinschi',
+    image: ADI,
+    description: 'Principal Product Manager, Circle',
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/seredinschi/' },
+  },
+  {
+    name: 'Stan Stelcher',
+    image: SS,
+    description: 'IAM Engineer, Swisscom | Blockchain Student Association',
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/stan-stelcher/' },
+  },
+  {
     name: 'François Xavier Wicht',
     image: fxw,
     description: 'PhD student in the Cryptology and Data Security Group, UniBern',
@@ -253,6 +250,12 @@ const speakersData = [
     socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/williamde-ath/' },
   },
   {
+    name: 'Nicolas Rémond',
+    image: NR,
+    description: 'CTO, SwissBorg',
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/nremond/' },
+  },
+  {
     name: 'Micha Roon',
     image: MR,
     description: 'Head of Engineering, Hashgraph Association',
@@ -265,11 +268,18 @@ const speakersData = [
     socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/filip-koprivec-a6635b107/' },
   },
   {
-    name: 'Stan Stelcher',
-    image: SS,
-    description: 'IAM Engineer, Swisscom | Blockchain Student Association',
-    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/stan-stelcher/' },
+    name: 'Stanislas de Maistre',
+    image: SDM,
+    description: 'General Partner, Belem Capital',
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/standemaistre/' },
   },
+  {
+    name: 'Timothy Voirol',
+    image: TV,
+    description: 'Investment Banking Associate, Areta',
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/timothy-voirol/' },
+  },
+
   {
     name: 'Rafael Mastroberardino',
     image: RM,
@@ -283,22 +293,10 @@ const speakersData = [
     socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/nandyba/' },
   },
   {
-    name: 'Stanislas de Maistre',
-    image: SDM,
-    description: 'General Partner, Belem Capital',
-    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/standemaistre/' },
-  },
-  {
-    name: 'Nicolas Rémond',
-    image: NR,
-    description: 'CTO, SwissBorg',
-    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/nremond/' },
-  },
-  {
-    name: 'Timothy Voirol',
-    image: TV,
-    description: 'Investment Banking Associate, Areta',
-    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/timothy-voirol/' },
+    name: 'Gauthier Vila',
+    image: GV,
+    description: 'Founder, Zyfai',
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/gauthier-vila/' },
   },
   {
     name: 'Dr. Anandadeep Mandal',
@@ -307,10 +305,10 @@ const speakersData = [
     socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/anandadeep-mandal-177978293/' },
   },
   {
-    name: 'Adi Seredinschi',
-    image: ADI,
-    description: 'Principal Product Manager, Circle',
-    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/seredinschi/' },
+    name: 'Thomas Hussenet',
+    image: TH,
+    description: 'Technical Partner, XRPL-Commons',
+    socials: { twitter: '', linkedin: '' },
   },
 ];
 

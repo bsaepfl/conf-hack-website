@@ -36,7 +36,6 @@ export const conferenceSchedule: ConferenceEventType[] = [
         stage: "panel",
         panelists: [
             { name: "Adi Seredinschi", linkedin: "https://www.linkedin.com/in/seredinschi/", company: "Circle" },
-            { name: "Vito Tumas", linkedin: "https://www.linkedin.com/in/vtumas/", company: "Ripple" },
             { name: "Micha Roon", linkedin: "https://www.linkedin.com/in/micha/", company: "Hashgraph Association" },
             { name: "Filip Koprivec", linkedin: "https://www.linkedin.com/in/filip-koprivec-a6635b107/", company: "Flare Network" },
             { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "STORM Partners" },
@@ -63,6 +62,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         stage: "panel",
         panelists: [
             { name: "William De'Ath", linkedin: "https://www.linkedin.com/in/williamde-ath/", company: "AlphaTON" },
+            { name: "Thomas XRPL", linkedin: "https://www.linkedin.com/in/thomas-hussenet/", company: "XRPL" },
             { name: "Jean-François Rochet", linkedin: "https://www.linkedin.com/in/jfrochet/", company: "Ledger" },
             { name: "Carmen Hett", linkedin: "https://www.linkedin.com/in/carmen-hett-/", company: "UNHCR" },
             { name: "Stan Stelcher", linkedin: "https://www.linkedin.com/in/stan-stelcher/", company: "BSA" },
@@ -92,6 +92,16 @@ export const conferenceSchedule: ConferenceEventType[] = [
         stage: "keynote",
         panelists: [
             { name: "William De Ath", linkedin: "https://www.linkedin.com/in/williamde-ath/", company: "AlphaTON" },
+        ],
+    },
+    {
+        date: new Date("2026-03-20T09:50:00"),
+        name: "The Rise of Autonomous Agents in Decentralized Finance",
+        icon: "keynote",
+        duration: 0.5,
+        stage: "keynote",
+        panelists: [
+            { name: "Gauthier Vila", linkedin: "https://www.linkedin.com/in/gauthier-vila/", company: "Zyfai" },
         ],
     },
     {
@@ -167,6 +177,16 @@ export const conferenceSchedule: ConferenceEventType[] = [
             { name: "Timothy Voirol", linkedin: "https://www.linkedin.com/in/timothy-voirol/", company: "Areta" },
         ],
     },
+    {
+        date: new Date("2026-03-20T15:30:00"),
+        name: "Bonnard Lawson",
+        icon: "keynote",
+        duration: 0.75,
+        stage: "keynote",
+        panelists: [
+            { name: "Florian Ducommun", linkedin: "https://www.linkedin.com/in/florianducommun/", company: "Bonnard Lawson" },
+        ],
+    },
 
     // === TECHNICAL STAGE ===
     {
@@ -187,16 +207,6 @@ export const conferenceSchedule: ConferenceEventType[] = [
         stage: "technical",
         panelists: [
             { name: "Marc Bickel", linkedin: "https://www.linkedin.com/in/marc-bickel/", company: "Fume" },
-        ],
-    },
-    {
-        date: new Date("2026-03-20T13:15:00"),
-        name: "PopCoin, a Democratic Time-Based Cryptocurrency",
-        icon: "technical",
-        duration: 0.75,
-        stage: "technical",
-        panelists: [
-            { name: "Prof. Bryan Ford", linkedin: "https://www.linkedin.com/in/baford/", company: "EPFL" },
         ],
     },
     {
