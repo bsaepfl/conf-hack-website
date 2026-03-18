@@ -56,12 +56,6 @@ import SpeakerCard from './SpeakerCard';
 
 const previousSpeakersData = [
   {
-    name: 'Gauthier Vila',
-    image: GV,
-    description: 'Founder of Zyfai',
-    socials: { twitter: '', linkedin: '' },
-  },
-  {
     name: 'Romain Thépaut',
     image: RT,
     description: 'President of DeVinci Blockchain',
