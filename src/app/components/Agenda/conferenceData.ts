@@ -181,7 +181,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         date: new Date("2026-03-20T15:30:00"),
         name: "Institutional Yield in Digital Assets: Technical Foundations and Regulatory Aspects",
         icon: "keynote",
-        duration: 0.75,
+        duration: 0.5,
         stage: "keynote",
         panelists: [
             { name: "Florian Ducommun", linkedin: "https://www.linkedin.com/in/florianducommun/", company: "Bonnard Lawson" },
