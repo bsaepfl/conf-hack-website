@@ -132,7 +132,7 @@ const speakersData = [
   {
     name: 'Shiri Band',
     image: ShiriBand,
-    description: 'Technical Product Lead - CBDC, Tokenization, Digital Assets SICPA',
+    description: 'Product Leader | Digital Asset Ecosystems & CBDC',
     socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/shiri-band/' },
   },
   {
@@ -308,7 +308,7 @@ const speakersData = [
     name: 'Thomas Hussenet',
     image: TH,
     description: 'Technical Partner, XRPL-Commons',
-    socials: { twitter: '', linkedin: '' },
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/thomas-hussenet/' },
   },
 ];
 

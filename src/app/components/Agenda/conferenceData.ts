@@ -23,7 +23,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         panelists: [
             { name: "Sebastiaan Krist", linkedin: "https://www.linkedin.com/in/sebastiaankrist/", company: "Raiffeisen" },
             { name: "Oleschak Robert", linkedin: "https://www.linkedin.com/in/robert-oleschak-702059a0/", company: "SNB" },
-            { name: "Shiri Band", linkedin: "https://www.linkedin.com/in/shiri-band/", company: "SICPA" },
+            { name: "Shiri Band", linkedin: "https://www.linkedin.com/in/shiri-band/", company: "" },
             { name: "Alexandre Mourot", linkedin: "https://www.linkedin.com/in/alexandre-mourot-01b965239/", company: "BSA" },
 
         ],
@@ -62,7 +62,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         stage: "panel",
         panelists: [
             { name: "William De'Ath", linkedin: "https://www.linkedin.com/in/williamde-ath/", company: "AlphaTON" },
-            { name: "Thomas XRPL", linkedin: "https://www.linkedin.com/in/thomas-hussenet/", company: "XRPL" },
+            { name: "Thomas Hussenet", linkedin: "https://www.linkedin.com/in/thomas-hussenet/", company: "XRPL" },
             { name: "Jean-François Rochet", linkedin: "https://www.linkedin.com/in/jfrochet/", company: "Ledger" },
             { name: "Carmen Hett", linkedin: "https://www.linkedin.com/in/carmen-hett-/", company: "UNHCR" },
             { name: "Stan Stelcher", linkedin: "https://www.linkedin.com/in/stan-stelcher/", company: "BSA" },
@@ -106,7 +106,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
     },
     {
         date: new Date("2026-03-20T10:15:00"),
-        name: "AAVE ACI Team",
+        name: "How Token Issuers Efficiently Grow TVL: Lessons From Billion Dollar Markets",
         icon: "keynote",
         duration: 0.75,
         stage: "keynote",
@@ -158,7 +158,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
     },
     {
         date: new Date("2026-03-20T14:00:00"),
-        name: "Hyli",
+        name: "Hyli - the ZK settlement layer for institutional finance",
         icon: "keynote",
         duration: 0.75,
         stage: "keynote",
@@ -179,7 +179,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
     },
     {
         date: new Date("2026-03-20T15:30:00"),
-        name: "Bonnard Lawson",
+        name: "Institutional Yield in Digital Assets: Technical Foundations and Regulatory Aspects",
         icon: "keynote",
         duration: 0.75,
         stage: "keynote",

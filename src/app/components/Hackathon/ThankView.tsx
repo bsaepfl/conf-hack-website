@@ -8,6 +8,7 @@ import raiffeisen from "../../images/sponsors/raiffeisen.png";
 import swissquote from "../../images/sponsors/swissquote.png";
 import taurus from "../../images/sponsors/taurus2.png";
 import hyli from "../../images/sponsors/hyli.png";
+import wiw3ch from "../../images/sponsors/WiW3ch.png";
 
 type Sponsor = {
   name: string;
@@ -94,7 +95,7 @@ const tiers: SponsorTier[] = [
     borderColor: "border-white/30",
     bgColor: "bg-white/5",
     logoSize: "w-28 sm:w-36 lg:w-44",
-    gridCols: "grid-cols-1 sm:grid-cols-3",
+    gridCols: "grid-cols-2 sm:grid-cols-4",
     sponsors: [
       {
         name: "MiCA Crypto Alliance",
@@ -112,6 +113,11 @@ const tiers: SponsorTier[] = [
         logo: "https://i.ibb.co/21JGJjkb/DECENTRAL.png",
         logoClass: "w-44 sm:w-56 lg:w-64",
         url: "https://decentral.house/",
+      },
+      {
+        name: "WiW3ch",
+        logo: wiw3ch.src,
+        url: "https://www.wiw3ch.com/",
       },
     ],
   },

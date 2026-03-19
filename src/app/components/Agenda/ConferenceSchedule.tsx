@@ -15,8 +15,8 @@ interface StageConfig {
 }
 
 const stages: StageConfig[] = [
-    { key: 'panel', label: 'Main Stage', room: 'BC 05/06', color: '#8b5cf6' },
-    { key: 'keynote', label: 'Secondary Stage', room: 'BC420', color: '#f43f5e' },
+    { key: 'panel', label: 'Panel Stage', room: 'BC 05/06', color: '#8b5cf6' },
+    { key: 'keynote', label: 'Keynote Stage', room: 'BC420', color: '#f43f5e' },
     { key: 'technical', label: 'Technical Stage', room: 'BC410', color: '#14b8a6' },
 ];
 
