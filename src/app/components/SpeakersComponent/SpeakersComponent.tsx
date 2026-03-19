@@ -48,6 +48,7 @@ import JMS from '../../images/speakers/JMS.png';
 import GV from '../../images/speakers/GV.png';
 import MB from '../../images/speakers/MB.png';
 import FX from '../../images/speakers/FX.jpg';
+import BryanFord from '../../images/speakers/bryanford.jpg';
 import AlexMourot from '../../images/speakers/AlexMourot.jpeg';
 import CarmenHett from '../../images/speakers/carmenhett.jpeg';
 import CedricMaire from '../../images/speakers/cedricmair.jpeg';
@@ -80,6 +81,12 @@ const speakersData = [
       twitter: '',
       linkedin: 'https://www.linkedin.com/in/alexandre-mourot-01b965239/',
     },
+  },
+  {
+    name: 'Bryan Ford',
+    image: BryanFord,
+    description: 'Decentralized and Distributed Systems (DEDIS), EPFL',
+    socials: { twitter: '', linkedin: 'https://www.linkedin.com/in/baford/' },
   },
   {
     name: 'Carmen Hett',
