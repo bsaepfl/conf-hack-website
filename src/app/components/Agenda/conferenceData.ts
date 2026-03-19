@@ -106,7 +106,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
     },
     {
         date: new Date("2026-03-20T10:15:00"),
-        name: "How Token Issuers Efficiently Grow TVL: Lessons From Billion Dollar Markets",
+        name: "How Token Issuers Efficiently Grow TVL: Lessons From Billion Dollar Market",
         icon: "keynote",
         duration: 0.75,
         stage: "keynote",
