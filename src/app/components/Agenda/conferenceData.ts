@@ -137,7 +137,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         ],
     },
     {
-        date: new Date("2026-03-20T13:00:00"),
+        date: new Date("2026-03-20T14:00:00"),
         name: "CMTAT",
         icon: "keynote",
         duration: 0.25,
@@ -148,7 +148,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         ],
     },
     {
-        date: new Date("2026-03-20T13:15:00"),
+        date: new Date("2026-03-20T14:15:00"),
         name: "Stablecoins will bring all the trading onchain",
         icon: "keynote",
         duration: 0.75,
@@ -158,7 +158,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
         ],
     },
     {
-        date: new Date("2026-03-20T14:00:00"),
+        date: new Date("2026-03-20T15:00:00"),
         name: "Hyli - the ZK settlement layer for institutional finance",
         icon: "keynote",
         duration: 0.75,
@@ -168,18 +168,18 @@ export const conferenceSchedule: ConferenceEventType[] = [
         ],
     },
     {
-        date: new Date("2026-03-20T14:45:00"),
+        date: new Date("2026-03-20T16:45:00"),
         name: "Areta x Storm - Understanding M&A in Digital Assets: From Industry Origins to Future Opportunities",
-        icon: "keynote",
+        icon: "panel",
         duration: 0.75,
-        stage: "keynote",
+        stage: "panel",
         panelists: [
             { name: "Sheraz Ahmed", linkedin: "https://www.linkedin.com/in/sherazahmed1/", company: "STORM Partners" },
             { name: "Timothy Voirol", linkedin: "https://www.linkedin.com/in/timothy-voirol/", company: "Areta" },
         ],
     },
     {
-        date: new Date("2026-03-20T15:30:00"),
+        date: new Date("2026-03-20T15:45:00"),
         name: "Institutional Yield in Digital Assets: Technical Foundations and Regulatory Aspects",
         icon: "keynote",
         duration: 0.5,
