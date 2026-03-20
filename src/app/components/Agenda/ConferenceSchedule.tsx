@@ -15,9 +15,9 @@ interface StageConfig {
 }
 
 const stages: StageConfig[] = [
-    { key: 'panel', label: 'Panel Stage', room: 'BC 05/06', color: '#8b5cf6' },
-    { key: 'keynote', label: 'Keynote Stage', room: 'BC420', color: '#f43f5e' },
-    { key: 'technical', label: 'Technical Stage', room: 'BC410', color: '#14b8a6' },
+    { key: 'panel', label: 'Panel Stage', room: 'BC 05/06 (Ground Floor)', color: '#8b5cf6' },
+    { key: 'keynote', label: 'Keynote Stage', room: 'BC420 (4th Floor)', color: '#f43f5e' },
+    { key: 'technical', label: 'Technical Stage', room: 'BC410 (4th Floor)', color: '#14b8a6' },
 ];
 
 interface ConferenceScheduleProps {
