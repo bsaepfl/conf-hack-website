@@ -85,7 +85,7 @@ export const conferenceSchedule: ConferenceEventType[] = [
 
     // === KEYNOTE STAGE ===
     {
-        date: new Date("2026-03-20T09:30:00"),
+        date: new Date("2026-03-20T12:30:00"),
         name: "AlphaTON - Data Sovereignty, Take Back Control: Blockchain in the Age of AI",
         icon: "keynote",
         duration: 0.5,
