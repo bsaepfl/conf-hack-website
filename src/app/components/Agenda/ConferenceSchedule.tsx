@@ -24,10 +24,20 @@ interface ConferenceScheduleProps {
     currentTime: CurrentEvent;
 }
 
-function hasTimeGap(a: ConferenceEventType, b: ConferenceEventType): boolean {
-    const aEnd = a.date.getHours() * 60 + a.date.getMinutes() + a.duration * 60;
-    const bStart = b.date.getHours() * 60 + b.date.getMinutes();
-    return (bStart - aEnd) >= 30;
+function isFirstAfternoonGap(events: ConferenceEventType[], index: number): boolean {
+    if (index === 0) return false;
+    const prev = events[index - 1];
+    const curr = events[index];
+    const prevEnd = prev.date.getHours() * 60 + prev.date.getMinutes() + prev.duration * 60;
+    const currStart = curr.date.getHours() * 60 + curr.date.getMinutes();
+    if ((currStart - prevEnd) < 30) return false;
+    // Only show divider for the first qualifying gap
+    for (let j = 1; j < index; j++) {
+        const pEnd = events[j - 1].date.getHours() * 60 + events[j - 1].date.getMinutes() + events[j - 1].duration * 60;
+        const cStart = events[j].date.getHours() * 60 + events[j].date.getMinutes();
+        if ((cStart - pEnd) >= 30) return false;
+    }
+    return true;
 }
 
 const StageColumn: React.FC<{
@@ -52,7 +62,7 @@ const StageColumn: React.FC<{
         <div className="flex flex-col gap-2.5">
             {events.map((event, i) => (
                 <React.Fragment key={i}>
-                    {i > 0 && hasTimeGap(events[i - 1], event) && (
+                    {i > 0 && isFirstAfternoonGap(events, i) && (
                         <div className="flex items-center gap-3 py-1.5">
                             <div className="flex-1 h-px bg-white/[0.06]" />
                             <span className="text-[10px] font-medium text-white/25 uppercase tracking-wider">afternoon</span>
@@ -115,7 +125,7 @@ const ConferenceSchedule: React.FC<ConferenceScheduleProps> = ({ currentTime }) 
                                     <div className="flex flex-col gap-2.5">
                                         {events.map((event, i) => (
                                             <React.Fragment key={i}>
-                                                {i > 0 && hasTimeGap(events[i - 1], event) && (
+                                                {i > 0 && isFirstAfternoonGap(events, i) && (
                                                     <div className="flex items-center gap-3 py-1.5">
                                                         <div className="flex-1 h-px bg-white/[0.06]" />
                                                         <span className="text-[10px] font-medium text-white/25 uppercase tracking-wider">afternoon</span>

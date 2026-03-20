@@ -83,19 +83,20 @@ export const conferenceSchedule: ConferenceEventType[] = [
         ],
     },
 
-    // === KEYNOTE STAGE ===
     {
         date: new Date("2026-03-20T12:30:00"),
         name: "AlphaTON - Data Sovereignty, Take Back Control: Blockchain in the Age of AI",
-        icon: "keynote",
+        icon: "panel",
         duration: 0.5,
-        stage: "keynote",
+        stage: "panel",
         panelists: [
             { name: "William De Ath", linkedin: "https://www.linkedin.com/in/williamde-ath/", company: "AlphaTON" },
         ],
     },
+
+    // === KEYNOTE STAGE ===
     {
-        date: new Date("2026-03-20T09:50:00"),
+        date: new Date("2026-03-20T17:00:00"),
         name: "The Rise of Autonomous Agents in Decentralized Finance",
         icon: "keynote",
         duration: 0.5,
