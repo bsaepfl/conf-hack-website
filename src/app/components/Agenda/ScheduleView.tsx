@@ -34,14 +34,14 @@ const schedule: ScheduleEventType[] = [
         value: "2026-03-21"
     },
     {
-        date: new Date("2026-03-21T09:30:00"),
+        date: new Date("2026-03-21T10:00:00"),
         name: "Opening Ceremony",
         icon: "ceremonyOpen",
         duration: 0.25,
         value: "2026-03-21"
     },
     {
-        date: new Date("2026-03-21T10:00:00"),
+        date: new Date("2026-03-21T10:15:00"),
         name: "Hacking Starts",
         icon: "code",
         duration: 0,
@@ -49,7 +49,7 @@ const schedule: ScheduleEventType[] = [
     },
     {
         date: new Date("2026-03-21T12:30:00"),
-        name: "Brunch",
+        name: "Lunch",
         icon: "snacks",
         duration: 0.5,
         value: "2026-03-21"

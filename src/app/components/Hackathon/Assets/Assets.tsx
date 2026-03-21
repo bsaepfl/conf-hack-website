@@ -147,7 +147,7 @@ export const schedule: ScheduleEvent[] = [
     value: "2024-10-12",
   },
   {
-    name: "Brunch",
+    name: "Lunch",
     icon: "meal",
     description: "",
     time: "13:00",
