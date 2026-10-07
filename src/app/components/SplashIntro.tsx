@@ -10,7 +10,7 @@ export default function SplashIntro() {
 
     useEffect(() => {
         if (sessionStorage.getItem('splashSeen')) {
-            // Returning visitor this session — hide instantly
+            // Returning visitor this session - hide instantly
             setShow(false);
             return;
         }

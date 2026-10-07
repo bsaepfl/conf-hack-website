@@ -22,6 +22,16 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "src/app/layout.tsx",
+    "src/app/page.tsx",
+    "src/app/agenda/page.tsx",
+    "src/app/conference/page.tsx",
+    "src/app/hackathon/page.tsx",
+    "src/app/register/page.tsx",
+    "src/app/components/EventSite.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({
       <span className="font-semibold">$16,000</span> prize pool.
     </p>
   ),
-  date = "SATURDAY, MARCH 21 — EPFL CAMPUS",
+  date = "SATURDAY, MARCH 21 - EPFL CAMPUS",
   showCalendar = true,
   showDate = true,
   showDiscoverButton = true,

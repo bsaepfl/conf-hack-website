@@ -1,51 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Inria_Serif } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-const inriaSerif = Inria_Serif({
-  subsets: ['latin'],
-  weight: ['300', '400', '700'],
-  variable: '--font-inria-serif',
-  display: 'swap',
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "BSA Stablecoin and Payments",
-  description: "BSA Blockchain Hackathon ",
-  icons: {
-    icon: "/icon.png",
+  title: "The Hackathon - BSA EPFL",
+  description:
+    "The Hackathon by the Blockchain Student Association at EPFL. 10-11 October 2026 at the BC Building, EPFL. Free food and $5,700 in prizes.",
+  icons: { icon: "/images/logo-icon-white.png" },
+  openGraph: {
+    title: "The Hackathon - BSA EPFL",
+    description: "10-11 October 2026 · BC Building, EPFL · $5,700 in prizes",
+    type: "website",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="myCustomTheme">
-      <body
-        className={`${inter.variable} ${inriaSerif.variable} font-sans antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
-

@@ -1,44 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). 
- 
-## Getting Started
+# The Hackathon - BSA EPFL
 
-First, install all dependecies (pnpm recommanded) 
+Event website for the Blockchain Student Association at EPFL.
+
+## Current event
+
+- **Date:** 10-11 October 2026, Saturday 9:00 AM to Sunday 6:00 PM
+- **Venue:** BC Building, EPFL, Lausanne
+- **Prize pool:** $5,700
+- **Sponsors shown in the supplied poster:** Belem Capital and Swissquote
+- **Participant food:** Free
+
+The event date, time, venue, registration, and sponsors are confirmed on the [Luma event page](https://luma.com/d5gqew38).
+
+## Local development
 
 ```bash
 pnpm install
-```
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.   
+The site is a statically exported Next.js app. All existing public routes render the current event site, so links to older event paths no longer show outdated conference content.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where to edit
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Event content](src/app/components/EventSite.tsx)
+- [Visual styles](src/app/globals.css)
+- [Exact poster title artwork](public/images/hackathon-title-reference.png)
+- [Page metadata](src/app/layout.tsx)
+- [Supplied BSA character assets](public/)
+- [Official sponsor logos](public/sponsors/)
 
-We also use daisyui and tailwind for styling. Please check the docs and ask ChatGPT how to do the style (I have no idea myself, just tell GPT to use daisyui and tailwind for style)
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All registration buttons open the [Luma event page](https://luma.com/d5gqew38).
+The main title uses the lettering from the supplied poster artwork. Its typeface is Fontworks’ ドット明朝16. A licensed webfont file is needed to render new, editable text in that typeface elsewhere on the site.

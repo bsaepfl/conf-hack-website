@@ -7,10 +7,6 @@ const nextConfig: NextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  typescript: {
-    // ⚠️ This will completely disable TypeScript checks during build
-    ignoreBuildErrors: true,
-  },
   output: 'export',
   // If you're using images, you might need this
   images: {
