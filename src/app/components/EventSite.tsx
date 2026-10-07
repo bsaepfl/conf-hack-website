@@ -23,9 +23,9 @@ const scheduleDays = [
     events: [
       { time: "00:00", name: "MIDNIGHT SNACK" },
       { time: "07:00", name: "BREAKFAST" },
-      { time: "13:00", name: "HACKING ENDS & SUBMISSIONS" },
-      { time: "13:00", name: "JUDGING" },
-      { time: "15:00", name: "CLOSING CEREMONY & AWARDS" },
+      { time: "10:00", name: "HACKING ENDS & SUBMISSIONS" },
+      { time: "10:30", name: "JUDGING" },
+      { time: "13:00", name: "CLOSING CEREMONY & AWARDS" },
       { time: "18:00", name: "EVENT ENDS" },
     ],
   },
@@ -211,7 +211,7 @@ export default function EventSite() {
               <span className="detail-index">01 / WHEN</span>
               <strong>10-11</strong>
               <h3>OCTOBER 2026</h3>
-              <p>Saturday 9:00 AM to Sunday 6:00 PM, Lausanne time.</p>
+              <p>33-hour event, Saturday 9:00 AM to Sunday 6:00 PM, Lausanne time.</p>
               <span className="detail-icon">⌁</span>
             </article>
             <article className="detail-card">

@@ -26,7 +26,7 @@ const PrizeView = () => {
             prestigious institution at the forefront of technology and innovation.
           </p>
           <p className="text-center text-lg font-semibold text-white rounded-lg border border-white/15 bg-white/5 px-5 py-4">
-            Get to win over $16,000 USD in prizes and build something amazing in just 36 hours!
+            Get to win over $16,000 USD in prizes and build something amazing in just 33 hours!
           </p>
         </div>
       </div>

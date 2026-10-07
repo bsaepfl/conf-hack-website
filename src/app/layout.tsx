@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "The Hackathon - BSA EPFL",
   description:
-    "The Hackathon by the Blockchain Student Association at EPFL. 10-11 October 2026 at the BC Building, EPFL. Free food and $5,700 in prizes.",
+    "The 33-hour Hackathon by the Blockchain Student Association at EPFL. 10-11 October 2026 at the BC Building, EPFL. Free food and $5,700 in prizes.",
   icons: { icon: "/images/logo-icon-white.png" },
   openGraph: {
     title: "The Hackathon - BSA EPFL",
