@@ -3,6 +3,34 @@ import EventCountdown from "./EventCountdown";
 
 const registrationUrl = "https://luma.com/d5gqew38";
 
+const scheduleDays = [
+  {
+    label: "DAY 01 / SATURDAY",
+    dateLabel: "10 OCT",
+    date: "2026-10-10",
+    events: [
+      { time: "09:00", name: "REGISTRATION & BREAKFAST" },
+      { time: "10:00", name: "OPENING CEREMONY" },
+      { time: "10:15", name: "HACKING STARTS" },
+      { time: "12:30", name: "LUNCH" },
+      { time: "18:30", name: "DINNER" },
+    ],
+  },
+  {
+    label: "DAY 02 / SUNDAY",
+    dateLabel: "11 OCT",
+    date: "2026-10-11",
+    events: [
+      { time: "00:00", name: "MIDNIGHT SNACK" },
+      { time: "07:00", name: "BREAKFAST" },
+      { time: "13:00", name: "HACKING ENDS & SUBMISSIONS" },
+      { time: "13:00", name: "JUDGING" },
+      { time: "15:00", name: "CLOSING CEREMONY & AWARDS" },
+      { time: "18:00", name: "EVENT ENDS" },
+    ],
+  },
+];
+
 function PixelCorners() {
   return (
     <>
@@ -52,6 +80,7 @@ export default function EventSite() {
         <nav className="desktop-nav" aria-label="Main navigation">
           <a href="#about">ABOUT</a>
           <a href="#details">DETAILS</a>
+          <a href="#schedule">SCHEDULE</a>
           <a href="#partners">PARTNERS</a>
           <a href="#location">LOCATION</a>
         </nav>
@@ -72,6 +101,7 @@ export default function EventSite() {
           <div className="mobile-nav-panel">
             <a href="#about">ABOUT</a>
             <a href="#details">DETAILS</a>
+            <a href="#schedule">SCHEDULE</a>
             <a href="#partners">PARTNERS</a>
             <a href="#location">LOCATION</a>
             <a href={registrationUrl} target="_blank" rel="noreferrer">
@@ -208,8 +238,42 @@ export default function EventSite() {
           </div>
         </section>
 
+        <section id="schedule" className="content-section schedule-section">
+          <SectionLabel number="03">PRELIMINARY SCHEDULE</SectionLabel>
+          <h2>
+            EVENT
+            <br />
+            SCHEDULE<span className="cursor">_</span>
+          </h2>
+          <div className="schedule-grid">
+            {scheduleDays.map((day) => (
+              <article className="schedule-day" key={day.date}>
+                <div className="schedule-day-header">
+                  <span>{day.label}</span>
+                  <strong>{day.dateLabel}</strong>
+                </div>
+                <ol className="schedule-entries">
+                  {day.events.map((event) => (
+                    <li className="schedule-entry" key={`${day.date}-${event.time}-${event.name}`}>
+                      <time dateTime={`${day.date}T${event.time}:00+02:00`}>
+                        {event.time}
+                      </time>
+                      <div>
+                        <h3>{event.name}</h3>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </article>
+            ))}
+          </div>
+          <p className="schedule-footnote">
+            PRELIMINARY PROGRAM / ALL TIMES CEST
+          </p>
+        </section>
+
         <section id="partners" className="content-section partners-section">
-          <SectionLabel number="03">SPONSORS</SectionLabel>
+          <SectionLabel number="04">SPONSORS</SectionLabel>
           <div className="partners-heading">
             <h2>EVENT SPONSORS<span className="cursor">_</span></h2>
           </div>
@@ -251,7 +315,7 @@ export default function EventSite() {
 
         <section id="location" className="content-section location-section">
           <div>
-            <SectionLabel number="04">VENUE</SectionLabel>
+            <SectionLabel number="05">VENUE</SectionLabel>
             <h2>
               BC BUILDING,
               <br />
@@ -269,26 +333,21 @@ export default function EventSite() {
               GET DIRECTIONS <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <div
-            className="location-map"
-            aria-label="Stylized map showing EPFL in Lausanne"
-          >
-            <div className="map-grid" />
-            <div className="map-cross map-cross-a">+</div>
-            <div className="map-cross map-cross-b">+</div>
-            <div className="map-cross map-cross-c">+</div>
-            <div className="map-pin">
-              <span>⌖</span>
-              <strong>EPFL / BC</strong>
-              <small>46.5186° N · 6.5619° E</small>
-            </div>
+          <div className="location-map">
+            <iframe
+              src="https://maps.google.com/maps?q=EPFL+BC+Building,+Ecublens,+Switzerland&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="Map of the BC Building at EPFL"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </section>
 
         <section id="join" className="join-section">
           <div className="join-frame pixel-frame">
             <PixelCorners />
-            <SectionLabel number="05">REGISTRATION</SectionLabel>
+            <SectionLabel number="06">REGISTRATION</SectionLabel>
             <h2>
               REQUEST
               <br />

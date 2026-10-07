@@ -9,6 +9,7 @@ Event website for the Blockchain Student Association at EPFL.
 - **Prize pool:** $5,700
 - **Sponsors shown in the supplied poster:** Belem Capital and Swissquote
 - **Participant food:** Free
+- **Schedule:** Preliminary program adapted from the previous event; Sunday lunch is omitted. The 09:00 start and 18:00 finish match the current Luma event page.
 
 The event date, time, venue, registration, and sponsors are confirmed on the [Luma event page](https://luma.com/d5gqew38).
 
@@ -25,6 +26,7 @@ The site is a statically exported Next.js app. All existing public routes render
 
 - [Event content](src/app/components/EventSite.tsx)
 - [Visual styles](src/app/globals.css)
+- [Countdown and event times](src/app/components/EventCountdown.tsx)
 - [Exact poster title artwork](public/images/hackathon-title-reference.png)
 - [Page metadata](src/app/layout.tsx)
 - [Supplied BSA character assets](public/)

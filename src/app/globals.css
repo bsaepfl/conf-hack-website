@@ -252,7 +252,7 @@ summary:focus-visible {
   align-items: center;
   gap: clamp(15px, 2vw, 30px);
   margin: clamp(15px, 2vw, 28px) auto 0;
-  padding: 10px 16px;
+  padding: 13px 20px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   background: rgba(16, 43, 169, 0.16);
 }
@@ -272,10 +272,10 @@ summary:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 36px;
+  min-width: 44px;
 }
 .hero-countdown-unit strong {
-  font-size: clamp(21px, 2.25vw, 32px);
+  font-size: clamp(27px, 3vw, 42px);
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
@@ -522,6 +522,97 @@ summary:focus-visible {
   font-size: 35px;
   line-height: 1;
 }
+.schedule-section {
+  background: white;
+  color: var(--blue);
+}
+.schedule-section .cursor {
+  color: var(--blue);
+}
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 2px solid var(--blue);
+  margin-top: 55px;
+}
+.schedule-day + .schedule-day {
+  border-left: 2px solid var(--blue);
+}
+.schedule-day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 27px;
+  background: var(--blue);
+  color: white;
+}
+.schedule-day-header span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.schedule-day-header strong {
+  font-family: Switzer, sans-serif;
+  font-size: clamp(27px, 3vw, 42px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  white-space: nowrap;
+}
+.schedule-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.schedule-entry {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 24px;
+  padding: 24px 27px;
+  min-height: 108px;
+}
+.schedule-entry + .schedule-entry {
+  border-top: 1px solid rgba(31, 64, 245, 0.25);
+}
+.schedule-entry time {
+  align-self: center;
+  font-size: 26px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.schedule-entry > div {
+  position: relative;
+  border-left: 2px solid var(--blue);
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+}
+.schedule-entry > div:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  background: var(--blue);
+}
+.schedule-entry h3 {
+  font-family: Switzer, sans-serif;
+  font-size: clamp(21px, 2vw, 28px);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+.schedule-footnote {
+  margin: 0;
+  padding: 15px 20px;
+  border: 2px solid var(--blue);
+  border-top: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: right;
+}
 .partners-heading {
   display: flex;
   justify-content: space-between;
@@ -587,69 +678,14 @@ summary:focus-visible {
 .location-map {
   height: clamp(380px, 43vw, 600px);
   border: 2px solid white;
-  position: relative;
   overflow: hidden;
-  background: var(--blue);
-  isolation: isolate;
-}
-.map-grid {
-  position: absolute;
-  inset: -100% -100%;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.23) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.23) 1px, transparent 1px);
-  background-size: 50px 50px;
-  transform: perspective(500px) rotateX(40deg) rotateZ(-19deg) scale(1.2);
-  transform-origin: center;
-}
-.location-map:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 18px solid rgba(255, 255, 255, 0.04);
-  pointer-events: none;
-}
-.map-cross {
-  position: absolute;
-  font-size: 30px;
-}
-.map-cross-a {
-  top: 13%;
-  left: 18%;
-}
-.map-cross-b {
-  right: 15%;
-  top: 25%;
-}
-.map-cross-c {
-  bottom: 15%;
-  left: 12%;
-}
-.map-pin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   background: white;
-  color: var(--blue);
-  padding: 25px 30px;
-  min-width: 230px;
-  box-shadow: 10px 10px 0 var(--blue-deep);
 }
-.map-pin span {
-  font-size: 60px;
-  line-height: 0.9;
-}
-.map-pin strong {
-  font-size: 20px;
-  margin-top: 12px;
-}
-.map-pin small {
-  font-size: 9px;
-  margin-top: 10px;
+.location-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 .join-section {
   padding: clamp(35px, 6vw, 100px);
@@ -740,6 +776,13 @@ summary:focus-visible {
   .detail-card strong {
     margin-top: 50px;
   }
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+  .schedule-day + .schedule-day {
+    border-left: 0;
+    border-top: 2px solid var(--blue);
+  }
 }
 @media (max-width: 760px) {
   .site-header {
@@ -816,7 +859,7 @@ summary:focus-visible {
   }
   .hero-countdown {
     gap: 12px;
-    padding: 8px 10px;
+    padding: 11px 12px;
   }
   .hero-countdown-label {
     font-size: 8px;
@@ -825,10 +868,10 @@ summary:focus-visible {
     gap: 5px;
   }
   .hero-countdown-unit {
-    min-width: 30px;
+    min-width: 33px;
   }
   .hero-countdown-unit strong {
-    font-size: 21px;
+    font-size: 27px;
   }
   .hero-countdown-unit small {
     font-size: 7px;
@@ -964,6 +1007,25 @@ summary:focus-visible {
   .detail-card strong {
     margin-top: 30px;
     font-size: 60px;
+  }
+  .schedule-day-header {
+    padding: 18px 20px;
+  }
+  .schedule-entry {
+    grid-template-columns: 75px 1fr;
+    gap: 14px;
+    padding: 22px 20px;
+    min-height: 95px;
+  }
+  .schedule-entry time {
+    font-size: 23px;
+  }
+  .schedule-entry > div {
+    padding-left: 18px;
+  }
+  .schedule-footnote {
+    text-align: left;
+    line-height: 1.5;
   }
   .partner {
     min-height: 145px;
