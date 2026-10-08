@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const eventStart = new Date("2026-10-10T09:00:00+02:00").getTime();
-const eventEnd = new Date("2026-10-11T18:00:00+02:00").getTime();
+const eventEnd = new Date("2026-10-11T15:00:00+02:00").getTime();
 
 function timeUntilStart(now: number) {
   const seconds = Math.max(0, Math.floor((eventStart - now) / 1000));

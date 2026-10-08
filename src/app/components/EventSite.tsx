@@ -24,9 +24,10 @@ const scheduleDays = [
       { time: "00:00", name: "MIDNIGHT SNACK" },
       { time: "07:00", name: "BREAKFAST" },
       { time: "10:00", name: "HACKING ENDS & SUBMISSIONS" },
-      { time: "10:30", name: "JUDGING" },
-      { time: "13:00", name: "CLOSING CEREMONY & AWARDS" },
-      { time: "18:00", name: "EVENT ENDS" },
+      { time: "10:30", name: "JUDGING STARTS" },
+      { time: "13:00", name: "JUDGING ENDS" },
+      { time: "13:30", name: "CLOSING CEREMONY & AWARDS" },
+      { time: "15:00", name: "EVENT ENDS" },
     ],
   },
 ];
@@ -122,11 +123,11 @@ export default function EventSite() {
             <div className="hero-intro">
               <Image
                 src="/images/logo-icon-white.png"
-                alt=""
+                alt="BSA"
                 width={49}
                 height={49}
               />
-              <span>BSA presents</span>
+              <span>presents</span>
             </div>
             <h1 id="hero-heading" aria-label="THE HACKATHON">
               <svg
@@ -144,6 +145,8 @@ export default function EventSite() {
             </h1>
             <EventCountdown />
             <div className="hero-art" aria-hidden="true">
+              <div className="hero-grid-floor" />
+              <div className="hero-scan-beam" />
               <Image
                 className="hero-character"
                 src="/bsa-man-icon-white.svg"
@@ -211,7 +214,7 @@ export default function EventSite() {
               <span className="detail-index">01 / WHEN</span>
               <strong>10-11</strong>
               <h3>OCTOBER 2026</h3>
-              <p>33-hour event, Saturday 9:00 AM to Sunday 6:00 PM, Lausanne time.</p>
+              <p>30-hour event, Saturday 9:00 AM to Sunday 3:00 PM, Lausanne time.</p>
               <span className="detail-icon">⌁</span>
             </article>
             <article className="detail-card">
@@ -239,7 +242,7 @@ export default function EventSite() {
         </section>
 
         <section id="schedule" className="content-section schedule-section">
-          <SectionLabel number="03">PRELIMINARY SCHEDULE</SectionLabel>
+          <SectionLabel number="03">PROGRAM</SectionLabel>
           <h2>
             EVENT
             <br />
@@ -268,7 +271,7 @@ export default function EventSite() {
             ))}
           </div>
           <p className="schedule-footnote">
-            PRELIMINARY PROGRAM / ALL TIMES CEST
+            PROGRAM / ALL TIMES CEST
           </p>
         </section>
 

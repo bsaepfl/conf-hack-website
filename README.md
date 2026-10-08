@@ -4,12 +4,12 @@ Event website for the Blockchain Student Association at EPFL.
 
 ## Current event
 
-- **Date:** 10-11 October 2026, Saturday 9:00 AM to Sunday 6:00 PM (33 hours)
+- **Date:** 10-11 October 2026, Saturday 9:00 AM to Sunday 3:00 PM (30 hours)
 - **Venue:** BC Building, EPFL, Lausanne
 - **Prize pool:** $5,700
 - **Sponsors shown in the supplied poster:** Belem Capital and Swissquote
 - **Participant food:** Free
-- **Schedule:** Preliminary program adapted from the previous event; Sunday lunch is omitted. The 09:00 start and 18:00 finish match the current Luma event page.
+- **Schedule:** Program adapted from the previous event and updated by the event team. Sunday lunch is omitted.
 
 The event date, time, venue, registration, and sponsors are confirmed on the [Luma event page](https://luma.com/d5gqew38).
 
