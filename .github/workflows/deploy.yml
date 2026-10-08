@@ -29,6 +29,19 @@ jobs:
             fi
           done
 
+      - name: Verify Vercel project access
+        shell: bash
+        run: |
+          status="$(curl --silent --show-error \
+            --output "$RUNNER_TEMP/vercel-project.json" \
+            --write-out '%{http_code}' \
+            --header "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID?teamId=$VERCEL_ORG_ID")"
+          if [ "$status" != 200 ]; then
+            echo "Vercel project lookup returned HTTP $status. Check the token's team scope and the project/team IDs." >&2
+            exit 1
+          fi
+
       - name: Check out source
         uses: actions/checkout@v4
         with:
