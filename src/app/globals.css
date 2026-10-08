@@ -320,6 +320,43 @@ summary:focus-visible {
   mask-image: linear-gradient(transparent, #000 35%);
   pointer-events: none;
 }
+.hero-grid-floor {
+  position: absolute;
+  inset: 24% -35% -45%;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(transparent 4%, #000 42%, #000 80%, transparent);
+  opacity: 0.65;
+  transform-origin: center bottom;
+  animation: grid-flow 14s linear infinite;
+  pointer-events: none;
+}
+.hero-scan-beam {
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  right: 5%;
+  z-index: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  animation: scan-beam 9s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes grid-flow {
+  from { transform: perspective(540px) rotateX(60deg) translate3d(0, -64px, 0); }
+  to { transform: perspective(540px) rotateX(60deg) translate3d(0, 0, 0); }
+}
+@keyframes scan-beam {
+  0%, 10% { transform: translate3d(0, -90px, 0); opacity: 0; }
+  18% { opacity: 0.52; }
+  68% { opacity: 0.52; }
+  78%, 100% { transform: translate3d(0, 400px, 0); opacity: 0; }
+}
 .hero-character {
   width: min(37vw, 480px);
   height: min(37vw, 480px);
@@ -1062,8 +1099,13 @@ summary:focus-visible {
   html {
     scroll-behavior: auto;
   }
-  .cursor {
+  .cursor,
+  .hero-grid-floor,
+  .hero-scan-beam {
     animation: none;
+  }
+  .hero-grid-floor {
+    transform: perspective(540px) rotateX(60deg);
   }
   *,
   *:before,
