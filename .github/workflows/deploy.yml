@@ -1,0 +1,73 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Production deployment
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Check deployment configuration
+        shell: bash
+        run: |
+          for name in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID; do
+            if [ -z "${!name:-}" ]; then
+              echo "Missing GitHub Actions secret or variable: $name" >&2
+              exit 1
+            fi
+          done
+
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install deployment tools
+        run: |
+          corepack enable
+          corepack prepare pnpm@9 --activate
+          npm install --global vercel@54.18.6
+
+      - name: Pull production configuration
+        run: vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+
+      - name: Build production output
+        run: vercel build --prod --token="$VERCEL_TOKEN"
+
+      - name: Deploy production output
+        id: deploy
+        shell: bash
+        run: |
+          url="$(vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN")"
+          echo "Production deployment: $url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Verify live event program
+        shell: bash
+        run: |
+          for attempt in {1..12}; do
+            page="$(curl --fail --silent --show-error --max-time 10 https://hackathon.bsaepfl.com/ || true)"
+            if [[ "$page" == *'JUDGING ENDS'* && "$page" == *'30-hour event'* ]]; then
+              echo "Live program verified at https://hackathon.bsaepfl.com/" >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "The production domain does not show the updated program yet." >&2
+          exit 1
