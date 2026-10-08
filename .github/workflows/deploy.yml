@@ -32,15 +32,6 @@ jobs:
       - name: Verify Vercel project access
         shell: bash
         run: |
-          team_status="$(curl --silent --show-error \
-            --output "$RUNNER_TEMP/vercel-team.json" \
-            --write-out '%{http_code}' \
-            --header "Authorization: Bearer $VERCEL_TOKEN" \
-            "https://api.vercel.com/v2/teams/$VERCEL_ORG_ID")"
-          if [ "$team_status" != 200 ]; then
-            echo "Vercel team lookup returned HTTP $team_status. Create a token scoped to the team that owns the project." >&2
-            exit 1
-          fi
           project_status="$(curl --silent --show-error \
             --output "$RUNNER_TEMP/vercel-project.json" \
             --write-out '%{http_code}' \
@@ -48,6 +39,21 @@ jobs:
             "https://api.vercel.com/v9/projects/$VERCEL_PROJECT_ID?teamId=$VERCEL_ORG_ID")"
           if [ "$project_status" != 200 ]; then
             echo "Vercel project lookup returned HTTP $project_status. Check the token's team scope and the project/team IDs." >&2
+            exit 1
+          fi
+          project_org_id="$(jq -r '.accountId // empty' "$RUNNER_TEMP/vercel-project.json")"
+          if [ -n "$project_org_id" ] && [ "$project_org_id" != "$VERCEL_ORG_ID" ]; then
+            echo "The project belongs to $project_org_id, but VERCEL_ORG_ID is $VERCEL_ORG_ID." >&2
+            exit 1
+          fi
+          team_status="$(curl --silent --show-error \
+            --output "$RUNNER_TEMP/vercel-team.json" \
+            --write-out '%{http_code}' \
+            --header "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v2/teams/$VERCEL_ORG_ID")"
+          if [ "$team_status" != 200 ]; then
+            error_code="$(jq -r '.error.code // "unknown"' "$RUNNER_TEMP/vercel-team.json")"
+            echo "Vercel team lookup returned HTTP $team_status ($error_code)." >&2
             exit 1
           fi
 
