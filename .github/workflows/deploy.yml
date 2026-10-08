@@ -79,10 +79,10 @@ jobs:
       - name: Build production output
         run: vercel build --prod --token="$VERCEL_TOKEN"
 
-      - name: Inspect production output
+      - name: Validate production output
         shell: bash
         run: |
-          test -f .vercel/output/static/index.html
+          jq -e '.version == 3' .vercel/output/config.json >/dev/null
 
       - name: Deploy production output
         id: deploy
