@@ -45,4 +45,4 @@ Configure these repository Actions settings before merging or pushing the workfl
 - Variable `VERCEL_ORG_ID`: the project's Vercel team or account ID.
 - Variable `VERCEL_PROJECT_ID`: the existing Vercel project ID.
 
-The IDs are available in the Vercel project settings or from `.vercel/project.json` after linking the existing project. Keep the token in GitHub Actions secrets, never in the repository. The workflow pulls the production environment, builds on the GitHub runner, uploads the prebuilt output, and checks that `hackathon.bsaepfl.com` shows the updated program.
+The IDs are available in the Vercel project settings or from `.vercel/project.json` after linking the existing project. Keep the token in GitHub Actions secrets, never in the repository. The workflow pulls the production environment, builds on the GitHub runner, uploads the prebuilt output, and checks that `hackathon.bsaepfl.ch` shows the updated program.

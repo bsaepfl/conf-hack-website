@@ -56,6 +56,7 @@ jobs:
             echo "Vercel team lookup returned HTTP $team_status ($error_code)." >&2
             exit 1
           fi
+          jq '{name, framework, outputDirectory, rootDirectory, buildCommand, domains}' "$RUNNER_TEMP/vercel-project.json"
 
       - name: Check out source
         uses: actions/checkout@v4
@@ -79,6 +80,13 @@ jobs:
       - name: Build production output
         run: vercel build --prod --token="$VERCEL_TOKEN"
 
+      - name: Inspect production output
+        shell: bash
+        run: |
+          jq '{version, routes, overrides}' .vercel/output/config.json
+          find .vercel/output/static -maxdepth 1 -type f -printf '%f\n' | sort
+          test -f .vercel/output/static/index.html
+
       - name: Deploy production output
         id: deploy
         shell: bash
@@ -90,9 +98,9 @@ jobs:
         shell: bash
         run: |
           for attempt in {1..12}; do
-            page="$(curl --fail --silent --show-error --max-time 10 https://hackathon.bsaepfl.com/ || true)"
+            page="$(curl --fail --silent --show-error --max-time 10 https://hackathon.bsaepfl.ch/ || true)"
             if [[ "$page" == *'JUDGING ENDS'* && "$page" == *'30-hour event'* ]]; then
-              echo "Live program verified at https://hackathon.bsaepfl.com/" >> "$GITHUB_STEP_SUMMARY"
+              echo "Live program verified at https://hackathon.bsaepfl.ch/" >> "$GITHUB_STEP_SUMMARY"
               exit 0
             fi
             sleep 5
