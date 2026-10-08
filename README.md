@@ -11,7 +11,7 @@ Event website for the Blockchain Student Association at EPFL.
 - **Participant food:** Free
 - **Schedule:** Program adapted from the previous event and updated by the event team. Sunday lunch is omitted.
 
-The event date, time, venue, registration, and sponsors are confirmed on the [Luma event page](https://luma.com/d5gqew38).
+Registration is on the [Luma event page](https://luma.com/d5gqew38). The program above reflects the event team's latest timing updates.
 
 ## Local development
 
